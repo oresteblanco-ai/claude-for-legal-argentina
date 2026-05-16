@@ -14,13 +14,14 @@ argentina/
   administrativo-CLAUDE.md           # Perfil para derecho administrativo
   civil-CLAUDE.md                    # Perfil para derecho civil (CCCN)
   concursos-CLAUDE.md                # Perfil para concursos y quiebras (LCQ)
-  ejemplos-laboral.md                # Casos de liquidación resueltos con checklist de rubros
   familia-CLAUDE.md                  # Perfil para derecho de familia
   laboral-CLAUDE.md                  # Perfil para derecho del trabajo (LCT)
   penal-CLAUDE.md                    # Perfil para derecho penal
   societario-CLAUDE.md               # Perfil para derecho societario (LGS)
   tributario-CLAUDE.md               # Perfil para derecho tributario
-  alertas-normas-inestables-PARCHE.md  # Bloques de alertas de normas inestables por área ★
+  ejemplos-laboral.md                # Casos de liquidación resueltos con checklist de rubros
+  ejemplos-civil.md                  # Casos de responsabilidad civil y daños con checklist
+  ejemplos-societario.md             # Due diligence, pactos de accionistas y constitución
   red-flags-contratos.md             # Lista de alertas para revisión de contratos
   fuentes.md                         # Conectores a bases de datos normativas locales
   diagnostico-SKILL.md               # Skill reutilizable de diagnóstico previo de escritos
@@ -48,8 +49,9 @@ Los plugins originales quedan intactos. Todo el material argentino vive en la ca
 
 **Agrega red flags específicas del derecho argentino** para revisión automática de contratos.
 
-**Incluye un sistema de alertas de normas inestables** que marca automáticamente las áreas
-con mayor riesgo de cambio normativo posterior al entrenamiento del modelo.
+**Incluye alertas de normas inestables integradas en cada perfil de área**, que marcan
+automáticamente las zonas con mayor riesgo de cambio normativo posterior al entrenamiento
+del modelo. Las alertas son nativas a cada perfil: no requieren paso de instalación separado.
 
 ---
 
@@ -80,33 +82,43 @@ Para cada área de práctica que uses, abrí el archivo correspondiente y comple
 
 Los perfiles disponibles:
 
-| Archivo | Área | Variable crítica |
-|---|---|---|
-| `laboral-CLAUDE.md` + `ejemplos-laboral.md` | Derecho del trabajo (LCT) | CCT_HABITUAL para el tope art. 245 |
-| `administrativo-CLAUDE.md` | Derecho administrativo | FUERO_HABITUAL para los plazos procesales |
-| `civil-CLAUDE.md` | Derecho civil (CCCN) | AREAS_PRACTICA |
-| `penal-CLAUDE.md` | Derecho penal | ESPECIALIDADES |
-| `familia-CLAUDE.md` | Derecho de familia | AREAS_PRACTICA |
-| `societario-CLAUDE.md` | Societario y M&A | JURISDICCION_INSCRIPCION (IGJ / DPPJ) |
-| `tributario-CLAUDE.md` | Derecho tributario | TRIBUTOS_FRECUENTES |
-| `concursos-CLAUDE.md` | Concursos y quiebras (LCQ) | ROL_PREDOMINANTE |
+| Archivo | Área | Variable crítica | Alertas |
+|---|---|---|---|
+| `laboral-CLAUDE.md` + `ejemplos-laboral.md` | Derecho del trabajo (LCT) | CCT_HABITUAL para el tope art. 245 | DNU 70/2023, topes art. 245, tasas CNAT |
+| `administrativo-CLAUDE.md` | Derecho administrativo | FUERO_HABITUAL para los plazos procesales | Plazos de caducidad, contratación pública |
+| `civil-CLAUDE.md` + `ejemplos-civil.md` | Derecho civil (CCCN) | AREAS_PRACTICA | Tasas de interés, fórmulas de daños |
+| `penal-CLAUDE.md` | Derecho penal | ESPECIALIDADES | Umbrales penales, código procesal vigente |
+| `familia-CLAUDE.md` | Derecho de familia | AREAS_PRACTICA | Cuotas alimentarias, régimen de alquileres |
+| `societario-CLAUDE.md` + `ejemplos-societario.md` | Societario y M&A | JURISDICCION_INSCRIPCION (IGJ / DPPJ) | Resoluciones IGJ/DPPJ, capital mínimo |
+| `tributario-CLAUDE.md` | Derecho tributario | TRIBUTOS_FRECUENTES | Alícuotas, MNI, umbrales de punibilidad |
+| `concursos-CLAUDE.md` | Concursos y quiebras (LCQ) | ROL_PREDOMINANTE | Tasas post-concursales, reformas LCQ |
 
-Cargá el perfil del área junto con el `CLAUDE.md` general en las instrucciones del Project correspondiente.
+Cargá el perfil del área junto con el `CLAUDE.md` general en las instrucciones del Project correspondiente. Las alertas de normas inestables ya están incluidas en cada perfil: no se requiere ningún paso adicional de instalación.
 
-### Paso 4: Parche de normas inestables
-
-Abrí `alertas-normas-inestables-PARCHE.md` e insertá el bloque correspondiente a cada área
-en el archivo `*-CLAUDE.md` de esa área, **inmediatamente antes** de la sección
-"Instrucciones operativas específicas". El archivo tiene instrucciones exactas de inserción
-para cada perfil.
-
-Este paso es opcional pero recomendado: el parche activa marcadores automáticos en las áreas
-donde el derecho argentino cambia con mayor frecuencia (topes indemnizatorios, alícuotas
-impositivas, normativa IGJ/DPPJ, locaciones urbanas, tasas de interés).
-
-### Paso 5: Plugins críticos
+### Paso 4: Plugins críticos
 
 Para los tres plugins del repo original que requieren reescritura completa de lógica, el `CLAUDE.md` argentino incluye instrucciones específicas por sección. Ver el archivo para el detalle.
+
+---
+
+## Alertas de normas inestables
+
+Cada perfil de área incluye una sección `## Alerta normativa` con las normas de mayor
+volatilidad para esa materia. La sección está ubicada antes de las instrucciones operativas
+de cada perfil para que el sistema la procese con prioridad.
+
+| Perfil | Sección de alerta | Normas cubiertas |
+|---|---|---|
+| `laboral-CLAUDE.md` | `## Alerta normativa - Decreto 70/2023 y modificaciones posteriores` | DNU 70/2023 (período de prueba, art. 245, negociación colectiva) |
+| `civil-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Tasas de interés por fuero, fórmulas de cuantificación de daños, art. 52 bis LDC |
+| `administrativo-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Plazos de caducidad art. 25 LNPA, contratación pública, normativa provincial |
+| `concursos-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Tasas post-concursales, período de sospecha, reformas LCQ |
+| `tributario-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Ganancias/MNI, Bienes Personales, umbrales penales Ley 27.430, monto mínimo TFN |
+| `familia-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Cuotas alimentarias, locaciones con destino habitacional |
+| `penal-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Umbrales de punibilidad, códigos procesales en transición |
+| `societario-CLAUDE.md` | `## Alerta normativa - normas de vigencia variable` | Resoluciones IGJ/DPPJ, capital mínimo, sindicatura |
+
+
 
 ---
 
@@ -177,17 +189,15 @@ Todo output del sistema es un borrador. No sabe qué pasó en la negociación, n
 El sistema tiene dos ciclos de actualización con distinta frecuencia:
 
 **Perfiles de área (`*-CLAUDE.md`):** actualizar cuando cambia un instituto central del área
-(nueva ley, reforma procesal, cambio de criterio CSJN en un tema estructural).
-Frecuencia orientativa: semestral o cuando ocurre un cambio relevante.
+(nueva ley, reforma procesal, cambio de criterio CSJN en un tema estructural) o cuando
+cambia una norma listada en la sección `## Alerta normativa` de ese perfil.
+Frecuencia orientativa: continua para alertas normativas; semestral para el resto.
 
-**Parche de normas inestables (`alertas-normas-inestables-PARCHE.md`):** actualizar cuando
-cambia una norma listada como inestable (nuevo tope indemnizatorio, nueva resolución IGJ,
-reforma locaciones, etc.). El log al final del archivo registra cada cambio.
-Frecuencia orientativa: continua, según los cambios normativos.
+Para actualizaciones urgentes (reforma procesal, cambio de régimen tributario, nuevo tope
+indemnizatorio): modificar directamente la sección `## Alerta normativa` del perfil afectado.
+Esa sección tiene el impacto más inmediato en los marcadores que el sistema emite.
 
-Para actualizaciones urgentes (reforma procesal, cambio de régimen tributario),
-el parche es el primer archivo a modificar porque tiene el impacto más inmediato
-en los marcadores que el sistema emite.
+
 
 ---
 
