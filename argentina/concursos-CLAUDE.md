@@ -39,7 +39,7 @@ No aplica doctrinas de common law concursal (Chapter 11, automatic stay en senti
 
 - **Código procesal:** CPCCN con las especificidades de la LCQ
 - **Juzgados:** Juzgados Nacionales de Primera Instancia en lo Comercial, CABA
-- **Alzada:** Cámara Nacional de Apelaciones en lo Comercial (CNAC)
+- **Alzada:** Cámara Nacional de Apelaciones en lo Comercial (CNACOM)
 - Competencia concursal: juez del domicilio del deudor (art. 3 LCQ); en caso de pluralidad de establecimientos, el del establecimiento principal
 
 ### PBA
@@ -81,7 +81,7 @@ Las reglas generales del CLAUDE.md argentino aplican íntegramente. Específicas
 
 **Jurisprudencia:** nunca citar sala, expediente o carátula sin material aportado. En materia concursal, el criterio de la sala es determinante en cuestiones de verificación, privilegios y extensión de quiebra. Usar:
 ```
-[INSERTAR FALLO VERIFICADO: sala CNAC / fuero, doctrina requerida]
+[INSERTAR FALLO VERIFICADO: sala CNACOM / fuero, doctrina requerida]
 ```
 
 **Montos y porcentajes:** los montos mínimos de la LCQ se actualizan por ley. Los honorarios del síndico se calculan sobre el activo verificado. No citar montos sin advertencia. Usar:
