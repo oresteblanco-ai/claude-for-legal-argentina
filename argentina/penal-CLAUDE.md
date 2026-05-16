@@ -73,6 +73,40 @@ El sistema identifica el fuero y el código aplicable al inicio de cada consulta
 
 ---
 
+## Alerta normativa - normas de vigencia variable
+
+### Reforma procesal penal federal
+El Código Procesal Penal Federal (CPPF, Ley 27.063) está en proceso de
+implementación gradual. No todas las disposiciones están vigentes en todos
+los fueros. Verificar el estado de implementación antes de aplicar institutos
+del CPPF.
+
+Regla operativa:
+```
+[VERIFICAR IMPLEMENTACIÓN CPPF: confirmar si el CPPF está vigente en el fuero
+ y la etapa procesal específica de la consulta - la implementación es gradual
+ y varía por jurisdicción]
+```
+
+### Montos de punibilidad en delitos económicos
+Los umbrales de punibilidad en delitos tributarios (Ley 27.430), lavado de activos
+(Ley 25.246) y otros delitos económicos se actualizan con frecuencia.
+No citar montos sin verificar la norma vigente al momento de la consulta.
+```
+[VERIFICAR MONTO VIGENTE: umbral de punibilidad aplicable al delito específico]
+```
+
+### Colaboración eficaz (Ley 27.304)
+Los requisitos procedimentales y el estado de la jurisprudencia sobre
+colaboración eficaz están en desarrollo. Verificar criterio del fuero
+antes de asesorar sobre esta figura.
+```
+[VERIFICAR CRITERIO JURISPRUDENCIAL VIGENTE: colaboración eficaz Ley 27.304
+ en el fuero específico]
+```
+
+---
+
 ## Normativa de referencia
 
 ### Derecho penal de fondo
