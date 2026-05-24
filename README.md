@@ -69,24 +69,86 @@ argentina/
 
 ## Lo que necesitás
 
-1. Una suscripción paga de Claude - Plan Pro (u$s 20/mes), Max, Team o Enterprise. El plan gratuito no sirve.
-2. La aplicación de escritorio Claude
+Hay dos formas de instalarlo. El plan gratuito es suficiente para evaluar el sistema sin costo. El plan pago agrega automatización, acceso directo a archivos locales y tareas largas sin supervisión.
+
+| Característica | Plan gratuito + Git Bash | Plan pago + Claude Desktop + Cowork |
+|---|---|---|
+| Costo | $0 | u$s 20/mes (Pro) |
+| Activación de perfiles | Manual (copiar y pegar) | Automática según la rama del derecho del caso |
+| Actualizaciones del repo | Manual (git pull) | Automática |
+| Acceso a archivos locales | No | Sí (directo, sin copiar archivos) |
+| Tareas largas sin supervisión | No | Sí |
+| Capacidades normativas | Completas | Completas |
 
 ---
 
 ## Instalación
 
-### Paso 1: Descargá la aplicación de escritorio
+### Opción A: Plan gratuito + Git Bash
+
+**Lo que necesitás:** cuenta Claude gratuita y Git. Instalá Git desde [git-scm.com](https://git-scm.com) con las opciones por defecto. No necesitás cuenta de GitHub para descargar y usar el sistema.
+
+#### Paso 1: Clonar el repositorio
+
+Abrí Git Bash desde el menú inicio y ejecutá:
+
+```bash
+git clone https://github.com/cristianaboitiz-eng/claude-for-legal-argentina.git
+cd claude-for-legal-argentina
+git pull
+```
+
+El `git pull` trae los cambios más recientes. Si dice "Already up to date" ya tenés la versión actual.
+
+#### Paso 2: Configurar el perfil del estudio
+
+El archivo `argentina/legal.local.md.template` tiene campos para todos los datos de tu práctica: jurisdicción, fueros, departamentos judiciales, CCT habitual, sistema de gestión, tasa de interés por materia, formato de firma, estilo de citas. Lo copiás y abrís:
+
+```bash
+cp argentina/legal.local.md.template argentina/legal.local.md
+notepad argentina/legal.local.md
+```
+
+Completás lo que aplica y borrás lo que no usás. Después lo protegés para que no se suba al repositorio por error:
+
+```bash
+echo "legal.local.md" >> .gitignore
+```
+
+#### Paso 3: Usar el sistema
+
+Abrís el archivo de área que corresponde a tu caso, copiás todo el contenido y lo pegás al inicio de una conversación nueva en Claude. Los perfiles disponibles están en la tabla de la sección [Perfiles por área](#perfiles-por-área).
+
+Pegás el perfil, describís el caso, subís los documentos y trabajás. El sistema opera con todas sus capacidades sustantivas: diagnóstico previo del material, detección de argumentos sin norma de respaldo, alertas de normas inestables, marcadores para vacíos probatorios y jurisprudencia no aportada.
+
+#### Paso 4: Mantener el sistema actualizado
+
+El repositorio no se actualiza solo con el plan gratuito. Cada vez que haya cambios - perfiles de área, alertas normativas, correcciones - los bajás con un solo comando:
+
+```bash
+cd claude-for-legal-argentina
+git pull
+```
+
+Hacelo antes de cada sesión de trabajo, o cuando veas un aviso de actualización en el repositorio. El pull es instantáneo y nunca pisa tu `legal.local.md` porque ese archivo está protegido por el `.gitignore`.
+
+---
+
+### Opción B: Plan pago + Claude Desktop + Cowork
+
+**Lo que necesitás:** Plan Pro (u$s 20/mes), Max, Team o Enterprise, y la aplicación de escritorio Claude.
+
+#### Paso 1: Descargá la aplicación de escritorio
 
 Entrá a [claude.ai/download](https://claude.ai/download) y bajá la app para Windows o Mac. Instalala como cualquier otro programa.
 
-### Paso 2: Abrí Cowork
+#### Paso 2: Abrí Cowork
 
 Una vez abierta la app, vas a ver una barra en la parte superior con distintas pestañas. Hacé clic en "Cowork".
 
 Cowork es el entorno de trabajo avanzado donde viven los plugins. La primera vez te va a pedir que configures acceso a una carpeta de tu computadora - dáselo a una carpeta donde tengas documentos de trabajo (contratos, escritos, lo que sea). Claude va a poder leer los archivos de esa carpeta.
 
-### Paso 3: Instalá el plugin legal
+#### Paso 3: Instalá el plugin legal
 
 Dentro de Cowork, hacé clic en "Customize" (Personalizar) en la barra lateral izquierda. Eso abre el menú de plugins, skills y conectores. [Más información](https://support.claude.com/en/articles/13837440-use-plugins-in-claude-cowork)
 
@@ -98,13 +160,17 @@ Desde ahí:
 
 Después de instalarlo, el plugin ejecuta automáticamente una entrevista inicial. Te pregunta sobre tu práctica: jurisdicción, tipo de trabajo habitual, a quién escalás, etc. Con esas respuestas arma tu perfil de práctica, y de ahí en más todos los flujos de trabajo corren contra ese contexto, no contra una plantilla genérica. Eso es lo que diferencia esta herramienta de un chat común.
 
-### Paso 4: Elegí qué plugins instalar
+#### Paso 4: Configurar el perfil argentino
+
+Dentro de Cowork, cargás el contenido de `argentina/CLAUDE.md` como perfil base. Ese archivo reemplaza la lógica norteamericana del plugin original con configuración argentina. La primera vez que usás un plugin de área, el sistema corre la entrevista de configuración; cuando te pida el perfil de práctica, usás el contenido de `argentina/legal.local.md` que ya completaste.
+
+#### Paso 5: Elegí qué plugins instalar
 
 Instalá los que correspondan a tu práctica. Podés instalar varios.
 
-### Paso 5: Empezar a usarlo
+#### Paso 6: Empezar a usarlo
 
-Después de la instalación, las skills (habilidades) se activan automáticamente cuando son relevantes. También podés invocarlas manualmente escribiendo "/" para ver la lista de comandos disponibles.
+Las skills se activan automáticamente cuando son relevantes. También podés invocarlas manualmente escribiendo "/" para ver la lista de comandos disponibles. Claude accede a tu carpeta de trabajo, lee los archivos directamente y ejecuta tareas largas sin supervisión: liquidaciones sobre varios expedientes, revisión de contratos en lote, matrices de riesgo, cronologías. Las actualizaciones del repositorio se incorporan automáticamente la próxima vez que usás el sistema.
 
 ---
 
@@ -167,10 +233,13 @@ Conectores de la comunidad que apuntan directamente a las fuentes oficiales arge
 | 10 | [guidobonomini/argentina-law-mcp-server](https://github.com/guidobonomini/argentina-law-mcp-server) | Praxis local | Análisis semántico, glosario judicial argentino, detección de riesgos calibrada para praxis local | Gratuito |
 | 11 | [datos-justicia-argentina/Tesauro-Saij](https://github.com/datos-justicia-argentina/Tesauro-Saij-de-Derecho-Argentino) | SAIJ | Vocabulario controlado para búsqueda jurídica | Gratuito |
 | 12 | [voftec/bora-mcp](https://github.com/voftec/bora-mcp) · URL directa: `https://bora-mcp.vercel.app/api/mcp/sse` | Boletín Oficial de la República Argentina | Portada del día, sumario por fecha, texto verbatim de avisos, nuevas sociedades (2da Sección), licitaciones (3ra Sección). Conexión directa en Claude.ai sin instalación local. | Gratuito |
+| 13 | [voftec/bopba-mcp](https://github.com/voftec/bopba-mcp) · URL directa: `https://bopba-mcp.vercel.app/api/mcp/sse` | Boletín Oficial de la Provincia de Buenos Aires | Texto de normas publicadas en el BOPBA, sumario por fecha, búsqueda por número y año. Conexión directa en Claude.ai sin instalación local. | Gratuito |
+| 14 | [voftec/pjn-consulta-mcp](https://github.com/voftec/pjn-consulta-mcp) · URL directa: `https://pjn-consulta-mcp.vercel.app/api/mcp/sse` | Poder Judicial de la Nación | Consulta de expedientes PJN: estado, movimientos, carátula. Conexión directa en Claude.ai sin instalación local. | Gratuito |
+| 15 | [voftec/ptn-mcp](https://github.com/voftec/ptn-mcp) · URL directa: `https://ptn-mcp.vercel.app/api/mcp/sse` | Procuración del Tesoro de la Nación | Dictámenes PTN: búsqueda por tema, número y año. Responsabilidad del Estado, empleo público, contratos administrativos. Conexión directa en Claude.ai sin instalación local. | Gratuito |
 
 #### Como conectar los servidores MCP por URL en Claude.ai (sin instalacion)
 
-Para los conectores marcados "URL directa" (2, 3, 4 y 12), el proceso es identico para todos:
+Para los conectores marcados "URL directa" (2, 3, 4, 12, 13, 14 y 15), el proceso es identico para todos:
 
 1. Entrá a [claude.ai/settings/integrations](https://claude.ai/settings/integrations) o desde Claude.ai: **Settings → Integrations → Add integration**.
 2. En el campo **URL** pegá la URL del conector (por ejemplo `https://juba-mcp.vercel.app/api/mcp/sse`).
@@ -191,16 +260,19 @@ Regla de uso: `verificar_vigencia` es un primer filtro, no una fuente definitiva
 |---|---|---|
 | Texto de norma nacional | 3 (voftec/InfoLeg-MCP) o 1 (Ansvar) | infoleg.gob.ar |
 | Texto de norma provincial PBA | 2 (voftec/normativapba-mcp) | normas.gba.gob.ar |
+| Boletín Oficial nacional (normas, sociedades, licitaciones) | 12 (voftec/bora-mcp) | boletinoficial.gob.ar |
+| Boletín Oficial PBA | 13 (voftec/bopba-mcp) | boletinoficial.gba.gob.ar |
 | Jurisprudencia PBA (SCBA y cámaras) | 4 (voftec/juba-mcp) | juba.scba.gov.ar |
 | Jurisprudencia SAIJ (todas las instancias) | 5 (saij-mcp) | saij.gob.ar |
 | Jurisprudencia CSJN | 6 (csjn-mcp) | sj.csjn.gov.ar |
 | Jurisprudencia CABA / fueros nacionales | 7 (juscaba-mcp) | jusbaires.gob.ar |
 | Grafo legal / navegación de citas / OCR histórico | 8 (joaquinescalante23/saij-mcp) | saij.gob.ar |
 | Jurisprudencia PJN alternativa | 9 (Psflores) | pjn.gov.ar |
+| Consulta de expedientes PJN | 14 (voftec/pjn-consulta-mcp) | pjn.gov.ar |
+| Dictámenes PTN | 15 (voftec/ptn-mcp) | ptn.gov.ar |
 | Doctrina y dictámenes | 5 (saij-mcp) o 8 (joaquinescalante23) | saij.gob.ar |
 | Análisis semántico / terminología | 10 (guidobonomini) | Glosario del CLAUDE.md |
 | Mejora de búsquedas jurisprudenciales | 11 (Tesauro SAIJ) | saij.gob.ar |
-| Texto de normas publicadas en BORA / nuevas sociedades / licitaciones | 12 (voftec/bora-mcp) | boletinoficial.gob.ar |
 
 ### Fuentes primarias sin conector MCP
 
@@ -223,7 +295,7 @@ Acceso directo por el abogado para verificación manual. Son la fuente de verdad
 No son necesarios para empezar. Los perfiles funcionan solos como única configuración.
 Los conectores son la segunda capa: permiten que el sistema consulte fuentes primarias
 automáticamente sin que el abogado tenga que pegar el texto en la sesión. Los conectores
-4 a 7 (Caravario) se instalan vía `uvx`; los conectores 2, 3 (voftec) y 12 (BORA Oficial)
+4 a 7 (Caravario) se instalan vía `uvx`; los conectores 2, 3, 4, 12, 13, 14 y 15 (voftec)
 tienen conexión directa por URL en Claude.ai sin instalación local. Ver `fuentes.md`
 para instrucciones completas de verificación de estado, fallback y combinaciones recomendadas.
 
