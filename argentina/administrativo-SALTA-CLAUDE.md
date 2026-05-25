@@ -2,412 +2,615 @@
 
 > Archivo de configuración para el sistema claude-for-legal.
 > Complementa el perfil general (argentina/CLAUDE.md) y el perfil administrativo nacional (administrativo-CLAUDE.md) con lógica específica del fuero contencioso administrativo de Salta.
-> Cargar junto con administrativo-CLAUDE.md en el Project. Este archivo no reemplaza al nacional - lo extiende.
-> **Configuración inicial obligatoria:** completar las variables de la sección siguiente antes de usar.
+> Cargar junto con administrativo-CLAUDE.md en el Project. Este archivo no reemplaza al nacional; lo extiende.
+>
+> **Estado del perfil:** operativo con campos de configuración pendientes (Bloque 0). Las reglas operativas de los Bloques 1-4 son aplicables. Las normas con etiqueta [A VERIFICAR] o [PENDIENTE] requieren confirmación antes de usar en el caso concreto.
 
 ---
 
-## Configuración inicial - completar antes de usar
+## Sistema de etiquetas
+
+Este perfil usa tres etiquetas para distinguir el nivel de certeza de cada regla:
+
+- **[CONFIRMADO]** Dato extraído directamente del texto legal citado; sin reformas conocidas al corte de mayo 2026.
+- **[A VERIFICAR]** Dato probable o histórico que debe confirmarse en el Boletín Oficial de Salta o en el portal del Poder Judicial de Salta antes de aplicar al caso concreto.
+- **[PENDIENTE]** Dato no disponible en este perfil; requiere investigación activa antes de operar.
+
+Cuando una sección mezcle los tres niveles, el etiquetado aparece en la regla específica, no en el título de la sección.
+
+---
+
+## Changelog
+
+| Versión | Fecha | Cambios principales |
+|---------|-------|---------------------|
+| 1.0 | mayo 2026 | Versión inicial |
+| 1.1 | mayo 2026 | Reestructuración en bloques; eliminación de duplicaciones; corrección referencia cruzada a Ley 4537 (Tucumán); unificación de terminología "revocatoria" |
+| 1.2 | mayo 2026 | Tabla de responsables procesales; mapa no-suspensión (art. 81) versus cautelar judicial (art. 20); sistematización de excepciones al agotamiento; ejemplos de cómputo de plazos; guía rápida de verificación; procedimiento de consentimiento tácito; regla para actos mixtos; normalización de citas legales |
+| 1.3 | mayo 2026 | Sistema de etiquetas [CONFIRMADO / A VERIFICAR / PENDIENTE]; tabla unificada de plazos (sección 2.6); matriz de vigencia por norma (sección 2.18); aclaración técnica sobre el Digesto (Ley 7913) como compilación con fecha de corte; reformulación del consentimiento tácito; advertencia operativa sobre plazo pendiente del jerárquico |
+| 1.4 | mayo 2026 | Revisión de estilo y redacción: puntuación, sintaxis, eliminación de frases imperativas ambiguas, unificación de denominaciones institucionales |
+
+---
+
+## Bloque 0 - Configuración inicial
 
 **PROVINCIA:** Provincia de Salta
 
-**FUERO_HABITUAL:** [COMPLETAR: denominación exacta. Ej: "Juzgado de Primera Instancia en lo Contencioso Administrativo de 1ª (o 2ª) Nominación, Salta Capital" / "Corte de Justicia de Salta (alzada contencioso administrativa)". Hay 2 Juzgados de Primera Instancia en lo Contencioso Administrativo (1ª y 2ª Nominación), con asiento en la Capital y jurisdicción en toda la Provincia (Ley 6569). La Corte de Justicia de Salta actúa como alzada y sus decisiones son definitivas (art. 153 ap. III Constitución Salta).]
+**FUERO_HABITUAL:** [COMPLETAR. Opciones: "Juzgado de Primera Instancia en lo Contencioso Administrativo de 1.ª Nominación, Salta Capital" o "2.ª Nominación". Existen dos juzgados de esa denominación con asiento en la Capital y jurisdicción en toda la Provincia (Ley 6569, art. 1). Alzada: Corte de Justicia de Salta (Constitución de Salta, art. 153, ap. III; Ley 6569, art. 3).]
 
-**AREAS_PRACTICA:** [COMPLETAR: áreas de mayor volumen. Ej: "Responsabilidad del Estado provincial, empleo público, sanciones administrativas, contratación pública, habilitaciones municipales".]
+**AREAS_PRACTICA:** [COMPLETAR. Ejemplo: "Responsabilidad del Estado provincial, empleo público, sanciones administrativas, contratación pública, habilitaciones municipales".]
 
-**ORGANISMO_CONTRALOR_HABITUAL:** [COMPLETAR: ej. "Ministerio de Salud Pública de Salta, IPSAS, APROSS no - SALTA-, Municipalidad de Salta, DGR Salta".]
-
----
-
-## Identidad y alcance
-
-Este perfil cubre práctica de derecho administrativo en la Provincia de Salta: procedimiento administrativo ante la Administración provincial y municipal (Ley 5348), recursos administrativos en sede provincial, proceso contencioso administrativo ante los Juzgados de Primera Instancia en lo Contencioso Administrativo y la Corte de Justicia de Salta (Ley 793 modificada por Ley 6569), responsabilidad del Estado provincial, empleo público y contratación pública.
-
-**Estructura judicial:** Salta tiene un fuero contencioso administrativo con primera instancia especializada (2 Juzgados de 1ª Instancia CA, Capital) y la Corte de Justicia como alzada definitiva. En el interior de la provincia, verificar si la jurisdicción corresponde a los mismos juzgados capitalinos o si hay tribunales con competencia delegada.
-
-**Articulación con el perfil nacional:** cuando actúa un organismo federal con sede en Salta (ARCA/ex AFIP, ANSES), aplica el régimen federal (LNPA + RLNPA). Cuando actúa la Administración provincial o municipal salteña, aplica este perfil. No transpolar plazos ni institutos.
-
-**Tercer nivel - organismos municipales:** la Ley 793 incluye a las Municipalidades como autoridades cuyos actos son impugnables ante el fuero contencioso administrativo (art. 1 Ley 793). La Ley 6569 dispone que los Juzgados de Primera Instancia CA entienden también en procesos contra Municipalidades (art. 2 Ley 6569). Verificar si el municipio tiene ordenanza de procedimiento propio que regule el agotamiento de la vía antes de ocurrir al fuero judicial.
+**ORGANISMO_CONTRALOR_HABITUAL:** [COMPLETAR. Ejemplo: "Ministerio de Salud Pública de Salta, IPSAS, Municipalidad de Salta, DGR Salta".]
 
 ---
 
-## Normativa de procedimiento administrativo provincial
+## Bloque 1 - Identidad y alcance
 
-### Ley de procedimiento administrativo Salta
+Este perfil cubre la práctica de derecho administrativo en la Provincia de Salta: procedimiento administrativo ante la Administración provincial y municipal (Ley 5348), recursos administrativos en sede provincial, proceso contencioso administrativo ante los Juzgados de Primera Instancia en lo Contencioso Administrativo y la Corte de Justicia de Salta (Ley 793, modificada por Ley 6569 y por Leyes 7822 y 7913), responsabilidad del Estado provincial, empleo público y contratación pública.
 
-- **Norma principal:** Ley 5348 (Ley de Procedimientos Administrativos para la Provincia de Salta), promulgada el 05/12/1978. Texto ordenado: Ley 5348/78 con modificaciones introducidas por Ley 5552/80.
-- **Ámbito (art. 1 Ley 5348):** rige toda la actividad administrativa estatal provincial y municipal, y la de entidades descentralizadas. Excepción: organismos de seguridad y los que tengan régimen especial por ley (en estos casos aplica como supletoria). También aplica supletoriamente a entes públicos no estatales que ejerzan función administrativa.
-- **Texto vigente:** consultar el Boletín Oficial de Salta: https://boletinoficialsalta.gob.ar y SAIJ.
-- **Articulado clave:** arts. 25-80 (acto administrativo), arts. 155-162 (plazos), arts. 177-188 (recursos: revocatoria, jerárquico, alzada, revisión), art. 81 (suspensión de ejecutoriedad en sede administrativa).
+**Estructura judicial:** [CONFIRMADO] primera instancia: dos Juzgados de Primera Instancia en lo Contencioso Administrativo (1.ª y 2.ª Nominación), con asiento en Salta Capital y jurisdicción en toda la Provincia. Alzada: Corte de Justicia de Salta como tribunal definitivo ordinario. Expediente digital desde 2022, según Acordada 13.665.
 
-```
-[VERIFICAR VIGENCIA: Ley 5348 LPA Salta (mod. Ley 5552/80 y otras) - consultar https://boletinoficialsalta.gob.ar - verificar modificaciones posteriores a mayo 2026]
-```
+**Competencia territorial en el interior:** [PENDIENTE] verificar si en cada departamento del interior provincial la jurisdicción corresponde a los mismos juzgados capitalinos o si existe competencia delegada. No debe asumirse, sin verificación previa, que el fuero capitalino tiene competencia exclusiva en todo el territorio.
 
-### Régimen de silencio administrativo Salta
+**Primer paso obligatorio en toda consulta:** identificar si el acto es de un organismo provincial, municipal o federal antes de aplicar este perfil o el nacional.
 
-- **Regla general:** silencio negativo. El art. 25 in fine Ley 5348 establece que el silencio solo vale como acto administrativo cuando el orden normativo expresamente dispone que ante el silencio del órgano, transcurrido cierto plazo, se considerará la petición denegada o aceptada.
-- **Retardación como causal de acción judicial (art. 6 Ley 793):** cuando transcurrieron 3 meses desde que el asunto está en estado de dictar resolución definitiva sin que se produzca, el interesado debe solicitar por escrito la resolución; si transcurren otros 3 meses sin resolución definitiva, queda habilitada la acción contencioso administrativa por retardación. También procede cuando la administración no dicta providencias de trámite en los plazos fijados por decretos o reglamentos.
-- **Sin reforma análoga al Dec 971/2024 nacional:** Salta no adoptó el régimen de silencio positivo de la Ley 27.742 nacional. El silencio positivo aplica solo ante la Administración nacional.
+**Actos de organismos federales con sede en Salta:** aplica el régimen federal (LNPA, Ley 19.549, y RLNPA, Decreto 1759/72). Ver administrativo-CLAUDE.md.
+
+**Actos mixtos - coexistencia de actos de distinto nivel:** cuando en un mismo caso coexisten actos de organismos provinciales y federales, cada régimen se aplica al acto correspondiente por separado. Los plazos del régimen federal no se extienden al acto provincial, ni viceversa.
+
+**Organismos municipales:** [CONFIRMADO] la Ley 793, art. 1, incluye a las Municipalidades entre las autoridades cuyos actos son impugnables ante el fuero contencioso administrativo. Los Juzgados de Primera Instancia CA tienen competencia en procesos contra Municipalidades (Ley 6569, art. 2). [PENDIENTE] este perfil no incluye un mapa de ordenanzas municipales; la verificación debe realizarse caso por caso. El régimen de agotamiento de la vía ante organismos municipales puede tener recursos y plazos distintos de los de la Ley 5348.
 
 ```
-[VERIFICAR SILENCIO SALTA: Ley 5348 art. 25 + Ley 793 art. 6 - silencio negativo por regla general - retardación: 3 meses en estado de resolver + 3 meses desde solicitud de resolución = habilita acción por retardación]
-```
-
-### Elementos esenciales del acto administrativo Salta
-
-La Ley 5348 regula exhaustivamente el acto administrativo (arts. 25-80). Elementos:
-1. Competencia: irrenunciable e improrrogable (art. 2 Ley 5348)
-2. Causa (objeto): no debe estar prohibido por el orden normativo, ni ser impreciso, absurdo o imposible de hecho (arts. 27-28)
-3. Voluntad: libre de vicios (dolo, error, violencia, simulación)
-4. Forma: debe exteriorizarse por escrito (salvo urgencia), con lugar y fecha, indicación del órgano y firma de la autoridad; debe ser motivado en los casos del art. 42
-
-**Motivación (art. 42 Ley 5348):** el acto debe motivarse cuando: (a) decide sobre derechos subjetivos, concursos, licitaciones y contrataciones directas; (b) resuelve recursos; (c) se aparta del criterio anterior o del dictamen del órgano consultivo; (d) lo disponen otras normas legales o reglamentarias.
-
-**Suspensión de ejecutoriedad en sede administrativa (art. 81 Ley 5348):** la interposición de recursos administrativos NO suspende la ejecución del acto impugnado. La autoridad puede disponer la suspensión de oficio o a pedido de parte cuando: (a) la ejecución cause daño de difícil o imposible reparación al recurrente, o un daño proporcionalmente mayor que los perjuicios de la suspensión para el ente estatal; (b) se alegue fundadamente un vicio grave en el acto; (c) por razones de interés público.
-
-**Vicios del acto:** la Ley 5348 regula nulidades absolutas y relativas con estructura análoga al régimen federal. Verificar articulado específico.
-
-### Recursos administrativos Salta (Ley 5348)
-
-**Recurso de revocatoria o reconsideración (art. 177 Ley 5348):**
-- Plazo: 10 días hábiles administrativos desde la notificación del acto
-- Ante: el mismo órgano que emanó la declaración
-- Se resuelve sin sustanciación (salvo medidas para mejor proveer) dentro de los 10 días de estar el expediente en estado
-- Es el recurso de primera impugnación ante el mismo órgano emisor
-
-**Recurso jerárquico (arts. 179-183 Ley 5348):**
-- Procede contra declaraciones definitivas, o que impongan trabas al ejercicio de derechos o intereses legítimos del recurrente
-- Plazo: verificar plazo específico del articulado (arts. 179-180 Ley 5348). Puede interponerse subsidiariamente con la revocatoria o independientemente de ella.
-- Ante: el órgano inmediatamente superior al que dictó el acto (art. 180)
-- Si no considera satisfecho su derecho luego del jerárquico: puede reproducirlo ante el superior jerárquico del órgano que resolvió, recorriendo así todos los grados de la línea jerárquica hasta el Gobernador (art. 182)
-- Agota la vía: sí, cuando es resuelto por el Gobernador o la autoridad superior del organismo
-
-**Recurso de alzada (arts. 184-185 Ley 5348):**
-- Procede contra decisiones definitivas de la autoridad superior de las entidades descentralizadas
-- Se presenta directamente ante el Poder Ejecutivo (art. 185), sin necesidad de agotar previamente el recurso jerárquico dentro del ente
-- Plazo: verificar articulado específico
-- Solo control de legitimidad (no oportunidad, mérito o conveniencia): verificar si la Ley 5348 establece igual restricción que la Ley 5348 de Tucumán (Ley 4537, art. 68)
-
-**Reclamo administrativo previo (Ley 5018):** Salta tiene una ley específica de reclamo administrativo previo (Ley 5018) que regula los requisitos de la reclamación previa a la acción judicial en ciertos supuestos. Verificar texto de la Ley 5018 y en qué casos se aplica conjuntamente con la Ley 793.
-
-**Sin reforma análoga al Decreto 695/2024 nacional:** Salta no duplicó los plazos de recursos administrativos. El plazo de la Ley 5348 para la revocatoria es de 10 días hábiles administrativos. No aplicar los plazos federales reformados.
-
-```
-[ALERTA PLAZO FATAL: recurso de revocatoria - Ley 5348 art. 177 - 10 días hábiles administrativos desde notificación - vencimiento: calcular]
-[ALERTA PLAZO FATAL: recurso jerárquico - Ley 5348 arts. 179-183 - verificar plazo específico en el articulado - vencimiento: calcular]
-[VERIFICAR: Ley 5018 (reclamo administrativo previo Salta) - determinar si aplica al caso concreto antes de la acción judicial]
-```
-
-### Agotamiento de la vía administrativa Salta
-
-- **Regla general:** la acción contencioso administrativa requiere que la resolución sea definitiva y que no haya recurso administrativo alguno contra ella (art. 26 inc. 1 Ley 793).
-- **Cadena recursiva:** revocatoria ante el órgano emisor → jerárquico recorriendo la línea hasta el Gobernador. Para entes descentralizados: alzada ante el PE (Ley 5348 arts. 184-185).
-- **Reclamo previo por retardación (art. 6 Ley 793):** cuando hay mora, el interesado debe solicitar por escrito la resolución (pronto despacho) y esperar 3 meses antes de iniciar la acción contencioso administrativa.
-- **Reclamo administrativo previo (Ley 5018):** verificar si la Ley 5018 exige un reclamo administrativo previo específico antes de iniciar la acción judicial por daños u otras pretensiones.
-- **Fiscal General:** en los juicios contencioso administrativos, el Fiscal General interviene como representante de la Administración General de la Provincia (art. 7 Ley 793). Las notificaciones al Fiscal General se hacen en su despacho (art. 10 Ley 793). Si el cargo está vacante, se notifica al Agente Fiscal o al abogado que designe el PE.
-
-```
-[VERIFICAR AGOTAMIENTO DE VÍA SALTA: Ley 5348 arts. 177-185 + Ley 793 art. 26 - resolución definitiva sin recurso administrativo disponible - para entes descentralizados: alzada ante PE - verificar también Ley 5018]
+[VERIFICAR RÉGIMEN MUNICIPAL SALTA: ordenanza de procedimiento del municipio concreto - el agotamiento de la vía ante organismos municipales puede tener recursos y plazos propios distintos de la Ley 5348]
 ```
 
 ---
 
-## Control judicial contencioso administrativo
+## Bloque 2 - Normas base
 
-### Código de Procedimiento Contencioso Administrativo Salta
+### 2.1 Procedimiento administrativo - Ley 5348
 
-- **Normas:** Ley 793 (Código de Procedimientos en lo Contencioso Administrativo de la Provincia de Salta, sancionada el 13/02/1908) modificada por Ley 6569 (Juzgados de Primera Instancia en lo Contencioso Administrativo, 1989, modificada por Leyes 7822 y 7913)
-- **Texto vigente:** consultar SAIJ y Boletín Oficial de Salta. La Ley 793 es uno de los códigos procesales contencioso administrativos más antiguos del país (1908). La Ley 6569 incorporó los Juzgados de Primera Instancia (antes solo existía competencia originaria del Superior Tribunal).
-- **Subsidiariedad (art. 23 Ley 793):** el Código de Procedimientos en lo Civil y Comercial de Salta se aplica supletoriamente en todo lo que no tenga tramitación o términos especiales señalados en la Ley 793.
+**Norma principal:** Ley 5348 (Ley de Procedimientos Administrativos para la Provincia de Salta).
 
-### Plazo de caducidad para accionar judicialmente
+- Fecha de sanción: [A VERIFICAR] 05/12/1978 según fuentes secundarias; confirmar en el Boletín Oficial de Salta.
+- Modificaciones conocidas: Ley 5552/80 [A VERIFICAR]; verificar otras modificaciones posteriores en el Boletín Oficial de Salta.
+- [CONFIRMADO] No existe decreto reglamentario separado. La regulación procedimental está integrada en la propia Ley 5348.
 
-**Este es el dato más crítico del perfil.**
+**Ámbito (Ley 5348, art. 1):** [CONFIRMADO] rige la actividad administrativa estatal provincial y municipal, y la de entidades descentralizadas. En organismos con régimen especial establecido por ley, la Ley 5348 actúa como supletoria. También se aplica supletoriamente a entes públicos no estatales en ejercicio de función administrativa.
 
-- **Plazo:** 30 días desde la notificación personal, por cédula o por edicto de la resolución administrativa que motiva la demanda (art. 12 Ley 793)
-- **Consentimiento:** el consentimiento tácito o expreso de la resolución administrativa, manifestado por actos posteriores a la notificación, quita el derecho a deducir la acción (art. 12 in fine Ley 793)
-- **Cómputo:** días hábiles (art. 16 Ley 793: "solo se computarán en ellos los días hábiles")
-- **Naturaleza:** caducidad - el consentimiento o el vencimiento del plazo extinguen la acción
-- **¿Declarable de oficio?:** sí; el tribunal puede desechar in límine la demanda presentada fuera de plazo (art. 27 inc. 1 Ley 793: incompetencia fundada en que "la demanda ha sido presentada fuera de término")
+**Texto vigente:** Boletín Oficial de Salta (https://boletinoficialsalta.gob.ar) y SAIJ (https://www.saij.gob.ar). Ver la matriz de vigencia en la sección 2.18 para el estado de cada norma citada.
+
+**Articulado de referencia:** arts. 25 a 80 (acto administrativo), arts. 155 a 162 (plazos), arts. 177 a 188 (recursos), art. 81 (ejecutoriedad y suspensión). [A VERIFICAR] la numeración puede no coincidir con ediciones no oficiales; verificar contra el texto del Boletín Oficial de Salta o del portal del Poder Judicial de Salta.
 
 ```
-[ALERTA PLAZO FATAL: art. 12 Ley 793 CCA Salta - 30 días hábiles - desde notificación personal/cédula/edicto de la resolución administrativa - consentimiento tácito también extingue la acción - vencimiento: calcular]
+[VERIFICAR VIGENCIA: Ley 5348 LPA Salta - consultar Boletín Oficial de Salta (https://boletinoficialsalta.gob.ar) para modificaciones posteriores al corte del Digesto (julio de 2015)]
 ```
 
-**Diferencia con otros regímenes:**
-- Federal: 180 días hábiles judiciales (actos post-9-jul-2024)
-- PBA: 90 días hábiles judiciales
-- Tucumán ordinario: 90 días hábiles judiciales
-- Córdoba: 30 días hábiles judiciales
-- Santa Fe: 30 días
-- **Salta: 30 días hábiles** (igual a Córdoba y Santa Fe)
+### 2.2 Proceso contencioso administrativo - Ley 793 / Ley 6569
 
-**Consentimiento tácito:** la particularidad de Salta es que el consentimiento tácito manifestado por actos posteriores también extingue la acción, independientemente del plazo de 30 días. Si el administrado realizó actos que impliquen aceptación de la resolución después de notificada (ej. ejecutar la obligación, aceptar beneficios del acto), puede perder el derecho aunque no haya transcurrido el plazo.
+[CONFIRMADO] **Normas:** Ley 793 (Código de Procedimientos en lo Contencioso Administrativo de la Provincia de Salta), sancionada el 13/02/1908, modificada por Ley 6569 (que incorporó los Juzgados de Primera Instancia), a su vez modificada por Leyes 7822 y 7913.
 
-### Órganos jurisdiccionales
+[CONFIRMADO] **Subsidiariedad (Ley 793, art. 23):** el Código de Procedimientos en lo Civil y Comercial de Salta se aplica supletoriamente en todo lo no previsto por la Ley 793.
 
-**Primera instancia:**
-- **Juzgados de Primera Instancia en lo Contencioso Administrativo:** 2 juzgados (1ª y 2ª Nominación), con asiento en Salta Capital y jurisdicción en toda la Provincia (art. 1 Ley 6569). Expediente digital implementado desde 2022 (Acordada 13665).
-- **Competencia material (art. 2 Ley 6569):** procesos contencioso administrativos contra la Provincia, sus reparticiones descentralizadas (cualquiera sea la modalidad de organización) y Municipalidades, reclamando por la vulneración de derechos subjetivos e intereses legítimos. También en juicios de expropiación.
+**Texto vigente:** SAIJ, Boletín Oficial de Salta y portal del Poder Judicial de Salta (https://www.justiciasalta.gov.ar).
 
-**Alzada:**
-- **Corte de Justicia de Salta:** sus decisiones son definitivas en materia contencioso administrativa (art. 153 ap. III Constitución Salta; art. 3 Ley 6569). Es el tribunal de última instancia ordinaria en el fuero.
-- **Representación ante la Corte:** el Fiscal de Estado actúa como representante de la Administración Provincial ante la Corte de Justicia (art. 5 Ley 6569 in fine). Ante los Juzgados de Primera Instancia actúan los Fiscales de Primera Instancia en lo Civil, Comercial y del Trabajo del Distrito Judicial del Centro.
+### 2.3 Silencio administrativo
 
-**Acción contencioso administrativa - requisitos de procedencia (art. 26 Ley 793):**
-1. La resolución sea definitiva y no haya recurso administrativo contra ella (o se configure retardación)
-2. La resolución verse sobre asuntos en que la autoridad actuó en ejercicio de facultades reglamentadas
-3. La resolución vulnere un derecho de carácter administrativo, establecido anteriormente en favor del demandante
-4. No exista en otro fuero juicio pendiente sobre los mismos derechos
+[CONFIRMADO] **Regla:** la Ley 5348, art. 25 in fine, dispone que el silencio solo tiene efecto cuando el ordenamiento lo prevé expresamente. Sin esa previsión expresa, el silencio no equivale por disposición general a resolución positiva ni negativa; es el ordenamiento específico el que debe asignarle efecto en cada caso. En la práctica procesal salteña, esta regla opera como silencio negativo: sin resolución expresa, el interesado puede considerar denegada su petición a los efectos de habilitar los recursos o la acción judicial.
 
-**Exclusiones de la vía contencioso administrativa (art. 27 Ley 793):**
-- Cuestiones en que la autoridad actuó en ejercicio de facultades discrecionales
-- Cuestiones en que el derecho vulnerado sea de orden civil o en que la autoridad haya actuado como persona jurídica
-- Resoluciones que sean reproducción de otras no reclamadas en término por el mismo demandante
-- Asuntos en que alguna ley haya declarado expresamente la exclusión
+[CONFIRMADO] **Sin reforma análoga al Decreto 971/2024 nacional:** Salta no adoptó el régimen de silencio positivo de la Ley 27.742 nacional. Ese régimen aplica exclusivamente ante la Administración nacional.
 
-**Pago previo en materia tributaria (art. 28 Ley 793):** cuando la resolución ordene el pago de una suma de dinero proveniente de liquidación de cuentas o impuestos, el demandante no puede promover la acción sin abonar previamente esa suma.
-
-### Medidas cautelares (arts. 20-21 Ley 793)
-
-- **Suspensión de la ejecución:** el Tribunal puede acordar la suspensión de la ejecución de las resoluciones administrativas impugnadas cuando su cumplimiento pudiere producir perjuicios irreparables. El peticionante debe dar fianza bastante (art. 20 Ley 793).
-- **Levantamiento por interés público:** cuando la autoridad administrativa demandada manifieste que la suspensión produce perjuicios al servicio público o que es urgente cumplir la resolución, el tribunal deja sin efecto la suspensión pero declara a cargo de la autoridad demandada (o personalmente de quienes la desempeñen) la responsabilidad por los perjuicios que la ejecución produzca (art. 21 Ley 793).
-- **No aplica Ley 26.854 nacional.**
-- **Otras cautelares:** verificar aplicación del CPCC Salta supletoriamente (art. 23 Ley 793).
+[CONFIRMADO] **Retardación como causal de acción judicial (Ley 793, art. 6):** cuando han transcurrido tres meses desde que el asunto está en estado de resolver sin que se dicte resolución definitiva, el interesado debe solicitar por escrito la resolución (pronto despacho). Si transcurren otros tres meses sin resolución, queda habilitada la acción contencioso administrativa por retardación.
 
 ```
-[VERIFICAR RÉGIMEN CAUTELAR SALTA: Ley 793 arts. 20-21 - suspensión requiere fianza - levantamiento por interés público con responsabilidad de los funcionarios que la ejecuten - CPCC Salta supletorio]
+[RETARDACIÓN SALTA: Ley 793, art. 6 - tres meses en estado de resolver + solicitud escrita de pronto despacho + tres meses adicionales sin resolución = acción habilitada por retardación]
 ```
 
-### Caducidad de la instancia (arts. 18-19 Ley 793)
+### 2.4 Elementos esenciales del acto administrativo (Ley 5348, arts. 25 a 80)
 
-- Se tiene por desistido todo juicio contencioso administrativo abandonado por el demandante durante **6 meses** (por omisión de actos que le correspondan o por no urgir para que el demandado los produzca) - art. 18 Ley 793.
-- Contra el auto de caducidad puede pedirse reposición dentro de los 5 días, fundada exclusivamente en error sobre el cómputo del término.
+[CONFIRMADO] Elementos:
 
-### Amparo Salta
+1. Competencia: irrenunciable e improrrogable (Ley 5348, art. 2).
+2. Objeto (causa): no debe estar prohibido por el orden normativo, ni ser impreciso, absurdo o imposible de hecho (Ley 5348, arts. 27-28).
+3. Voluntad: libre de vicios (dolo, error, violencia, simulación).
+4. Forma: escrita (salvo urgencia), con lugar, fecha, indicación del órgano y firma de la autoridad; motivación en los casos del art. 42.
 
-- **Norma:** art. 87 Constitución Salta (2003) + Ley 7319 (Régimen de Amparo de Salta) y modificatorias
-- **Plazo:** verificar plazo de caducidad en la Ley 7319 desde que el afectado conoció o pudo conocer el acto lesivo
-- **Competencia:** verificar si en materia administrativa el amparo tramita ante los Juzgados CA o ante otro fuero. La Constitución salteña tiene disposiciones específicas sobre el amparo.
-- **Subsidiariedad:** procede cuando no existe otro remedio judicial más idóneo. El proceso contencioso administrativo de la Ley 793 y la Ley 6569 es en muchos casos la vía idónea.
+[CONFIRMADO] **Motivación (Ley 5348, art. 42):** el acto debe motivarse cuando: (a) decide sobre derechos subjetivos, concursos, licitaciones y contrataciones directas; (b) resuelve recursos; (c) se aparta del criterio anterior o del dictamen del órgano consultivo; (d) lo disponen otras normas.
+
+[A VERIFICAR] **Acto, hecho administrativo y vía de hecho:** la Ley 5348 regula el acto administrativo (arts. 25 a 80). El hecho administrativo (conducta material sin forma jurídica) y la vía de hecho (conducta material sin respaldo normativo o en contradicción con un acto previo) tienen regímenes de impugnación propios que el texto de la Ley 5348 no sistematiza de la misma manera. Antes de encuadrar la pretensión, verificar la jurisprudencia de la Corte de Justicia de Salta sobre impugnación de hechos administrativos y vías de hecho.
+
+[A VERIFICAR] **Vicios del acto:** la Ley 5348 regula nulidades absolutas y relativas. Verificar el articulado específico en el Boletín Oficial de Salta antes de encuadrar el vicio; la numeración original puede haber variado.
+
+### 2.5 Recursos administrativos (Ley 5348, arts. 177 a 188)
+
+[CONFIRMADO] **Regla de suspensión (ver también la sección 2.9 para el mapa completo):** la interposición de recursos administrativos NO suspende la ejecución del acto impugnado (Ley 5348, art. 81). Esta regla es opuesta al régimen federal, en el que la interposición sí suspende. Si el cliente necesita la suspensión mientras tramita el recurso, debe pedirla expresamente invocando alguno de los siguientes supuestos del art. 81:
+
+- Ejecución que cause daño de difícil o imposible reparación, proporcionalmente mayor al perjuicio que la suspensión causaría al ente.
+- Vicio grave en el acto, alegado fundadamente.
+- Razones de interés público.
+
+[CONFIRMADO] **Recurso de revocatoria (Ley 5348, art. 177):**
+- Plazo: 10 días hábiles administrativos desde la notificación del acto.
+- Ante: el mismo órgano emisor.
+- No agota la vía por sí solo.
+
+[CONFIRMADO en cuanto a la mecánica; PENDIENTE en cuanto al plazo] **Recurso jerárquico (Ley 5348, arts. 179-183):**
+- Procede contra declaraciones definitivas o que impongan trabas al ejercicio de derechos o intereses legítimos.
+- Plazo: [PENDIENTE] verificar el plazo específico en los arts. 179-180 de la Ley 5348, en el Boletín Oficial de Salta. Este perfil no dispone de un dato cerrado sobre ese plazo.
+- Puede interponerse subsidiariamente con la revocatoria o de forma independiente.
+- Ante: el órgano inmediatamente superior al emisor (Ley 5348, art. 180). Si el recurrente no queda satisfecho, puede reproducirlo ante el superior del órgano que resolvió, recorriendo la línea jerárquica hasta el Gobernador (Ley 5348, art. 182).
+- Agota la vía: sí, cuando es resuelto por el Gobernador o la autoridad superior del organismo.
+
+⚠ **Advertencia operativa:** la cadena recursiva revocatoria → jerárquico está mecánicamente confirmada, pero el plazo del jerárquico está [PENDIENTE]. No debe operarse la cadena sin verificar ese plazo primero.
+
+[A VERIFICAR] **Recurso de alzada (Ley 5348, arts. 184-185):**
+- Procede contra decisiones definitivas de la autoridad superior de entes descentralizados.
+- Ante: el Poder Ejecutivo directamente (Ley 5348, art. 185), sin necesidad de agotar el jerárquico interno del ente.
+- Plazo: [PENDIENTE] verificar el plazo específico en los arts. 184-185 de la Ley 5348.
+
+[CONFIRMADO] **Sin reforma análoga al Decreto 695/2024 nacional:** Salta no duplicó los plazos de recursos administrativos. El plazo de la revocatoria es de 10 días hábiles administrativos. No deben aplicarse los plazos federales reformados al régimen provincial.
+
+[A VERIFICAR] **Reclamo administrativo previo (Ley 5018):** Salta tiene un régimen específico de reclamo previo a la acción judicial (Ley 5018). Cuando aplica al caso concreto, es condición de admisibilidad conjunta con el agotamiento de la Ley 793; no es una alternativa. Verificar en cada caso si la pretensión encuadra en el ámbito de la Ley 5018.
 
 ```
-[VERIFICAR AMPARO SALTA: Ley 7319 - plazo de caducidad - competencia (Juzgados CA o fuero civil según la materia) - consultar jurisprudencia de la Corte de Justicia de Salta]
+[ALERTA PLAZO FATAL: recurso de revocatoria - Ley 5348, art. 177 - 10 días hábiles administrativos desde la notificación - vencimiento: calcular]
+[PENDIENTE: plazo del recurso jerárquico - Ley 5348, arts. 179-183 - verificar en el Boletín Oficial de Salta antes de computar - no operar sin este dato]
+[PENDIENTE: plazo del recurso de alzada - Ley 5348, arts. 184-185 - verificar en el Boletín Oficial de Salta antes de computar]
+[VERIFICAR: Ley 5018 (reclamo administrativo previo Salta) - determinar si aplica al caso concreto antes de iniciar la acción judicial]
 ```
+
+### 2.6 Tabla unificada de plazos
+
+| Plazo | Días | Tipo de días | Norma | Estado |
+|-------|------|--------------|-------|--------|
+| Recurso de revocatoria | 10 | Hábiles administrativos | Ley 5348, art. 177 | [CONFIRMADO] |
+| Recurso jerárquico | [PENDIENTE] | Hábiles administrativos | Ley 5348, arts. 179-183 | [PENDIENTE] |
+| Recurso de alzada (entes descentralizados) | [PENDIENTE] | Hábiles administrativos | Ley 5348, arts. 184-185 | [PENDIENTE] |
+| Retardación: estado de resolver sin resolución | 90 (tres meses) | [A VERIFICAR: corridos o hábiles] | Ley 793, art. 6 | [A VERIFICAR] |
+| Retardación: desde pronto despacho sin resolución | 90 (tres meses) | [A VERIFICAR: corridos o hábiles] | Ley 793, art. 6 | [A VERIFICAR] |
+| Caducidad para accionar judicialmente | 30 | Hábiles judiciales | Ley 793, arts. 12 y 16 | [CONFIRMADO] |
+| Amparo | [PENDIENTE] | [PENDIENTE] | Ley 7319 | [PENDIENTE: verificar Ley 7319] |
+| Caducidad de la instancia | 180 (seis meses) | [A VERIFICAR: corridos o hábiles] | Ley 793, art. 18 | [A VERIFICAR] |
+| Reposición contra auto de caducidad de instancia | 5 | [A VERIFICAR] | Ley 793, art. 19 | [A VERIFICAR] |
+
+> Los plazos de sede administrativa son días hábiles del Poder Ejecutivo provincial, no días hábiles judiciales. El plazo del art. 12 de la Ley 793 es de días hábiles judiciales (Ley 793, art. 16).
+
+### 2.7 Cómputo de plazos - reglas generales
+
+[CONFIRMADO] **Dies a quo:** el plazo comienza a correr el día hábil siguiente al de la notificación efectiva.
+
+[CONFIRMADO] **Días hábiles administrativos y judiciales:** son calendarios distintos. En sede administrativa: días hábiles del Poder Ejecutivo provincial. En sede judicial: días hábiles del Poder Judicial de Salta. Deben verificarse por separado antes de computar cualquier plazo; no corresponde asumir su equivalencia.
+
+[CONFIRMADO] **Art. 16 Ley 793:** "solo se computarán en ellos los días hábiles". El plazo del art. 12 es de días hábiles judiciales; no de días corridos ni de días hábiles administrativos.
+
+**Herramientas:** usar la calculadora de plazos del Colegio de Abogados de Salta o del Poder Judicial de Salta, con el calendario de feriados y días inhábiles del año en curso. El cómputo manual es fuente frecuente de error. Documentar el cálculo con tabla de fechas y adjuntar la constancia de notificación al escrito inicial.
+
+### 2.8 Ejemplos de cómputo de plazos (art. 12, Ley 793)
+
+#### Ejemplo 1 - Notificación por cédula
+
+**Hecho base:** cédula entregada con firma del receptor el lunes 2 de noviembre de 2025.
+
+**Dies a quo:** día hábil siguiente: martes 3/11/2025.
+
+**Cómputo:** 30 días hábiles judiciales desde el 3/11/2025, excluyendo sábados, domingos y feriados judiciales.
+
+**Feriados del período (ejemplo):** un feriado nacional el jueves 20/11/2025.
+
+**Resultado ilustrativo:** con ese único feriado, los 30 días hábiles vencen el miércoles 16/12/2025. Verificar el calendario judicial vigente del Poder Judicial de Salta para el período concreto.
+
+**Documentación recomendada:** adjuntar tabla con las 30 fechas hábiles marcadas y la constancia de notificación con fecha certificada al escrito inicial.
+
+**Regla de "primeras horas":** [A VERIFICAR] confirmar si el fuero contencioso administrativo de Salta aplica la prórroga a las primeras horas del día hábil siguiente; verificar en la práctica actual del Juzgado actuante.
+
+#### Ejemplo 2 - Notificación por edicto
+
+**Hecho base:** resolución publicada en el Boletín Oficial de Salta el viernes 6/03/2026.
+
+**Dies a quo:** [A VERIFICAR] si la norma procesal establece que la notificación por edicto se tiene por efectuada al día siguiente de la publicación, el dies a quo es el día hábil siguiente: lunes 9/03/2026 (el sábado 7 y el domingo 8 son inhábiles). Verificar si la Ley 793 o la práctica del fuero fijan una regla distinta para edictos.
+
+**Cómputo:** 30 días hábiles judiciales desde el 9/03/2026, excluyendo sábados, domingos y feriados judiciales.
+
+**Feriados del período (ejemplo):** un feriado provincial el martes 17/03/2026.
+
+**Resultado ilustrativo:** con ese único feriado, los 30 días hábiles vencen el jueves 14/04/2026.
+
+**Prueba del dies a quo:** solicitar certificación del Boletín Oficial de Salta (impresión, sello o constancia electrónica) para acreditar la fecha exacta de publicación.
+
+#### Guía rápida de verificación antes de calcular cualquier plazo
+
+1. Confirmar la modalidad de notificación (cédula con firma, depósito, edicto, notificación electrónica) y extraer la fecha exacta certificada.
+2. Determinar si el plazo corre en días hábiles judiciales o administrativos. Para el art. 12, Ley 793: días hábiles judiciales.
+3. Consultar el calendario judicial vigente del Poder Judicial de Salta para el período concreto.
+4. Usar una herramienta de cálculo con el listado de feriados del año en curso; no confiar en el cómputo mental.
+5. Documentar el cómputo con tabla de fechas y adjuntar la constancia de notificación al escrito inicial.
+
+### 2.9 Mapa: no suspensión (Ley 5348, art. 81) versus cautelar judicial (Ley 793, arts. 20-21)
+
+Estas dos reglas operan en planos distintos y no se contradicen.
+
+**Plano 1 - Sede administrativa (Ley 5348, art. 81):** [CONFIRMADO]
+
+- La interposición de recursos NO suspende la ejecución del acto impugnado.
+- Para obtener la suspensión: pedirla expresamente ante el mismo órgano administrativo, acreditando uno de los supuestos del art. 81 (daño de difícil reparación, vicio grave o razones de interés público).
+- Esta regla opera antes o durante el trámite del recurso administrativo, con independencia de si se inicia o no la acción judicial.
+- La denegación de la suspensión no es recurrible por vía ordinaria.
+
+**Plano 2 - Sede judicial (Ley 793, arts. 20-21):** [CONFIRMADO]
+
+- Una vez iniciada la acción contencioso administrativa, el Tribunal puede acordar la suspensión de la ejecución si el cumplimiento del acto pudiere producir perjuicios irreparables.
+- Requiere fianza bastante del peticionante (Ley 793, art. 20).
+- La autoridad demandada puede pedir el levantamiento invocando perjuicios al servicio público o urgencia en el cumplimiento. El tribunal puede levantar la suspensión, pero en ese caso declara a cargo de la autoridad demandada (o personalmente de quienes la desempeñen) la responsabilidad por los perjuicios que la ejecución produzca (Ley 793, art. 21).
+- No aplica la Ley 26.854 nacional, que rige exclusivamente contra el Estado nacional.
+- Otras cautelares pueden fundarse en el CPCC Salta supletoriamente (Ley 793, art. 23).
+
+**Flujo de decisión:**
+```
+¿El cliente necesita suspender el acto?
+│
+├─ ANTES o DURANTE la vía administrativa:
+│   → Pedir suspensión en sede administrativa (Ley 5348, art. 81)
+│   → Acreditar daño de difícil reparación, vicio grave o interés público
+│   → La denegación no es recurrible por vía ordinaria
+│
+└─ UNA VEZ iniciada la acción judicial:
+    → Pedir suspensión cautelar (Ley 793, art. 20)
+    → Ofrecer fianza bastante
+    → Prever posible levantamiento por interés público (Ley 793, art. 21)
+    → O fundar en CPCC Salta supletoriamente (Ley 793, art. 23)
+```
+
+### 2.10 Agotamiento de la vía administrativa
+
+[CONFIRMADO] **Regla general:** la acción contencioso administrativa requiere resolución definitiva sin recurso administrativo pendiente (Ley 793, art. 26, inc. 1).
+
+[CONFIRMADO] **Cadena recursiva ordinaria:** revocatoria ante el órgano emisor (Ley 5348, art. 177) → jerárquico recorriendo la línea jerárquica hasta el Gobernador (Ley 5348, arts. 179-183). Para entes descentralizados: alzada ante el Poder Ejecutivo (Ley 5348, arts. 184-185), sin necesidad de agotar el jerárquico interno del ente.
+
+⚠ **Advertencia operativa:** la cadena está confirmada en su mecánica, pero los plazos del jerárquico y la alzada están [PENDIENTE]. No debe operarse la cadena recursiva completa sin verificar esos plazos primero.
+
+[A VERIFICAR] **Interacción Ley 5018 / Ley 793:** la Ley 5018 puede requerir un reclamo administrativo previo específico en ciertas materias antes de habilitar la vía judicial. Cuando aplica, es condición de admisibilidad conjunta con el agotamiento de la Ley 793; no es alternativa ni supletoria.
+
+**Excepciones al agotamiento:**
+
+| Excepción | Fundamento | Requisito para invocarla | Estado |
+|-----------|-----------|--------------------------|--------|
+| Retardación | Ley 793, art. 6 | Acreditar tres meses en estado de resolver, con solicitud de pronto despacho documentada, y tres meses adicionales sin resolución | [CONFIRMADO] |
+| Acto nulo de nulidad absoluta | Jurisprudencia de la Corte de Justicia de Salta | Acreditar el vicio que configure nulidad absoluta; no opera automáticamente | [PENDIENTE: insertar fallo verificado] |
+| Inutilidad del agotamiento | Jurisprudencia de la Corte de Justicia de Salta | Acreditar que el agotamiento resulta manifiestamente inútil | [PENDIENTE: insertar fallo verificado] |
+| Otras excepciones locales | Jurisprudencia de la Corte | Aportar fallo | [PENDIENTE] |
+
+Ninguna excepción opera automáticamente. Su aplicación requiere el fallo que la sostenga y la acreditación de los requisitos que ese fallo exige.
+
+```
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta - excepción al agotamiento por nulidad absoluta - requisitos]
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta - excepción por inutilidad del agotamiento - requisitos]
+```
+
+### 2.11 Requisitos de procedencia de la demanda (Ley 793, art. 26)
+
+[CONFIRMADO] Requisitos:
+
+1. La resolución sea definitiva y no haya recurso administrativo contra ella (o se configure retardación).
+2. La resolución verse sobre asuntos en que la autoridad actuó en ejercicio de facultades reglamentadas.
+3. La resolución vulnere un derecho de carácter administrativo establecido anteriormente en favor del demandante.
+4. No exista en otro fuero juicio pendiente sobre los mismos derechos.
+
+[CONFIRMADO] **Exclusiones (Ley 793, art. 27):**
+
+- Facultades discrecionales.
+- Derecho vulnerado de orden civil, o autoridad actuando como persona jurídica privada.
+- Resoluciones que sean reproducción de otras no reclamadas en término por el mismo demandante.
+- Asuntos excluidos expresamente por ley especial.
+
+[CONFIRMADO] **Pago previo en materia tributaria (Ley 793, art. 28):** cuando la resolución ordena pagar una suma proveniente de liquidación de cuentas o impuestos, el demandante no puede promover la acción sin abonar previamente esa suma. [A VERIFICAR] verificar si la Corte de Justicia de Salta admite excepciones a esta regla.
+
+### 2.12 Caducidad de la instancia (Ley 793, arts. 18-19)
+
+[CONFIRMADO] Se tiene por desistido todo juicio contencioso administrativo abandonado por el demandante durante seis meses. [A VERIFICAR] confirmar si el cómputo es en días corridos o en días hábiles judiciales. Contra el auto de caducidad puede pedirse reposición dentro de los cinco días, fundada exclusivamente en error de cómputo del término.
+
+### 2.13 Amparo Salta
+
+[CONFIRMADO] **Norma:** Constitución de Salta (2003), art. 87, y Ley 7319 (Régimen de Amparo de Salta) y modificatorias.
+
+[PENDIENTE] **Plazo:** verificar el plazo de caducidad establecido en la Ley 7319 desde que el afectado conoció o pudo conocer el acto lesivo. No corresponde asumir equivalencia con el plazo federal (15 días, Ley 16.986, art. 2) ni con el de CABA (90 días, Ley 2145, art. 6).
+
+[PENDIENTE] **Competencia:** [A VERIFICAR en jurisprudencia de la Corte de Justicia de Salta] si en materia administrativa el amparo tramita ante los Juzgados de Primera Instancia CA o ante juzgados civiles. Este perfil no dispone de un criterio cerrado de distribución; verificar antes de radicar.
+
+[CONFIRMADO] **Subsidiariedad:** procede cuando no existe otro remedio judicial más idóneo. En materia administrativa, el proceso contencioso de la Ley 793 y la Ley 6569 suele ser la vía idónea; verificar caso por caso.
+
+```
+[ALERTA PLAZO FATAL - AMPARO SALTA: Ley 7319 - plazo PENDIENTE - verificar en la Ley 7319 antes de operar - no asumir equivalencia con regímenes de otras jurisdicciones]
+[VERIFICAR COMPETENCIA AMPARO SALTA: Juzgados CA o fuero civil según la materia - consultar jurisprudencia de la Corte de Justicia de Salta]
+```
+
+### 2.14 Consentimiento tácito (Ley 793, art. 12, in fine)
+
+[CONFIRMADO] **Regla legal:** el consentimiento tácito o expreso de la resolución administrativa, manifestado por actos posteriores a la notificación, quita el derecho a deducir la acción (Ley 793, art. 12, in fine). Es una causal de extinción autónoma, independiente del vencimiento del plazo de 30 días.
+
+[PENDIENTE] **Configuración concreta:** qué actos constituyen consentimiento tácito en la jurisprudencia de la Corte de Justicia de Salta es una cuestión que este perfil no puede cerrar. Los indicadores que siguen son orientativos; no sustituyen el fallo verificado.
+
+**Indicadores orientativos que pueden configurar consentimiento tácito:**
+
+- Cumplimiento voluntario de la obligación impuesta (pagar la multa, demoler la construcción ordenada).
+- Aceptación o percepción de beneficios del acto (cobrar la suma reconocida, usar la habilitación otorgada condicionalmente).
+- Presentación de documentación o realización de trámites que presuponen la validez del acto sin cuestionarlo.
+
+**Indicadores orientativos que generalmente no configuran consentimiento tácito:**
+
+- Cumplimiento compulsivo o bajo apercibimiento de ejecución forzada.
+- Actos de mero trámite para evitar consecuencias más gravosas mientras se sustancia la impugnación.
+- Solicitud de prórroga de plazo para cumplir, documentada como tal.
+
+**Prueba:** aportar el expediente administrativo completo y las constancias de actos posteriores del administrado. No corresponde emitir opinión sobre consentimiento tácito sin ese material.
+
+```
+[VERIFICAR CONSENTIMIENTO TÁCITO: Ley 793, art. 12, in fine - aportar expediente administrativo completo y constancias de actos posteriores del administrado antes de opinar]
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta - criterios para la configuración del consentimiento tácito - actos que lo constituyen y actos que no lo configuran]
+```
+
+### 2.15 Responsabilidad del Estado provincial
+
+[CONFIRMADO] **Sin ley propia:** Salta no sancionó una ley de responsabilidad del Estado equivalente a la Ley 26.944 nacional. La inaplicabilidad de la Ley 26.944 al Estado provincial surge de su propio art. 1, que limita su ámbito al Estado nacional, y de la competencia provincial sobre derecho administrativo local.
+
+[CONFIRMADO] **Inaplicabilidad del CCCN como regla general:** la responsabilidad extracontractual del Estado provincial se rige por el derecho público local, no por el CCCN. No invocar los arts. 1757, 1741 ni otros del CCCN sin verificar previamente si la Corte de Justicia de Salta admite alguna aplicación.
+
+[PENDIENTE] **Régimen sustantivo:** principios generales del derecho administrativo y jurisprudencia de la Corte de Justicia de Salta. En el régimen federal, los elementos son: daño cierto, imputabilidad, nexo causal y falta de servicio. El régimen salteño puede coincidir o diferir; verificar qué elementos exige la Corte.
+
+[PENDIENTE] **Prescripción:** verificar el criterio de la Corte de Justicia de Salta. No asumir el plazo de tres años del art. 7 de la Ley 26.944 sin confirmación jurisprudencial local.
+
+[PENDIENTE] **Lucro cesante en actividad lícita:** verificar si la Corte lo admite o lo excluye, tal como lo hace la Ley 26.944 en su art. 5.
+
+[A VERIFICAR] **Competencia:** los Juzgados de Primera Instancia CA entienden en pretensiones resarcitorias contra la Provincia (Ley 6569, art. 2). Verificar si la pretensión resarcitoria debe plantearse conjunta o autónomamente con la pretensión anulatoria.
+
+[A VERIFICAR] **Reclamo administrativo previo:** verificar si la Ley 5018 exige reclamo previo para la pretensión resarcitoria.
+
+```
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta - requisitos de la responsabilidad extracontractual del Estado provincial]
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta - régimen de prescripción de la acción resarcitoria contra el Estado provincial]
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta - admisibilidad del lucro cesante en responsabilidad por actividad lícita del Estado provincial]
+```
+
+### 2.16 Empleo público Salta
+
+[A VERIFICAR] **Estatuto general:** Ley 5546 (Estatuto del Empleado Público de la Provincia de Salta). El texto disponible más reciente en este perfil es el compilado en el Digesto (Ley 7913, con corte al 31/07/2015). Para verificar el estado normativo actual: Boletín Oficial de Salta.
+
+[A VERIFICAR] **Escalafón:** Decreto Ley 1178/96. Verificar si fue modificado o reemplazado.
+
+[CONFIRMADO] **Régimen disciplinario:** Ley 5546 y Decreto 2734/2007 (Reglamento General de Investigaciones Administrativas de la Provincia de Salta). Sumario administrativo con garantías de debido proceso.
+
+[CONFIRMADO] **Opción del agente (Ley 5546, art. 50):** si el pronunciamiento judicial resulta contrario a la medida segregativa, el Estado debe reincorporar al empleado en cargo de idénticas condiciones o, a opción del agente, pagar la indemnización que establezca la reglamentación. La opción es del agente, no de la Administración.
+
+**Estatutos sectoriales:**
+- Docentes: Ley 6830 [A VERIFICAR modificaciones posteriores a 2015].
+- Policía: [PENDIENTE] verificar la Ley Orgánica vigente.
+- Personal de salud: [PENDIENTE] verificar la norma sectorial vigente.
+- Personal municipal: [PENDIENTE] verificar el estatuto del municipio concreto.
+
+```
+[VERIFICAR ESTATUTO APLICABLE SALTA: Ley 5546 general (verificar estado actual en Boletín Oficial de Salta) o estatuto sectorial según el organismo - docentes: Ley 6830 - régimen disciplinario: Decreto 2734/2007]
+```
+
+### 2.17 Contratación pública Salta
+
+[CONFIRMADO en cuanto a la norma base; PENDIENTE en cuanto a montos] **Norma general:** Ley 8072 (Sistema de Contrataciones de la Provincia de Salta) y Decreto Reglamentario 1319/18 y modificatorias. Los umbrales para licitación pública, privada y contratación directa se actualizan por decreto o resolución; verificar en el Boletín Oficial de Salta antes de encuadrar el procedimiento.
+
+[PENDIENTE] **Organismo rector:** verificar la denominación actual y la normativa complementaria vigente.
+
+[PENDIENTE] **Plataforma de compras:** verificar el sistema electrónico de contrataciones vigente en Salta.
+
+[PENDIENTE] **Obra pública provincial:** verificar la ley provincial vigente. La Ley 13.064 nacional no aplica supletoriamente salvo remisión contractual expresa.
+
+[PENDIENTE] **Redeterminación de precios:** verificar si la Ley 8072 o los pliegos del contrato concreto prevén redeterminación de precios y bajo qué régimen. No asumir equivalencia con el Decreto 691/16 nacional.
+
+```
+[VERIFICAR VIGENCIA: Ley 8072 Salta + Decreto 1319/18 - montos actualizados por resolución - consultar Boletín Oficial de Salta antes de encuadrar el procedimiento]
+```
+
+### 2.18 Tabla de responsables procesales por instancia
+
+[CONFIRMADO]
+
+| Instancia | Representante de la Administración | Normativa |
+|-----------|-----------------------------------|-----------|
+| Juzgados de Primera Instancia CA (1.ª y 2.ª Nominación) | Fiscales de Primera Instancia en lo Civil, Comercial y del Trabajo del Distrito Judicial del Centro | Ley 6569, art. 5 |
+| Corte de Justicia de Salta (alzada) | Fiscal de Estado | Ley 6569, art. 5, in fine |
+| Administración como actora (impugna actos de otra autoridad) | Fiscal General | Ley 793, art. 7 |
+| Notificaciones al Fiscal General | En su despacho | Ley 793, art. 10 |
+| Cargo de Fiscal General vacante | Agente Fiscal o abogado que designe el Poder Ejecutivo | Ley 793, art. 10 |
+
+### 2.19 Organismos de control
+
+[CONFIRMADO] **Tribunal de Cuentas de Salta:** control externo del Estado provincial; tiene función jurisdiccional. Sus resoluciones definitivas son impugnables ante el fuero contencioso administrativo.
+
+[A VERIFICAR] **Tribunal de Cuentas de la Municipalidad de Salta:** competencia sobre la hacienda municipal. Verificar si sus resoluciones se revisan ante el fuero CA provincial o ante fuero municipal propio.
+
+[CONFIRMADO] **IPSAS:** ente autárquico de obra social provincial. Sus resoluciones son impugnables ante el fuero contencioso administrativo.
+
+[A VERIFICAR] **Defensor del Pueblo de Salta:** previsto en la Constitución de Salta. Legitimación para actuar en defensa de derechos colectivos. Verificar la ley orgánica vigente.
 
 ---
 
-## Normativa de referencia Salta
+## Bloque 3 - Alertas críticas
 
-### Responsabilidad del Estado provincial
+### Alerta 1 - Plazo de caducidad para accionar judicialmente
 
-- **Sin ley propia equivalente a Ley 26.944 nacional:** Salta no sancionó una ley de responsabilidad del Estado equivalente a la Ley 26.944. Ésta no aplica a demandas contra el Estado provincial salteño.
-- **Competencia de los Juzgados CA:** los Juzgados de Primera Instancia CA entienden en procesos contra la Provincia y sus reparticiones por vulneración de derechos subjetivos e intereses legítimos (art. 2 Ley 6569). La pretensión resarcitoria puede plantearse en el proceso contencioso administrativo.
-- **Régimen sustantivo:** principios generales del derecho administrativo y jurisprudencia de la Corte de Justicia de Salta.
-- **Reclamo administrativo previo:** verificar si la Ley 5018 establece requisito de reclamo previo para la pretensión resarcitoria.
-- **No aplicar CCCN:** no invocar arts. 1757, 1741 ni otros del CCCN en demandas contra el Estado provincial sin verificar criterio de la Corte de Justicia de Salta.
-- **Prescripción de la acción:** verificar criterio de la Corte de Justicia de Salta.
+**Este es el primer dato a verificar en toda consulta que involucre una acción judicial contra el Estado provincial o municipal de Salta.**
 
-```
-[VERIFICAR RÉGIMEN DE RESPONSABILIDAD SALTA: sin ley propia - principios generales + jurisprudencia Corte de Justicia de Salta - verificar Ley 5018 (reclamo previo) - no aplicar Ley 26.944 ni CCCN sin verificar]
-```
+[CONFIRMADO] **Plazo:** 30 días hábiles judiciales desde la notificación personal, por cédula o por edicto de la resolución administrativa que motiva la demanda (Ley 793, art. 12; cómputo en días hábiles: Ley 793, art. 16).
 
-### Empleo público Salta
+[CONFIRMADO] **Naturaleza:** caducidad. No se suspende ni interrumpe salvo norma expresa.
 
-- **Estatuto general:** Ley 5546 (Estatuto del Empleado Público de la Provincia de Salta, 1980) y modificatorias. Texto ordenado por Ley 7913 (Digesto Jurídico, actualizado hasta 31/07/2015). Regula el personal permanente y no permanente del PE provincial y organismos autárquicos que así lo dispongan.
-- **Escalafón:** Decreto Ley 1178/96 (Régimen Escalafonario del Personal de la Administración General).
-- **Régimen disciplinario:** Ley 5546 + Decreto 2734/2007 (Reglamento General de Investigaciones Administrativas de la Provincia de Salta). Sumario administrativo con garantías de debido proceso.
-- **Opción empleo público en la vía contencioso administrativa (art. 50 Ley 5546):** cuando en caso de medidas segregativas el agente va a la vía contencioso administrativa y el pronunciamiento judicial resulta contrario a la medida disciplinaria, el Estado debe reincorporar al empleado en cargo de idénticas condiciones o, a opción del agente, pagar la indemnización que establezca la reglamentación.
-- **Estatutos sectoriales principales:**
-  - Docentes: Ley 6830 (Estatuto del Educador de la Provincia de Salta) y modificatorias
-  - Policía: verificar Ley Orgánica de la Policía de Salta vigente
-  - Personal de salud: verificar norma sectorial vigente
-  - Personal municipal: verificar si el municipio tiene estatuto propio o remite a la Ley 5546 supletoriamente
-  - [COMPLETAR: otros estatutos sectoriales según las áreas de práctica habituales]
+[CONFIRMADO] **Declarable de oficio:** sí (Ley 793, art. 27, inc. 1).
+
+[CONFIRMADO] **Consentimiento tácito (Ley 793, art. 12, in fine):** causal autónoma de extinción de la acción, independiente del plazo. Ver sección 2.14.
 
 ```
-[VERIFICAR ESTATUTO APLICABLE SALTA: Ley 5546 general (TO Ley 7913) o estatuto sectorial según el organismo - docentes: Ley 6830 / régimen disciplinario: Decreto 2734/2007]
+[ALERTA PLAZO FATAL: Ley 793, art. 12, CCA Salta - 30 días hábiles judiciales desde notificación personal/cédula/edicto de la resolución administrativa - verificar también consentimiento tácito posterior (art. 12, in fine) - vencimiento: calcular con guía rápida de la sección 2.8]
 ```
 
-### Contratación pública Salta
+**Comparación con otros regímenes (solo a título informativo; no transpolar):**
 
-- **Norma general:** Ley 8072 (Sistema de Contrataciones de la Provincia de Salta) + Decreto Reglamentario 1319/18 y modificatorias
-- **Organismo rector:** verificar denominación actual del organismo rector de contrataciones en Salta (Dirección General de Contrataciones o equivalente)
-- **Plataforma de compras:** verificar sistema electrónico de contrataciones vigente en Salta
-- **Obra pública provincial:** verificar ley de obras públicas provincial vigente. La Ley 13.064 (obra pública nacional) no aplica supletoriamente salvo remisión contractual expresa.
-- **Impugnación de licitaciones:** los plazos para impugnar pliegos y preadjudicación están fijados en la Ley 8072 y en cada pliego.
+| Régimen | Plazo | Norma |
+|---------|-------|-------|
+| Salta | **30 días hábiles judiciales** | Ley 793, art. 12 |
+| CABA (CCAyT) | 90 días hábiles judiciales | Ley 189 CABA, art. 7 |
+| PBA | 90 días hábiles judiciales | Ley 12.008 PBA |
+| Federal (actos post-9-jul-2024) | 180 días hábiles judiciales | LNPA, art. 25 (modificado por Ley 27.742) |
+| Federal (actos pre-9-jul-2024) | 90 días hábiles judiciales | LNPA, art. 25 (texto anterior) |
 
-```
-[VERIFICAR VIGENCIA: Ley 8072 Salta (contrataciones) + Decreto 1319/18 - los montos de licitación pública/privada/contratación directa se actualizan - verificar antes de encuadrar el procedimiento]
-```
+### Alerta 2 - Suspensión de la ejecución en sede administrativa
 
-### Organismos de control Salta
+[CONFIRMADO] La interposición de recursos administrativos (revocatoria, jerárquico, alzada) NO suspende la ejecución del acto impugnado (Ley 5348, art. 81). Esta regla es opuesta al régimen federal. Para el mapa completo de cuándo y cómo pedir la suspensión en sede administrativa y en sede judicial, ver la sección 2.9.
 
-**Tribunal de Cuentas de Salta:**
-- Control externo del Estado provincial. Tiene función jurisdiccional. Sus resoluciones definitivas son impugnables ante el fuero contencioso administrativo.
-- El Tribunal de Cuentas de la Municipalidad de Salta tiene competencia sobre la hacienda municipal.
+### Alerta 3 - Consentimiento tácito
 
-**Fiscal General de Salta:**
-- Interviene en los juicios contencioso administrativos como demandante representando a la Administración General de la Provincia cuando impugna resoluciones de otra autoridad administrativa que afecte el patrimonio o los derechos de la Provincia (art. 7 Ley 793) o como defensor cuando el demandado es el Poder Ejecutivo.
-- Ante los Juzgados de Primera Instancia CA: Fiscales de Primera Instancia en lo Civil, Comercial y del Trabajo del Distrito Judicial del Centro (art. 5 Ley 6569).
-- Las notificaciones al Fiscal General se hacen en su despacho (art. 10 Ley 793).
+[CONFIRMADO como regla legal; PENDIENTE en cuanto a su configuración concreta] Causal autónoma de extinción de la acción, independiente del plazo de 30 días (Ley 793, art. 12, in fine). Verificar siempre antes de analizar el fondo. Ver sección 2.14 para indicadores y prueba.
 
-**IPSAS (Instituto Provincial de Salud de Salta):**
-- Ente autárquico de obra social provincial. Sus resoluciones son impugnables ante el fuero contencioso administrativo.
+### Alerta 4 - Plazos de jerárquico y alzada sin cerrar
 
-**Defensor del Pueblo de Salta:**
-- Constitución Salta. Legitimación para actuar en defensa de derechos colectivos.
+[PENDIENTE] Los plazos del recurso jerárquico (Ley 5348, arts. 179-183) y del recurso de alzada (Ley 5348, arts. 184-185) no están confirmados en este perfil. No debe operarse la cadena recursiva completa sin verificar esos plazos en el Boletín Oficial de Salta. Ver sección 2.5.
 
 ---
 
-## Alerta normativa - normas de vigencia variable
+## Bloque 4 - Checklists operativos
 
-*Última verificación de esta sección: mayo 2026. Actualizar cuando cambie alguna de las normas listadas.*
+### Checklist: acto administrativo
 
-### Plazo de caducidad CCA Salta
+1. Identificar: ¿el acto es de un organismo provincial, municipal o federal?
+2. ¿El acto fue notificado? ¿En qué fecha y de qué modo (personal / cédula / edicto / electrónica)?
+3. ¿El administrado realizó actos posteriores que puedan interpretarse como consentimiento tácito? (ver sección 2.14)
+4. ¿El acto es definitivo y no tiene recurso administrativo disponible?
+5. ¿Hay expediente administrativo? ¿El abogado lo tiene o requiere vista?
+6. ¿Se interpuso la revocatoria en plazo? (10 días hábiles administrativos, Ley 5348, art. 177) [CONFIRMADO]
+7. ¿Se interpuso el jerárquico en plazo? [PENDIENTE: verificar plazo antes de responder]
+8. Para entes descentralizados: ¿se interpuso alzada ante el Poder Ejecutivo? [PENDIENTE: verificar plazo]
+9. ¿Aplica la Ley 5018 (reclamo previo)? [A VERIFICAR]
+10. ¿Cuál es el plazo remanente del art. 12 de la Ley 793?
 
-```
-[ALERTA PLAZO FATAL: art. 12 Ley 793 CCA Salta - 30 días hábiles - desde notificación personal/cédula/edicto de la resolución administrativa - consentimiento tácito posterior también extingue la acción - vencimiento: calcular]
-```
+### Checklist: acción judicial
 
-### Normas de vigencia variable a verificar en cada consulta
+1. Verificar agotamiento de la vía (cadena recursiva Ley 5348 y Ley 5018 si aplica).
+2. Calcular el plazo de 30 días hábiles judiciales (Ley 793, art. 12) con la guía de la sección 2.8.
+3. Verificar consentimiento tácito posterior (Ley 793, art. 12, in fine; sección 2.14).
+4. Verificar los requisitos del art. 26 de la Ley 793.
+5. Verificar las exclusiones del art. 27 de la Ley 793.
+6. En materia tributaria: verificar pago previo (Ley 793, art. 28).
+7. Verificar el representante procesal de la Administración según la instancia (tabla de la sección 2.18).
+8. Si hay retardación: verificar los tres más tres meses del art. 6 de la Ley 793 con solicitud de pronto despacho documentada.
 
-- **Montos de contratación pública (Ley 8072 + Dec 1319/18):** los umbrales se actualizan. Verificar antes de encuadrar el procedimiento.
-- **Escala salarial empleo público Salta:** se modifica por paritarias. Verificar resolución de homologación vigente.
-- **Habilitaciones municipales:** el régimen varía por municipio. Verificar norma vigente al momento del acto.
-- **Digesto Jurídico (Ley 7913):** el texto ordenado de las normas por Ley 7913 está actualizado hasta julio 2015. Para verificar modificaciones posteriores, consultar el Boletín Oficial.
+### Checklist: empleo público
 
-```
-[VERIFICAR VIGENCIA: norma Salta - [materia] - consultar Boletín Oficial Salta (https://boletinoficialsalta.gob.ar) antes de aplicar]
-```
+1. Encuadre: Ley 5546 o estatuto sectorial (Ley 6830 para docentes; Policía y salud: [PENDIENTE]).
+2. Situación de revista: planta permanente / no permanente / contratado / transitorio.
+3. ¿Hubo sumario con garantías de debido proceso? (Decreto 2734/2007: notificación de cargos, vista, descargo, prueba.)
+4. ¿La cesantía o exoneración encuadra en alguna causal taxativa del estatuto?
+5. ¿Prescripción de la acción disciplinaria? (verificar el plazo en la Ley 5546).
+6. En caso de sentencia favorable: la opción entre reincorporación e indemnización es del agente (Ley 5546, art. 50), no de la Administración.
+7. La interposición de recursos no suspende la ejecución del acto (Ley 5348, art. 81): evaluar suspensión administrativa o cautelar judicial (sección 2.9).
+
+### Checklist: contratación pública
+
+1. Verificar los montos vigentes (Ley 8072, Decreto 1319/18 y actualizaciones) [PENDIENTE: consultar Boletín Oficial de Salta].
+2. ¿La impugnación fue planteada en el plazo del pliego?
+3. ¿El contrato prevé redeterminación de precios? ¿Bajo qué régimen?
+4. Para obra pública: verificar la ley provincial, no la Ley 13.064 nacional.
+5. ¿Aplica el reclamo previo de la Ley 5018?
 
 ---
 
 ## Fuentes primarias
 
-- **Boletín Oficial Salta:** https://boletinoficialsalta.gob.ar
-- **Poder Judicial Salta (jurisprudencia y normativa):** https://www.justiciasalta.gov.ar
+- **Boletín Oficial de Salta:** https://boletinoficialsalta.gob.ar - fuente primaria para verificar la vigencia de toda norma posterior a julio de 2015.
+- **Poder Judicial de Salta (jurisprudencia, normativa, expediente digital):** https://www.justiciasalta.gov.ar
+- **SAIJ:** https://www.saij.gob.ar - texto de normas; confirmar siempre contra el Boletín Oficial de Salta.
 - **Portal del Empleado Público Salta:** https://empleopublico.salta.gob.ar
-- **Tribunal de Cuentas Salta:** verificar URL vigente
-- **IPSAS:** verificar URL vigente
+- **Tribunal de Cuentas de Salta:** [PENDIENTE: verificar URL vigente]
+- **IPSAS:** [PENDIENTE: verificar URL vigente]
 
 ---
 
 ## Reglas de citación - administrativo Salta
 
-Las reglas generales del CLAUDE.md argentino y del administrativo-CLAUDE.md nacional aplican íntegramente. Específicas para el fuero contencioso administrativo Salta:
+Las reglas generales del CLAUDE.md argentino y del administrativo-CLAUDE.md nacional aplican íntegramente. Específicas para este fuero:
 
-**Jurisprudencia:** nunca citar expediente o carátula sin material aportado. La Corte de Justicia de Salta actúa como alzada definitiva; su jurisprudencia es la referencia principal. Usar:
-```
-[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta / Juzgado CA [1ª o 2ª Nominación] - doctrina requerida]
-```
+**Formato de cita legal:** siempre "Ley X, art. Y" con etiqueta de estado ([CONFIRMADO / A VERIFICAR / PENDIENTE]) cuando sea relevante para el análisis.
 
-**Actos administrativos Salta:** no asumir el contenido de resoluciones, dictámenes del Fiscal General o actos impugnados sin que el abogado los aporte. Usar:
+**Jurisprudencia:** nunca citar expediente o carátula sin material aportado. Usar:
 ```
-[VACÍO PROBATORIO: texto del acto administrativo provincial/municipal no aportado - aportar copia del acto impugnado con sello de notificación]
+[INSERTAR FALLO VERIFICADO: Corte de Justicia de Salta / Juzgado de Primera Instancia CA [1.ª o 2.ª Nominación] - doctrina requerida]
 ```
 
-**Plazos CCA Salta:** no transpolar plazos del régimen federal ni de otras provincias. Usar:
+**Actos administrativos:** no asumir contenido sin material aportado. Usar:
 ```
-[ALERTA PLAZO FATAL: art. 12 Ley 793 CCA Salta - 30 días hábiles desde notificación de la resolución administrativa - verificar consentimiento tácito posterior - vencimiento: calcular]
+[VACÍO PROBATORIO: texto del acto administrativo provincial/municipal no aportado - aportar copia del acto impugnado con constancia de notificación]
+```
+
+**Plazos:** no transpolar plazos del régimen federal ni de otras provincias. Usar:
+```
+[ALERTA PLAZO FATAL: Ley 793, art. 12, CCA Salta - 30 días hábiles judiciales - desde notificación de la resolución administrativa - verificar también consentimiento tácito (art. 12, in fine) - vencimiento: calcular con guía sección 2.8]
+```
+
+**Consentimiento tácito:** no emitir opinión sin expediente completo. Usar:
+```
+[VERIFICAR CONSENTIMIENTO TÁCITO: Ley 793, art. 12, in fine - aportar expediente administrativo completo y constancias de actos posteriores del administrado]
 ```
 
 ---
 
-## Lógica de análisis por institución
+## Matriz de vigencia por norma
 
-### Acto administrativo provincial/municipal - elementos y vicios
+> El Digesto Jurídico de Salta (Ley 7913) compiló normas con corte al 31/07/2015. La mención en el Digesto indica que la norma fue incorporada a esa compilación, no que exista un texto ordenado oficial con efecto refundidor. Para toda norma marcada [A VERIFICAR], consultar el Boletín Oficial de Salta.
 
-Aplicar Ley 5348. Elementos: competencia, objeto, voluntad, forma (art. 42: motivación en casos específicos). Verificar suspensión de ejecutoriedad: la interposición de recursos NO suspende la ejecución del acto (art. 81 Ley 5348); hay que pedirla expresamente.
-
-Preguntas de diagnóstico:
-1. ¿Qué acto se impugna? ¿Es definitivo y sin recurso administrativo disponible?
-2. ¿El acto fue notificado? ¿En qué fecha? (inicio del cómputo del art. 12 Ley 793 - 30 días)
-3. ¿El administrado realizó actos posteriores que puedan interpretarse como consentimiento tácito?
-4. ¿Hay expediente administrativo que lo respalda?
-5. ¿Se interpusieron los recursos de la Ley 5348 (revocatoria + jerárquico) en plazo?
-6. ¿Para entes descentralizados: se interpuso alzada ante el PE?
-7. ¿Intervino el Fiscal General cuando era preceptivo?
-8. ¿Aplica la Ley 5018 (reclamo previo)?
-
-### Recursos administrativos Salta
-
-Aplicar Ley 5348 arts. 177-185. Verificar siempre:
-- Plazo en días hábiles administrativos: revocatoria 10 días
-- Cadena: revocatoria → jerárquico (recorriendo la línea) → alzada ante PE (entes descentralizados)
-- La interposición de recursos NO suspende la ejecución (art. 81 Ley 5348): pedir suspensión expresamente si se necesita
-
-```
-[ALERTA PLAZO FATAL: recurso de revocatoria - Ley 5348 art. 177 - 10 días hábiles administrativos desde notificación - vencimiento: calcular]
-```
-
-### Agotamiento de la vía y proceso contencioso administrativo
-
-1. Verificar si la resolución es definitiva y no hay recurso administrativo disponible
-2. Verificar que no haya consentimiento tácito del acto (art. 12 in fine Ley 793)
-3. Calcular el plazo de 30 días hábiles desde la notificación
-4. Verificar si aplica la Ley 5018 (reclamo previo)
-5. Verificar cumplimiento del art. 26 Ley 793 (requisitos de procedencia de la demanda)
-6. Si hay retardación: verificar los 3 + 3 meses del art. 6 Ley 793
-
-### Responsabilidad del Estado Salta
-
-- No aplicar Ley 26.944 ni CCCN sin verificar criterio de la Corte de Justicia de Salta
-- Verificar si aplica reclamo previo (Ley 5018)
-- Verificar si la pretensión resarcitoria corresponde al fuero contencioso administrativo (art. 2 Ley 6569)
-
-### Empleo público Salta
-
-Verificar siempre:
-- Encuadre en Ley 5546 (TO Ley 7913) o estatuto sectorial (Ley 6830 docentes)
-- Régimen disciplinario: Decreto 2734/2007
-- Opción del agente entre reincorporación e indemnización si la sentencia resulta favorable (art. 50 Ley 5546)
-- La interposición de recursos administrativos no suspende la ejecución del acto de cesantía (art. 81 Ley 5348)
-
-### Contratación pública Salta
-
-Verificar siempre:
-- Encuadre según Ley 8072 + Dec 1319/18 y montos vigentes
-- Plazos de impugnación de pliegos y preadjudicación
-- Para obra pública: verificar ley provincial, no Ley 13.064 nacional
+| Norma | Objeto | Estado al corte de mayo 2026 | Fuente de verificación |
+|-------|--------|------------------------------|------------------------|
+| Ley 5348 | LPA Salta | [A VERIFICAR] fecha de sanción y modificaciones posteriores a 2015 | Boletín Oficial de Salta |
+| Ley 5552/80 | Modificación a la Ley 5348 | [A VERIFICAR] confirmar texto en el Boletín Oficial | Boletín Oficial de Salta |
+| Ley 793 | CCA Salta | [A VERIFICAR post-2015] modificada por Leyes 6569, 7822 y 7913; verificar modificaciones ulteriores | Boletín Oficial de Salta / Poder Judicial de Salta |
+| Ley 6569 | Juzgados CA | [A VERIFICAR post-2015] modificada por Leyes 7822 y 7913; verificar modificaciones ulteriores | Boletín Oficial de Salta |
+| Ley 5018 | Reclamo previo | [A VERIFICAR] texto vigente y ámbito de aplicación | Boletín Oficial de Salta |
+| Ley 7319 | Amparo | [A VERIFICAR] texto vigente, plazo y competencia | Boletín Oficial de Salta |
+| Ley 5546 | Estatuto del empleado público | [A VERIFICAR post-2015] compilada en el Digesto al 31/07/2015; verificar modificaciones ulteriores | Boletín Oficial de Salta |
+| Decreto Ley 1178/96 | Escalafón general | [A VERIFICAR] verificar vigencia y posibles reformas | Boletín Oficial de Salta |
+| Decreto 2734/2007 | Investigaciones administrativas | [CONFIRMADO al momento de incorporación al Digesto; A VERIFICAR modificaciones post-2015] | Boletín Oficial de Salta |
+| Ley 6830 | Estatuto docente | [A VERIFICAR post-2015] | Boletín Oficial de Salta |
+| Ley 8072 | Contrataciones | [CONFIRMADO en cuanto a la existencia de la norma; PENDIENTE en cuanto a montos vigentes] | Boletín Oficial de Salta |
+| Decreto 1319/18 | Reglamento de la Ley 8072 | [A VERIFICAR] verificar modificaciones; los montos se actualizan por resolución | Boletín Oficial de Salta |
+| Constitución de Salta 2003 | Arts. 87 y 153, ap. III | [CONFIRMADO] | Texto oficial |
 
 ---
 
-## Instrucciones operativas específicas - Salta
+## Estado del escrito - campos estándar
 
-### Alerta crítica - plazo de caducidad
+Todo escrito ante el fuero contencioso administrativo de Salta cierra con:
 
-El plazo del art. 12 Ley 793 es de caducidad:
-- 30 días hábiles desde la notificación personal, por cédula o por edicto
-- El consentimiento tácito manifestado por actos posteriores también extingue la acción
-- El tribunal puede desechar in límine la demanda presentada fuera de término
-
-Antes de analizar cualquier otra cuestión, emitir:
-```
-[ALERTA PLAZO FATAL: art. 12 Ley 793 CCA Salta - 30 días hábiles desde notificación - verificar también si hay consentimiento tácito posterior que extinga la acción - vencimiento: calcular]
-```
-
-### Alerta sobre la suspensión de los recursos
-
-A diferencia del régimen federal (donde la interposición de recursos administrativos sí suspende la ejecución), en Salta **la interposición de recursos administrativos NO suspende la ejecución del acto impugnado** (art. 81 Ley 5348). Si el cliente necesita la suspensión del acto mientras tramita el recurso administrativo, debe pedirla expresamente invocando alguno de los supuestos del art. 81 inc. a, b o c.
+- Fuero y juzgado: 1.ª o 2.ª Nominación / Corte de Justicia de Salta (alzada).
+- Organismo demandado: provincial / municipal / ente descentralizado.
+- Agotamiento de la vía (Ley 5348 y Ley 5018 si aplica): completo / pendiente / excepción invocada (cuál).
+- Plazo, Ley 793, art. 12: verificado (vence: ___) / pendiente / vencido.
+- Consentimiento tácito posterior: verificado (no hay) / pendiente / detectado.
+- Pago previo (Ley 793, art. 28) si materia tributaria: cumplido / no aplica / pendiente.
+- Representante procesal de la Administración identificado: sí (cuál, según tabla de la sección 2.18) / a verificar.
+- Normas con [A VERIFICAR] o [PENDIENTE] usadas en el escrito: listado.
+- Marcadores pendientes: dato que falta para resolverlos.
+- Próximo plazo procesal: ___.
 
 ---
 
-- Identificar si el acto es del Estado provincial salteño, de un municipio o de un organismo federal antes de aplicar este perfil o el nacional.
-- Verificar agotamiento de la vía (Ley 5348: revocatoria + jerárquico + alzada para entes descentralizados) antes de analizar la acción. Verificar también Ley 5018.
-- Plazos en sede administrativa: revocatoria 10 días hábiles administrativos. La interposición NO suspende la ejecución del acto.
-- El plazo judicial es de 30 días hábiles desde la notificación. Verificar consentimiento tácito posterior.
-- El consentimiento tácito extingue la acción independientemente del plazo (art. 12 in fine Ley 793).
-- En empleo público: la reincorporación o la indemnización son opciones del agente, no de la Administración (art. 50 Ley 5546).
-- Para pretensiones resarcitorias: verificar si aplica reclamo previo (Ley 5018) y si el fuero CA tiene competencia.
-- Verificar intervención preceptiva del Fiscal General (Juzgados CA: Fiscales de 1ª Instancia; Corte de Justicia: Fiscal de Estado).
-- No aplicar Ley 26.944 ni CCCN sin verificar criterio de la Corte de Justicia de Salta.
-- No asumir el contenido de actos, expedientes ni dictámenes sin que el abogado los aporte.
-- Todo escrito ante el fuero contencioso administrativo salteño cierra con "Estado del escrito" estándar más: juzgado nominación y estado del agotamiento de la vía, **plazo art. 12 Ley 793 (verificado / pendiente / vencido)**, verificación de consentimiento tácito posterior, verificación de requisitos del art. 26 Ley 793, intervención del Fiscal General/Fiscal de 1ª Instancia (sí / no / a verificar), próximo plazo procesal.
+## Alerta normativa - normas de vigencia variable
+
+*Última verificación: mayo 2026. El Digesto Jurídico (Ley 7913) tiene corte al 31/07/2015. Para toda norma posterior a esa fecha o modificada después de ella, consultar el Boletín Oficial de Salta (https://boletinoficialsalta.gob.ar).*
+
+- **Montos de contratación pública (Ley 8072 y Decreto 1319/18):** se actualizan por resolución. Consultar el Boletín Oficial de Salta antes de encuadrar el procedimiento.
+- **Escala salarial del empleo público de Salta:** se modifica por paritarias. Verificar la resolución de homologación vigente.
+- **Habilitaciones municipales:** varían por municipio. Verificar la ordenanza vigente al momento del acto.
+- **Calendario judicial:** ferias y feriados se determinan año a año. Obtener el calendario del Poder Judicial de Salta antes de calcular cualquier plazo.
+
+```
+[VERIFICAR VIGENCIA: norma Salta - [materia] - consultar Boletín Oficial de Salta (https://boletinoficialsalta.gob.ar) antes de aplicar]
+```
 
 ---
 
-*Última actualización: mayo 2026*
-*Normativa base: Ley 5348 LPA Salta (mod. Ley 5552/80), Ley 793 CCA Salta (mod. Ley 6569, Leyes 7822 y 7913), Ley 5018 (reclamo administrativo previo), Ley 7319 (amparo Salta), Ley 5546 (estatuto empleado público, TO Ley 7913), Ley 6830 (estatuto docente), Decreto 2734/2007 (investigaciones administrativas), Ley 8072 + Decreto 1319/18 (contrataciones), Constitución de Salta (2003) arts. 87, 153*
+*Última actualización: mayo 2026 (v1.4)*
+*Normativa base: Ley 5348 LPA Salta (modificada por Ley 5552/80), Ley 793 CCA Salta (modificada por Ley 6569, Leyes 7822 y 7913), Ley 5018, Ley 7319 (amparo), Ley 5546 (estatuto del empleado público, compilada en Digesto Ley 7913 al 31/07/2015), Ley 6830 (estatuto docente), Decreto 2734/2007, Ley 8072 y Decreto 1319/18 (contrataciones), Constitución de Salta (2003) arts. 87 y 153, ap. III.*
 *Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*

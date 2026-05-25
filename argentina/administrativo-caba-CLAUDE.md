@@ -26,10 +26,10 @@ Este perfil cubre práctica de derecho administrativo ante el Gobierno de la Ciu
 **Articulación con el perfil nacional:** cuando actúa un organismo federal con sede en CABA (ARCA/ex AFIP, ANSES, organismos desconcentrados nacionales), aplica el régimen federal (LNPA + RLNPA) - ver administrativo-CLAUDE.md. Cuando actúa el GCBA o sus entes, aplica este perfil. La distinción es crítica: CABA tiene régimen propio que difiere sustancialmente del federal en plazos, recursos y estructura de control judicial.
 
 **Distinción crítica - dos cuerpos normativos distintos:**
-- **Procedimiento administrativo CABA (en sede administrativa):** Decreto 1510/97 (LPA CABA) - texto consolidado por Ley 6764/24 (5ta actualización del Digesto Jurídico CABA, BO 18-dic-2024). Cubre el trámite ante el GCBA antes de agotar la vía.
-- **Control judicial contencioso administrativo CABA:** Ley 189 CABA (Código Contencioso Administrativo y Tributario - CCAyT). Cubre la acción judicial una vez agotada la vía administrativa.
+- **Procedimiento administrativo CABA (en sede administrativa):** Decreto N° 1510/97 (LPA CABA) - t.o. Ley N° 6764/24 (5ta actualización del Digesto Jurídico CABA, B.O. CABA 18/12/2024). Cubre el trámite ante el GCBA antes de agotar la vía.
+- **Control judicial contencioso administrativo CABA:** Ley N° 189 CABA (Código Contencioso Administrativo y Tributario - CCAyT). Cubre la acción judicial una vez agotada la vía administrativa.
 
-No confundir Dec 1510/97 (procedimiento en sede administrativa) con Ley 189 CCAyT (control judicial): son cuerpos legales distintos que cubren etapas distintas del conflicto.
+No confundir el Decreto N° 1510/97 (procedimiento en sede administrativa) con la Ley N° 189 CCAyT (control judicial): son cuerpos legales distintos que cubren etapas distintas del conflicto.
 
 ---
 
@@ -37,29 +37,29 @@ No confundir Dec 1510/97 (procedimiento en sede administrativa) con Ley 189 CCAy
 
 ### Ley de procedimiento administrativo CABA
 
-- **Norma principal:** Decreto 1510/97 (Ley de Procedimientos Administrativos CABA - LPA CABA)
-- **Texto vigente:** consolidado por Ley 6764/24 (5ta actualización del Digesto Jurídico CABA, BO 18-dic-2024). Consultar texto en JURISTECA: https://juristeca.jusbaires.gob.ar/compilacion-normativa-juristeca/decreto-1510/
-- **Reglamento:** el propio Dec 1510/97 contiene la regulación procedimental; no tiene decreto reglamentario separado equivalente al Decreto 1759/72 nacional.
+- **Norma principal:** Decreto N° 1510/97 (Ley de Procedimientos Administrativos CABA - LPA CABA)
+- **Texto vigente:** t.o. Ley N° 6764/24 (5ta actualización del Digesto Jurídico CABA, B.O. CABA 18/12/2024). Consultar texto en JURISTECA: https://juristeca.jusbaires.gob.ar/compilacion-normativa-juristeca/decreto-1510/
+- **Reglamento:** el propio Decreto N° 1510/97 contiene la regulación procedimental; no tiene decreto reglamentario separado equivalente al Decreto N° 1759/72 nacional.
 - **Articulado clave:** art. 7 (elementos esenciales del acto), arts. 14-17 (vicios y nulidades), arts. 84 y ss. (recursos), art. 10 (silencio administrativo).
 
 ```
-[VERIFICAR VIGENCIA: Decreto 1510/97 LPA CABA - texto consolidado Ley 6764/24 - consultar JURISTECA para modificaciones posteriores a mayo 2026]
+[VERIFICAR VIGENCIA: Decreto N° 1510/97 LPA CABA (t.o. Ley N° 6764/24) - consultar JURISTECA para modificaciones posteriores a mayo 2026]
 ```
 
 ### Régimen de silencio administrativo CABA
 
-- **Regla general:** silencio negativo por regla general (art. 10 Dec 1510/97). Vencido el plazo para resolver sin resolución expresa, se tiene por denegado y corre el plazo para recurrir o accionar judicialmente.
-- **Silencio positivo:** el Dec 1510/97 no adoptó el régimen de silencio positivo de la Ley 27.742 nacional (Dec 971/2024). El silencio positivo del art. 10 LNPA reformado y su reglamentación (Anexo I y II del Dec 971/2024) aplican solo a procedimientos ante la Administración nacional. No transpolar ese régimen al GCBA sin verificar si CABA sancionó normativa equivalente.
-- **Plazo subsidiario:** [VERIFICAR: el Dec 1510/97 fija plazos máximos para resolver según el tipo de acto. Verificar artículo aplicable al procedimiento específico.]
+- **Regla general:** silencio negativo por regla general (art. 10 Decreto N° 1510/97). Vencido el plazo para resolver sin resolución expresa, se tiene por denegado y corre el plazo para recurrir o accionar judicialmente.
+- **Silencio positivo:** el Decreto N° 1510/97 no adoptó el régimen de silencio positivo de la Ley N° 27.742 nacional (Decreto N° 971/2024). El silencio positivo del art. 10 LNPA reformado y su reglamentación (Anexo I y II del Decreto N° 971/2024) aplican solo a procedimientos ante la Administración nacional. No transpolar ese régimen al GCBA sin verificar si CABA sancionó normativa equivalente.
+- **Plazo subsidiario:** [VERIFICAR: el Decreto N° 1510/97 fija plazos máximos para resolver según el tipo de acto. Verificar artículo aplicable al procedimiento específico.]
 - **Denegatoria tácita:** opera vencido el plazo legal para resolver. A partir de ese momento corre el plazo para interponer el recurso correspondiente o accionar judicialmente.
 
 ```
-[VERIFICAR EFECTO DEL SILENCIO CABA: Dec 1510/97 - regla general es silencio negativo - verificar si CABA adoptó norma equivalente al Dec 971/2024 nacional]
+[VERIFICAR EFECTO DEL SILENCIO CABA: Decreto N° 1510/97 art. 10 - regla general: silencio negativo - verificar si CABA adoptó norma equivalente al Decreto N° 971/2024 nacional antes de aplicar otro criterio]
 ```
 
 ### Elementos esenciales del acto administrativo CABA
 
-El art. 7 Dec 1510/97 establece los elementos esenciales del acto administrativo, con estructura paralela al art. 7 LNPA federal:
+El art. 7 del Decreto N° 1510/97 establece los elementos esenciales del acto administrativo, con estructura paralela al art. 7 LNPA federal:
 
 1. Competencia: atribución del órgano del GCBA para dictar el acto
 2. Causa: antecedentes de hecho y de derecho que fundamentan el acto
@@ -68,44 +68,44 @@ El art. 7 Dec 1510/97 establece los elementos esenciales del acto administrativo
 5. Motivación: expresión concreta de las razones que llevan al dictado del acto
 6. Finalidad: adecuada a la causa del acto y al ordenamiento
 
-**Régimen de nulidades CABA:** arts. 14-17 Dec 1510/97, paralelos a los arts. 14-17 LNPA federal. Distingue nulidad absoluta (vicio en elementos esenciales, imprescriptible, declarable de oficio) de nulidad relativa (vicios que admiten saneamiento).
+**Régimen de nulidades CABA:** arts. 14-17 Decreto N° 1510/97, paralelos a los arts. 14-17 LNPA federal. Distingue nulidad absoluta (vicio en elementos esenciales, imprescriptible, declarable de oficio) de nulidad relativa (vicios que admiten saneamiento).
 
 ### Recursos administrativos CABA
 
-**Recurso de reconsideración (art. 119 Dec 1510/97):**
-- Plazo: 10 días hábiles administrativos desde la notificación del acto
+**Recurso de reconsideración (art. 119 Decreto N° 1510/97):**
+- Plazo: 10 días hábiles administrativos GCBA desde la notificación del acto
 - Ante: el mismo órgano que dictó el acto
 - Efecto: suspende el plazo para interponer el recurso jerárquico
-- Resultado: si es denegado o no hay resolución en 30 días hábiles, el particular puede alzarse en jerárquico
+- Resultado: si es denegado o no hay resolución en 30 días hábiles administrativos, el particular puede alzarse en jerárquico
 
-**Recurso jerárquico (arts. 108-119 Dec 1510/97):**
-- Plazo: 15 días hábiles desde la notificación del acto denegatorio o desde la denegatoria tácita de la reconsideración
+**Recurso jerárquico (arts. 108-119 Decreto N° 1510/97):**
+- Plazo: 15 días hábiles administrativos GCBA desde la notificación del acto denegatorio o desde la denegatoria tácita de la reconsideración
 - Ante: el superior jerárquico del órgano emisor; sube hasta el Jefe de Gobierno o ministro competente según el caso
 - Agota la vía: sí, cuando es resuelto por el ministro o el Jefe de Gobierno
 
-**Recurso de alzada (arts. 120-122 Dec 1510/97):**
+**Recurso de alzada (arts. 120-122 Decreto N° 1510/97):**
 - Procede contra actos de entes autárquicos y descentralizados del GCBA
 - Ante: el ministerio con tutela sobre el ente
 - Opcional en algunos casos: el particular puede prescindir del recurso de alzada y ocurrir directamente al CCAyT
 
-**Queja (art. 71 Dec 1510/97):**
+**Queja (art. 71 Decreto N° 1510/97):**
 - Por defectos de tramitación o incumplimiento de plazos
 - No interrumpe plazos de recursos
 
 **Días hábiles administrativos CABA:** son los días hábiles del GCBA, que pueden diferir del calendario de días hábiles judiciales. Verificar calendario administrativo vigente al momento del acto.
 
 ```
-[ALERTA PLAZO FATAL: recurso [denominación] - Dec 1510/97 art. [X] - [X] días hábiles administrativos CABA desde notificación - vencimiento: calcular]
+[ALERTA PLAZO FATAL: recurso [denominación] - Decreto N° 1510/97 art. [X] - [X] días hábiles administrativos GCBA desde notificación - vencimiento: calcular]
 ```
 
 ### Agotamiento de la vía administrativa CABA
 
-- **Regla general:** el agotamiento de la vía administrativa es requisito previo a la acción judicial ante el CCAyT, salvo excepciones (art. 3 y ss. CCAyT Ley 189).
+- **Regla general:** el agotamiento de la vía administrativa es requisito previo a la acción judicial ante el CCAyT, salvo excepciones (art. 3 y ss. Ley N° 189 CCAyT).
 - **Excepciones:** acto nulo de nulidad absoluta, cuando el agotamiento resulta inútil (jurisprudencia TSJ CABA), vías de hecho del GCBA, cuando el particular es ajeno a la iniciación del procedimiento.
 - **Procuración General CABA:** emite dictámenes obligatorios en las materias previstas por el art. 134 Constitución CABA y la ley orgánica de la PG. Verificar si el expediente requirió dictamen de la PG y si fue cumplido; su omisión puede configurar vicio de procedimiento.
 
 ```
-[VERIFICAR AGOTAMIENTO DE VÍA CABA: Dec 1510/97 + CCAyT Ley 189 - verificar si se interpusieron los recursos correspondientes en plazo y si la resolución que agota la vía fue notificada]
+[VERIFICAR AGOTAMIENTO DE VÍA CABA: Decreto N° 1510/97 + Ley N° 189 CCAyT - verificar si se interpusieron los recursos correspondientes en plazo y si la resolución que agota la vía fue notificada]
 ```
 
 ---
@@ -114,7 +114,7 @@ El art. 7 Dec 1510/97 establece los elementos esenciales del acto administrativo
 
 ### Código de proceso contencioso administrativo CABA
 
-- **Norma:** Ley 189 CABA (Código Contencioso Administrativo y Tributario - CCAyT) y modificatorias
+- **Norma:** Ley N° 189 CABA (Código Contencioso Administrativo y Tributario - CCAyT) y modificatorias
 - **Texto vigente:** consultar JURISTECA: https://juristeca.jusbaires.gob.ar/compilacion-normativa-juristeca/ley-189/
 - **Subsidiariedad:** el CCAyT es autónomo. Para lo no previsto, remite al Código Procesal Civil y Comercial de la Nación (CPCCN) en forma supletoria según criterio jurisprudencial de la Cámara CCAyT.
 
@@ -122,18 +122,22 @@ El art. 7 Dec 1510/97 establece los elementos esenciales del acto administrativo
 
 **Este es el dato más crítico del perfil. Diferencia sustancial con el régimen federal.**
 
-- **Plazo general:** 90 días hábiles desde que el acto fue ejecutado o debió serlo, o desde que el particular tomó conocimiento fehaciente del acto (art. 7 CCAyT Ley 189)
+- **Plazo general:** 90 días hábiles judiciales desde que el acto fue ejecutado o debió serlo, o desde que el particular tomó conocimiento fehaciente del acto (art. 7 Ley N° 189 CCAyT)
 - **Cómputo:** días hábiles judiciales CABA
 - **Naturaleza:** caducidad - no se suspende ni interrumpe salvo norma expresa
 - **¿Declarable de oficio?:** sí, según jurisprudencia uniforme de la Cámara CCAyT y TSJ CABA
 
 ```
-[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley 189 CABA) - 90 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía o desde que debió conocerse - vencimiento: calcular]
+[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley N° 189 CABA) - 90 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía o desde que debió conocerse - vencimiento: calcular]
 ```
 
 **Diferencia crítica con el régimen federal:** el plazo federal (art. 25 LNPA) es de 180 días hábiles judiciales para actos post-9-jul-2024. El plazo CABA es de 90 días hábiles judiciales. No aplicar el plazo federal a actos del GCBA.
 
-**Supuestos especiales:** verificar si el CCAyT prevé plazos distintos para pretensiones específicas (ej. materia tributaria CABA, habilitaciones, sanciones). La Cámara CCAyT tiene jurisprudencia sobre el inicio del cómputo según el tipo de acto; aportar el fallo cuando sea relevante.
+**Supuestos especiales:** el CCAyT puede prever plazos distintos para pretensiones específicas (ej. materia tributaria CABA, habilitaciones, sanciones). La Cámara CCAyT tiene jurisprudencia sobre el inicio del cómputo según el tipo de acto - en particular, cuándo comienza a correr ante actos de ejecución continuada, actos complejos o notificaciones defectuosas. En esos supuestos, el plazo de 90 días hábiles judiciales sigue siendo la regla; lo que varía es el momento de inicio del cómputo. Aportar el fallo aplicable cuando el caso no encuadre en el supuesto estándar de notificación fehaciente de acto definitivo.
+
+```
+[INSERTAR FALLO VERIFICADO: Cámara CCAyT / TSJ CABA - doctrina sobre inicio del cómputo del plazo art. 7 en supuesto específico del caso]
+```
 
 ### Órganos jurisdiccionales
 
@@ -165,27 +169,27 @@ Verificar si la pretensión encuadra en la materia contencioso administrativa de
 
 ### Medidas cautelares contra el GCBA
 
-- **Régimen:** el CCAyT regula las medidas cautelares contra el GCBA con reglas propias (arts. 177 y ss. CCAyT). No aplica la Ley 26.854 nacional (que rige solo contra el Estado nacional).
+- **Régimen:** el CCAyT regula las medidas cautelares contra el GCBA con reglas propias (arts. 177 y ss. CCAyT). No aplica la Ley N° 26.854 nacional (que rige solo contra el Estado nacional).
 - **Requisitos:** verosimilitud del derecho + peligro en la demora + no afectación grave del interés público
 - **Informe previo del GCBA:** el CCAyT puede requerir informe previo del organismo demandado antes de resolver la cautelar. Verificar práctica actual de la sala actuante.
 - **Contracautela:** exigida como regla; puede ser juratoria según el caso y el criterio de la sala.
 - **Plazo de vigencia:** sin límite temporal fijo en el CCAyT; la cautelar subsiste hasta la sentencia salvo levantamiento o modificación.
 
 ```
-[VERIFICAR RÉGIMEN CAUTELAR CABA: CCAyT arts. 177 y ss. - no aplica Ley 26.854 nacional - verificar criterio de la sala actuante sobre informe previo y contracautela]
+[VERIFICAR RÉGIMEN CAUTELAR CABA: CCAyT arts. 177 y ss. - no aplica Ley N° 26.854 nacional - verificar criterio de la sala actuante sobre informe previo y contracautela]
 ```
 
 ### Amparo CABA
 
-- **Norma:** art. 14 Constitución CABA + Ley 2145 CABA (amparo)
-- **Plazo:** 90 días desde que el afectado conoció o pudo conocer el acto lesivo (art. 6 Ley 2145 CABA)
+- **Norma:** art. 14 Constitución CABA + Ley N° 2145 CABA (amparo)
+- **Plazo:** 90 días desde que el afectado conoció o pudo conocer el acto lesivo (art. 6 Ley N° 2145 CABA)
 - **Legitimación activa:** amplia; incluye legitimación colectiva
 - **Subsidiariedad:** procede cuando no existe otro medio judicial más idóneo; el CCAyT tiene acción ordinaria más amplia
-- **Habeas data:** integrado en el régimen de la Ley 2145 CABA
+- **Habeas data:** integrado en el régimen de la Ley N° 2145 CABA
 - **Competencia:** Juzgados CCAyT en primera instancia; Cámara CCAyT en alzada
 
 ```
-[ALERTA PLAZO FATAL - AMPARO CABA: art. 6 Ley 2145 CABA - 90 días hábiles desde que el acto fue conocido o debió conocerse - vencimiento: calcular]
+[ALERTA PLAZO FATAL - AMPARO CABA: art. 6 Ley N° 2145 CABA - 90 días hábiles judiciales desde que el acto fue conocido o debió conocerse - vencimiento: calcular]
 ```
 
 ---
@@ -194,45 +198,45 @@ Verificar si la pretensión encuadra en la materia contencioso administrativa de
 
 ### Responsabilidad del Estado CABA
 
-- **Ley propia:** CABA no sancionó una ley de responsabilidad del Estado equivalente a la Ley 26.944 nacional. La Ley 26.944 no aplica a demandas contra el GCBA.
-- **Régimen aplicable:** principios generales del derecho administrativo + jurisprudencia del TSJ CABA y Cámara CCAyT. No aplicar Ley 26.944 ni CCCN (arts. 1757, 1741) a demandas contra el GCBA sin verificar criterio del fuero.
+- **Ley propia:** CABA no sancionó una ley de responsabilidad del Estado equivalente a la Ley N° 26.944 nacional. En consecuencia, la Ley N° 26.944 no aplica como fuente directa a demandas contra el GCBA; el régimen surge de principios generales del derecho administrativo y jurisprudencia local. Si en algún pronunciamiento concreto el fuero CCAyT la aplicó supletoriamente, aportar el fallo antes de invocarla.
+- **Régimen aplicable:** principios generales del derecho administrativo + jurisprudencia del TSJ CABA y Cámara CCAyT. El CCCN (arts. 1757, 1741) tampoco es fuente directa; su invocación requiere verificar si la sala actuante lo admitió en el supuesto específico.
 - **Requisitos según jurisprudencia CCAyT:** daño cierto + imputabilidad al GCBA + nexo causal + falta de servicio (criterio análogo al federal pero de fuente jurisprudencial, no legal). Aportar fallo de la sala actuante.
-- **Responsabilidad por actividad lícita:** criterio jurisprudencial propio del TSJ CABA; no asumir que excluye el lucro cesante como hace la Ley 26.944. Verificar fallo del tribunal.
-- **Prescripción de la acción:** verificar criterio del fuero CCAyT; puede diferir del plazo de 3 años del art. 7 Ley 26.944.
+- **Responsabilidad por actividad lícita:** criterio jurisprudencial propio del TSJ CABA; no asumir que excluye el lucro cesante como hace la Ley N° 26.944. Verificar fallo del tribunal.
+- **Prescripción de la acción:** verificar criterio del fuero CCAyT; puede diferir del plazo de 3 años del art. 7 Ley N° 26.944.
 
 ```
-[VERIFICAR RÉGIMEN DE RESPONSABILIDAD GCBA: sin ley propia equivalente a Ley 26.944 - aplicar jurisprudencia TSJ CABA y Cámara CCAyT - aportar fallo de la sala actuante]
+[VERIFICAR RÉGIMEN DE RESPONSABILIDAD GCBA: sin ley propia equivalente a Ley N° 26.944 - aplicar jurisprudencia TSJ CABA y Cámara CCAyT - aportar fallo de la sala actuante - no invocar Ley N° 26.944 ni CCCN sin verificar recepción jurisprudencial en el caso concreto]
 ```
 
 ### Empleo público GCBA
 
-- **Estatuto general:** Ley 471 CABA (Relaciones Laborales en la Administración Pública de la Ciudad de Buenos Aires) y modificatorias. Paralelo al MREP Ley 25.164 federal pero con diferencias sustanciales en plazos, causales y régimen disciplinario. No transpolar institutos entre ambos.
+- **Estatuto general:** Ley N° 471 CABA (Relaciones Laborales en la Administración Pública de la Ciudad de Buenos Aires) y modificatorias. Paralelo al MREP Ley N° 25.164 federal pero con diferencias sustanciales en plazos, causales y régimen disciplinario. No transpolar institutos entre ambos.
 - **Escalafón:** verificar decreto o resolución de escalafón general GCBA vigente al momento del acto.
 - **Estatutos sectoriales:** principales estatutos especiales GCBA:
   - Docentes: Estatuto del Docente CABA (Ordenanza 40.593 y modificatorias)
   - Personal de salud: verificar norma sectorial vigente
-  - Policía de la Ciudad: Ley 5688 (Sistema Integral de Seguridad Pública CABA) + estatuto policial
+  - Policía de la Ciudad: Ley N° 5688 (Sistema Integral de Seguridad Pública CABA) + estatuto policial
   - [COMPLETAR: otros estatutos sectoriales según las áreas de práctica habituales]
-- **Régimen disciplinario:** Ley 471 + reglamentación. Sumario administrativo GCBA con garantías de debido proceso. Verificar si el organismo tiene reglamento de sumarios propio.
-- **Negociación colectiva:** CABA tiene régimen propio de negociación colectiva para el sector público (Ley 471). Verificar convenio colectivo sectorial aplicable.
+- **Régimen disciplinario:** Ley N° 471 + reglamentación. Sumario administrativo GCBA con garantías de debido proceso. Verificar si el organismo tiene reglamento de sumarios propio.
+- **Negociación colectiva:** CABA tiene régimen propio de negociación colectiva para el sector público (Ley N° 471). Verificar convenio colectivo sectorial aplicable.
 - **Obra Social:** OSBA (Obra Social de Buenos Aires) para agentes GCBA - distinto de IOMA (PBA) y UPCN/ATE (nacionales).
 
 ```
-[VERIFICAR ESTATUTO APLICABLE GCBA: Ley 471 general o estatuto sectorial según el organismo y la categoría del agente]
+[VERIFICAR ESTATUTO APLICABLE GCBA: Ley N° 471 general o estatuto sectorial según el organismo y la categoría del agente]
 ```
 
 ### Contratación pública CABA
 
-- **Norma general:** Ley 2095 CABA (Régimen de Compras y Contrataciones de la Ciudad de Buenos Aires) y modificatorias
-- **Reglamento:** Decreto 129/23 GCBA (reemplazó al Dec 168/19 y al Dec 74/21; modificado por Dec 32/26 [art. 58 Anexo I + art. 3] y Dec 72/26 [Anexos II a V]). Verificar texto consolidado en BAC antes de aplicar umbrales o cuadro de competencias.
-- **Plataforma de compras:** BAC (Buenos Aires Compras) - art. 83 Ley 2095. Acceso en: https://www.buenosairescompras.gob.ar/normativa.aspx
+- **Norma general:** Ley N° 2095 CABA (Régimen de Compras y Contrataciones de la Ciudad de Buenos Aires) y modificatorias
+- **Reglamento:** Decreto N° 129/23 GCBA (reemplazó al Decreto N° 168/19 y al Decreto N° 74/21; modificado por Decreto N° 32/26 [art. 58 Anexo I + art. 3] y Decreto N° 72/26 [Anexos II a V]). Verificar texto consolidado en BAC antes de aplicar umbrales o cuadro de competencias.
+- **Plataforma de compras:** BAC (Buenos Aires Compras) - art. 83 Ley N° 2095. Acceso en: https://www.buenosairescompras.gob.ar/normativa.aspx
 - **Organismo rector:** Dirección General de Compras y Contrataciones GCBA
-- **Obra pública CABA:** Ley 13.064 nacional aplica supletoriamente; verificar si CABA tiene norma propia para el contrato específico.
-- **Redeterminación de precios:** verificar si el pliego y el contrato específico prevén redeterminación y bajo qué régimen. CABA tiene criterio propio que puede diferir del Decreto 691/16 nacional.
-- **Impugnación de licitaciones:** los plazos para impugnar pliegos y preadjudicación están fijados en la Ley 2095 y en cada pliego. Verificar antes de analizar la admisibilidad de la impugnación.
+- **Obra pública CABA:** Ley N° 13.064 nacional aplica supletoriamente; verificar si CABA tiene norma propia para el contrato específico.
+- **Redeterminación de precios:** verificar si el pliego y el contrato específico prevén redeterminación y bajo qué régimen. CABA tiene criterio propio que puede diferir del Decreto N° 691/16 nacional.
+- **Impugnación de licitaciones:** los plazos para impugnar pliegos y preadjudicación están fijados en la Ley N° 2095 y en cada pliego. Verificar antes de analizar la admisibilidad de la impugnación.
 
 ```
-[VERIFICAR VIGENCIA: Ley 2095 CABA y Decreto 129/23 GCBA (mod. por Dec 32/26 y Dec 72/26) - los montos de licitación pública/privada/contratación directa se actualizan por resolución - consultar BAC antes de encuadrar el procedimiento]
+[VERIFICAR VIGENCIA: Ley N° 2095 CABA y Decreto N° 129/23 GCBA (mod. por Decreto N° 32/26 y Decreto N° 72/26) - los montos de licitación pública/privada/contratación directa se actualizan por resolución - consultar BAC antes de encuadrar el procedimiento]
 ```
 
 ### Organismo de control externo CABA
@@ -251,12 +255,12 @@ Verificar si la pretensión encuadra en la materia contencioso administrativa de
 ### Plazos de caducidad CCAyT
 
 ```
-[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley 189 CABA) - 90 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía - vencimiento: calcular]
+[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley N° 189 CABA) - 90 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía - vencimiento: calcular]
 ```
 
 ### Normas de vigencia variable a verificar en cada consulta
 
-- **Montos de contratación pública CABA (Ley 2095):** los umbrales para licitación pública, privada y contratación directa se actualizan por resolución de la Dirección General de Compras. Verificar en BAC antes de encuadrar el procedimiento.
+- **Montos de contratación pública CABA (Ley N° 2095):** los umbrales para licitación pública, privada y contratación directa se actualizan por resolución de la Dirección General de Compras. Verificar en BAC antes de encuadrar el procedimiento.
 - **Escala salarial empleo público GCBA:** se modifica por paritarias. No asumir montos sin verificar la resolución de homologación vigente.
 - **Resoluciones IGJ con impacto en entes del GCBA:** los entes autárquicos y sociedades del Estado CABA pueden estar sujetos a requisitos registrales propios. Verificar.
 - **Normativa sanitaria y habilitaciones AGC:** el régimen de habilitaciones comerciales CABA se modifica frecuentemente por resoluciones de la Agencia Gubernamental de Control (AGC). Ante cualquier habilitación o sanción de la AGC, verificar normativa vigente al momento del acto.
@@ -295,7 +299,7 @@ Las reglas generales del CLAUDE.md argentino y del administrativo-CLAUDE.md naci
 
 **Plazos CCAyT:** no transpolar plazos del régimen federal. Usar:
 ```
-[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley 189 CABA) - 90 días hábiles judiciales - desde [inicio del cómputo] - vencimiento: calcular]
+[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley N° 189 CABA) - 90 días hábiles judiciales - desde [inicio del cómputo] - vencimiento: calcular]
 ```
 
 **Dictámenes de Procuración General CABA:** no asumir su contenido sin material aportado. Usar:
@@ -309,7 +313,7 @@ Las reglas generales del CLAUDE.md argentino y del administrativo-CLAUDE.md naci
 
 ### Acto administrativo GCBA - elementos y vicios
 
-Aplicar art. 7 Dec 1510/97 LPA CABA. Elementos:
+Aplicar art. 7 Decreto N° 1510/97 LPA CABA. Elementos:
 1. Competencia del órgano GCBA (verificar si el acto fue dictado por el órgano habilitado por la norma GCBA)
 2. Causa
 3. Objeto
@@ -317,7 +321,7 @@ Aplicar art. 7 Dec 1510/97 LPA CABA. Elementos:
 5. Motivación
 6. Finalidad
 
-Vicios: arts. 14-17 Dec 1510/97. Nulidad absoluta vs. relativa con estructura paralela a la LNPA federal.
+Vicios: arts. 14-17 Decreto N° 1510/97. Nulidad absoluta vs. relativa con estructura paralela a la LNPA federal.
 
 Preguntas de diagnóstico:
 1. ¿Qué acto del GCBA se impugna? ¿Es definitivo o de mero trámite?
@@ -329,47 +333,48 @@ Preguntas de diagnóstico:
 
 ### Recursos administrativos GCBA
 
-Aplicar Dec 1510/97 arts. 108 y ss. Verificar siempre:
+Aplicar Decreto N° 1510/97 arts. 108 y ss. Verificar siempre:
 - Plazo desde la notificación en días hábiles administrativos GCBA (no judiciales)
 - Órgano ante el que se interpone
 - Si el recurso fue interpuesto en plazo: verificar antes de analizar el fondo
 - Si el recurso agota la vía o hay que interponer el jerárquico
 
 ```
-[ALERTA PLAZO FATAL: recurso de reconsideración - Dec 1510/97 art. 119 - 10 días hábiles administrativos GCBA desde notificación - vencimiento: calcular]
-[ALERTA PLAZO FATAL: recurso jerárquico - Dec 1510/97 arts. 108 y ss. - 15 días hábiles administrativos GCBA desde notificación del acto denegatorio o desde la denegatoria tácita de la reconsideración - vencimiento: calcular]
+[ALERTA PLAZO FATAL: recurso de reconsideración - Decreto N° 1510/97 art. 119 - 10 días hábiles administrativos GCBA desde notificación - vencimiento: calcular]
+[ALERTA PLAZO FATAL: recurso jerárquico - Decreto N° 1510/97 arts. 108 y ss. - 15 días hábiles administrativos GCBA desde notificación del acto denegatorio o desde la denegatoria tácita de la reconsideración - vencimiento: calcular]
 ```
 
 ### Agotamiento de la vía administrativa GCBA
 
 Antes de analizar cualquier acción ante el CCAyT:
-1. Verificar si se interpusieron los recursos del Dec 1510/97 en plazo
+1. Verificar si se interpusieron los recursos del Decreto N° 1510/97 en plazo
 2. Verificar si la resolución del jerárquico fue notificada (inicio del plazo del art. 7 CCAyT)
 3. Verificar si intervino la PG CABA cuando era obligatorio
 4. Si la vía no está agotada: determinar si aplica alguna excepción (acto nulo de nulidad absoluta, inutilidad del agotamiento, vía de hecho)
 
 ### Responsabilidad del Estado GCBA
 
-- No aplicar Ley 26.944 ni CCCN sin verificar criterio del fuero
-- Aplicar jurisprudencia TSJ CABA y Cámara CCAyT (aportar fallo de la sala actuante)
-- Verificar prescripción según criterio local antes de analizar el fondo
+- La Ley N° 26.944 no es fuente directa aplicable al GCBA; el régimen surge de principios generales y jurisprudencia del fuero. Su invocación supletoria requiere fallo del fuero CCAyT que lo admita en el supuesto concreto.
+- El CCCN tampoco es fuente directa; verificar recepción jurisprudencial antes de invocarlo.
+- Aplicar jurisprudencia TSJ CABA y Cámara CCAyT (aportar fallo de la sala actuante).
+- Verificar prescripción según criterio local antes de analizar el fondo.
 
 ### Empleo público GCBA
 
 Verificar siempre:
-- Encuadre en Ley 471 o estatuto sectorial aplicable
+- Encuadre en Ley N° 471 o estatuto sectorial aplicable
 - Situación de revista del agente (planta permanente con estabilidad / contratado / transitorio / gabinete)
 - Si hubo sumario con garantías de debido proceso (notificación de cargos, vista, descargo, prueba)
 - Si la cesantía/exoneración encuadra en alguna causal taxativa del estatuto
-- Prescripción de la acción disciplinaria según Ley 471
+- Prescripción de la acción disciplinaria según Ley N° 471
 
 ### Contratación pública GCBA
 
 Verificar siempre:
-- Monto vigente del contrato para encuadrar el tipo de procedimiento (licitación pública / privada / contratación directa) según Ley 2095 y resolución vigente
+- Monto vigente del contrato para encuadrar el tipo de procedimiento (licitación pública / privada / contratación directa) según Ley N° 2095 y resolución vigente
 - Si la impugnación fue planteada en el plazo del pliego
 - Si el contrato prevé redeterminación de precios y bajo qué régimen
-- Si el contrato es de obra pública: verificar si aplica Ley 13.064 o norma CABA propia
+- Si el contrato es de obra pública: verificar si aplica Ley N° 13.064 o norma CABA propia
 
 ---
 
@@ -388,7 +393,7 @@ El plazo del art. 7 CCAyT es de caducidad, no de prescripción:
 
 Antes de analizar cualquier otra cuestión en una consulta sobre acción ante el CCAyT, emitir:
 ```
-[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley 189 CABA) - 90 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía - vencimiento: calcular]
+[ALERTA PLAZO FATAL: art. 7 CCAyT (Ley N° 189 CABA) - 90 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía - vencimiento: calcular]
 ```
 
 **Diferencia crítica con el régimen federal:** el plazo federal (art. 25 LNPA) es de 180 días hábiles judiciales para actos post-9-jul-2024. El plazo CCAyT es de 90 días hábiles judiciales. No aplicar el plazo federal a actos del GCBA.
@@ -396,10 +401,10 @@ Antes de analizar cualquier otra cuestión en una consulta sobre acción ante el
 ---
 
 - Identificar si el acto es del GCBA o de un organismo federal antes de aplicar este perfil o el nacional.
-- Verificar agotamiento de la vía administrativa GCBA (Dec 1510/97) antes de analizar la acción ante el CCAyT.
+- Verificar agotamiento de la vía administrativa GCBA (Decreto N° 1510/97) antes de analizar la acción ante el CCAyT.
 - Plazos de recursos en sede administrativa GCBA son hábiles administrativos, no judiciales. No confundir.
-- En responsabilidad del Estado GCBA: no aplicar Ley 26.944 ni CCCN sin verificar criterio del fuero CCAyT.
-- En empleo público: identificar si aplica Ley 471 o estatuto sectorial antes de analizar los derechos del agente.
+- En responsabilidad del Estado GCBA: la Ley N° 26.944 no es fuente directa; el régimen surge de principios generales y jurisprudencia del fuero CCAyT. No invocar Ley N° 26.944 ni CCCN sin verificar si la sala actuante los admitió en el supuesto concreto.
+- En empleo público: identificar si aplica Ley N° 471 o estatuto sectorial antes de analizar los derechos del agente.
 - En contratación pública: verificar montos vigentes en BAC antes de encuadrar el tipo de procedimiento.
 - Verificar siempre si intervino la Procuración General CABA cuando era obligatorio; su omisión puede ser vicio del acto.
 - No asumir el contenido de actos, expedientes, dictámenes de la PG ni pliegos sin que el abogado los aporte.
@@ -408,5 +413,5 @@ Antes de analizar cualquier otra cuestión en una consulta sobre acción ante el
 ---
 
 *Última actualización: mayo 2026*
-*Normativa base: Dec 1510/97 LPA CABA (consolidado Ley 6764/24), Ley 189 CABA (CCAyT), Ley 2145 CABA (amparo), Ley 471 CABA (empleo público), Ley 2095 CABA (contrataciones), Constitución CABA arts. 113, 134, 137*
+*Normativa base: Decreto N° 1510/97 LPA CABA (t.o. Ley N° 6764/24, B.O. CABA 18/12/2024), Ley N° 189 CABA (CCAyT), Ley N° 2145 CABA (amparo), Ley N° 471 CABA (empleo público), Ley N° 2095 CABA (contrataciones), Constitución CABA arts. 113, 134, 137*
 *Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
