@@ -3,7 +3,7 @@ titulo: Prescripción laboral bienal con suspensiones concurrentes - telegrama y
 area: laboral
 perfil: laboral-CLAUDE.md
 fuero: CNAT
-problema: cómputo de la prescripción bienal del art. 256 LCT con suspensiones concurrentes: telegrama art. 257 LCT y trámite SECLO (art. 7 Ley 24.635) que se superponen parcialmente en el tiempo
+problema: "cómputo de la prescripción bienal del art. 256 LCT con suspensiones concurrentes: telegrama art. 257 LCT y trámite SECLO (art. 7 Ley 24.635) que se superponen parcialmente en el tiempo"
 ---
 
 # Caso · Prescripción laboral - suspensiones concurrentes
