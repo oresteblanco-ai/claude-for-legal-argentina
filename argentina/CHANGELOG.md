@@ -28,6 +28,43 @@ No esperar a la revisión periódica.
 
 ## 2026
 
+### Mayo 2026 - Skill de telegramas laborales + correcciones normativas Ley 27.742 y Ley 27.802
+
+**Archivos nuevos:**
+- `argentina/laboral/telegrama/telegramas-SKILL.md` - instrucciones operativas del skill de telegramas laborales y cartas documento; incluye proceso de tres pasos (recolección de datos, verificación normativa, consulta de modelos), formato de salida en dos bloques (texto del telegrama + referencias legales), tabla de racionalizaciones comunes con rebuttals, señales de alerta pre-entrega, y checklist de verificación al cierre; frontmatter con `name` y `description` para triggering automático
+- `argentina/laboral/telegrama/tipos-de-telegrama.md` - clasificación de telegramas por grupo (1-10) con notas críticas de derogación y condiciones temporales; Grupo 7 actualizado con alertas de derogación de multas Ley 24.013 y Ley 25.345 arts. 43-48
+- `argentina/laboral/telegrama/reglas-normativas.md` - 12 reglas de validación normativa post-reforma; corregidas: Regla 2 (Ley 25.323 derogada por art. 100 Ley 27.742 desde 9/7/2024, no por Ley 27.802), Regla 3 (arts. 43-48 Ley 25.345 derogados por art. 99 Ley 27.742, no solo la multa del art. 45), Regla 5 (art. 245 con tres tramos temporales: pre-30/12/2023, 30/12/2023-5/3/2026, desde 6/3/2026)
+- `argentina/laboral/telegrama/modelos/bloque-01-registro.md` - modelos de registro de relación laboral; art. 11 Ley 24.013 reemplazado por arts. 7 y 7 bis como fundamento vigente de intimación
+- `argentina/laboral/telegrama/modelos/bloque-02-estabilidad-despido.md` - modelos de estabilidad y despido; art. 45 Ley 25.345 marcado como derogado; modelo de multa por certificados reencuadrado como histórico (solo para extinciones pre-9/7/2024); nota general del art. 245 con tres tramos temporales
+- `argentina/laboral/telegrama/modelos/bloque-03-salarios.md` - modelos de pago de salarios y remuneraciones; nota de horas extras corregida de "contratos iniciados desde 6/3/2026" a "actos extintivos desde 6/3/2026"
+- `argentina/laboral/telegrama/modelos/bloque-04-ius-variandi.md` - modelos de modificaciones contractuales e ius variandi
+- `argentina/laboral/telegrama/modelos/bloque-05-renuncia.md` - modelos de renuncia
+- `argentina/laboral/telegrama/modelos/bloque-06-vacaciones-licencias.md` - modelos de vacaciones y licencias; referencia a "LCT art. 41 Ley 27.802" corregida a "Art. 41 Ley 27.802 (modifica régimen de vacaciones LCT)"
+- `argentina/laboral/telegrama/modelos/bloque-07-salud-hostigamiento.md` - modelos de seguridad y salud laboral, hostigamiento y discriminación
+- `argentina/laboral/telegrama/modelos/bloque-08-construccion.md` - modelos de industria de la construcción (Ley 22.250)
+
+**Archivos modificados:**
+- `argentina/laboral-CLAUDE.md` - sección "Normativa de referencia": Ley 24.013 actualizada (arts. 8-17 DEROGADOS por Ley 27.742, art. 11 DEROGADO, fundamento vigente arts. 7 y 7 bis), Ley 25.323 marcada como DEROGADA íntegramente, Ley 25.345 arts. 43-48 marcados como DEROGADOS; sección "Registración del contrato": tabla de consecuencias convertida a doble régimen temporal; art. 245 expandido a TRES regímenes (pre-30/12/2023, 30/12/2023-5/3/2026, desde 6/3/2026); sección "Certificados de trabajo": multa art. 45 Ley 25.345 marcada como DEROGADA con fecha de corte; sección "Presunciones procesales": "libro del art. 52" reemplazado por "registro de ARCA"; renuncia art. 240 actualizada con modalidad digital; licencia por maternidad art. 177 actualizada (mínimo 10 días previos, "persona gestante"); art. 80 LCT plazo corregido a 45 días hábiles; alerta normativa: cuatro tramos temporales, Ley 27.802 incorporada; módulo empleador: referencias a ARCA, diagnóstico actualizado; referencias a `ejemplos-laboral.md` eliminadas
+- `argentina/CLAUDE.md` - sección "Normativa de referencia laboral": derogaciones de Ley 24.013, 25.323 y 25.345 con fecha y norma derogante; sección "employment-legal": agravantes marcados como DEROGADOS con fecha; referencia a `ejemplos-laboral.md` eliminada; tabla de routing: fila de telegramas incorporada (`laboral-CLAUDE.md` + `laboral/telegrama/telegramas-SKILL.md`); árbol del repo actualizado con `laboral/telegrama/` y eliminación de `ejemplos-laboral.md` y `evals/laboral-prescripcion-suspension-concurrente/`; AFIP reemplazado por ARCA en marcadores tributarios
+- `argentina/README.md` - árbol de estructura: `laboral/telegrama/` incorporada, `ejemplos-laboral.md` eliminado, `evals/laboral-prescripcion-suspension-concurrente/` eliminado; tabla "Perfiles por área": complemento de laboral actualizado a `laboral/telegrama/`, alertas actualizadas con Ley 27.742 y Ley 27.802; instalación Paso 4 Opción A: instrucción genérica de skills para laboral; instalación Paso 6 Opción B: instrucción de Cowork con aclaración del flujo `.skill` vs `.md`; sección "Lo que podés hacer - Laboral": agravantes derogados eliminados, tres regímenes del art. 245 incorporados; sección "Contribuciones": "prescripción laboral" eliminada de áreas prioritarias de evals; encabezado `### Fuentes primarias` incorporado
+
+**Archivos eliminados:**
+- `argentina/ejemplos-laboral.md` - casos de liquidación con agravantes Ley 24.013/25.323; retirado por incompatibilidad con el régimen post-9/7/2024 (agravantes derogados); reemplazar cuando se disponga de casos actualizados al régimen vigente
+- `argentina/evals/laboral-prescripcion-suspension-concurrente/` - caso de verificación de prescripción bienal y suspensiones concurrentes; retirado para revisión
+
+**Normas afectadas:**
+- Ley 27.742 (Ley de Bases, BO 8/7/2024, vigente desde 9/7/2024): arts. 99 (derogación arts. 8-17 Ley 24.013, arts. 43-48 Ley 25.345) y 100 (derogación íntegra Ley 25.323); arts. 82-83 (incorporación arts. 7 y 7 bis Ley 24.013 como fundamento vigente de intimación de registro)
+- Ley 27.802 (Ley de Modernización Laboral, BO 6/3/2026): art. 51 (reforma art. 245 LCT - exclusión de vacaciones no gozadas y horas extras de la base; nuevo tope); art. 25 (reforma art. 80 LCT - tres vías de cumplimiento, plazo 45 días hábiles); art. 40 (reforma arts. 231 y 240 LCT - renuncia digital); art. 45 (reforma art. 210 LCT - certificados médicos digitales); art. 19 (reforma art. 31 LCT - solidaridad limitada a fraude); art. 9 (reforma art. 18 LCT - antigüedad en reingreso); art. 10 (reforma art. 20 LCT - pluspetición con costas solidarias)
+- DNU 70/2023 (BO 30/12/2023): reforma art. 245 LCT en su primer tramo (exclusión de SAC y bonificaciones semestrales/anuales)
+
+**Impacto en marcadores:**
+- Sin cambios en marcadores canónicos. Todos los modelos de telegramas usan `[VERIFICAR CCT APLICABLE]`, `[DATO A COMPLETAR]` y `[AVANCE BAJO RESERVA]` conforme al glosario
+
+**Normas de alta volatilidad - tabla actualizada:**
+- Art. 245 LCT: entrada actualizada para reflejar los tres regímenes temporales (ver tabla al pie)
+
+---
+
 ### Mayo 2026 - Incorporación perfil medicina legal y pericia médica forense
 
 **Archivos nuevos:**
@@ -263,7 +300,7 @@ Actualizar la columna "Última verificación" cuando se confirme la vigencia.
 
 | Norma | Área | Dato volátil | Última verificación |
 |---|---|---|---|
-| Art. 245 LCT - tope indemnizatorio | Laboral | Monto del tope por CCT | Mayo 2026 - verificar por CCT |
+| Art. 245 LCT - tope indemnizatorio y base | Laboral | TRES regímenes según fecha del acto extintivo: (1) pre-30/12/2023: base incluye SAC; (2) 30/12/2023-5/3/2026: base excluye SAC y bonificaciones semestrales/anuales (DNU 70/2023); (3) desde 6/3/2026: base excluye además vacaciones no gozadas y horas extras; tope = 3x promedio CCT (Ley 27.802). Verificar fecha del acto extintivo antes de calcular | Mayo 2026 - verificar por CCT y fecha del acto extintivo |
 | Acta CNAT - tasa de interés | Laboral | Criterio por sala; sin unificación post-Acta 2788/2024; no hay criterio único vigente; revisar pronunciamiento de cada sala | Mayo 2026 - verificar acta vigente |
 | Resolución SRT - prestaciones LRT | Laboral / LRT | Montos de prestaciones | Mayo 2026 - verificar RG vigente |
 | DNU 70/2023 - modificaciones LCT | Laboral | Estado judicial de cada modificación | Mayo 2026 - algunas suspendidas, verificar |
