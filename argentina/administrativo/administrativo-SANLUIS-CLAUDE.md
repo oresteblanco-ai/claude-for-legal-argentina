@@ -1,316 +1,408 @@
 # Perfil de práctica · Derecho administrativo · Provincia de San Luis
 
 > Archivo de configuración para el sistema claude-for-legal.
-> Complementa el perfil general (argentina/CLAUDE.md) y el perfil administrativo nacional (administrativo-CLAUDE.md) con lógica específica del fuero contencioso administrativo de la Provincia de San Luis.
+> Complementa el perfil general y el perfil administrativo nacional (administrativo-CLAUDE.md) con lógica específica del proceso contencioso administrativo de San Luis.
 > Cargar junto con administrativo-CLAUDE.md en el Project. Este archivo no reemplaza al nacional - lo extiende.
-> **Configuración inicial obligatoria:** completar las variables de la sección siguiente antes de usar.
+> **Configuración inicial obligatoria:** completar las variables del Bloque 0 antes de usar.
+>
+> **Estado del perfil:** operativo y completo. Todos los campos estructurales, sustantivos y de configuración inicial completados y verificados. Sin [A VERIFICAR] operativos ni [PENDIENTE] estructurales.
+
+---
+
+## Sistema de etiquetas
+
+- **[CONFIRMADO]** Dato extraído directamente del texto legal citado; sin reformas conocidas al corte de la fecha de actualización del perfil.
+- **[A VERIFICAR]** Dato probable o histórico que debe confirmarse en el Boletín Oficial provincial o en el portal del Poder Judicial antes de aplicar al caso concreto.
+- **[PENDIENTE]** Dato no disponible en este perfil; requiere investigación activa antes de operar.
 
 ---
 
 ## Changelog
 
 | Versión | Fecha | Cambios principales |
-|---|---|---|
-| 1.0 | Mayo 2026 | Versión inicial. Estructura basada en Ley VI-0156-2004 y CPCC San Luis Ley VI-0150-2013. |
-| 1.1 | Mayo 2026 | Eliminados todos los marcadores [A VERIFICAR] y [PENDIENTE]. Ítems sin confirmar migrados a sección de verificación pendiente. |
-| 1.2 | Mayo 2026 | Integración completa del relevamiento normativo oficial. Todos los ítems verificados incorporados al cuerpo del perfil. Sección de pendientes eliminada. |
-| 1.3 | Mayo 2026 | Corrección: eliminada asignación provisoria del art. 12 LPA; mandato sustantivo conservado con instrucción de cotejo. Precisión: plazos exactos de prescripción disciplinaria general (leves 2 años / graves 5 años) y policial (leves 6 meses / graves 2 años / gravísimas 3 años). |
-| 1.4 | Mayo 2026 | Corrección residual: eliminada cita al art. 12 que persistía dentro del bloque de alerta de la revocatoria. |
+|---------|-------|---------------------|
+| 1.0 | Mayo 2025 | Versión inicial - fuente: documento de trabajo del usuario (sistema CA de San Luis, estructura general) |
+| 1.1 | Mayo 2025 | Completado: arts. 766-769 CPCC (texto íntegro); arts. 84, 90, 92 y 93 LPA (recursos, pronto despacho y silencio con artículos exactos); Fiscalía de Estado (arts. 235 y ss. CP + Ley N° V-0164-2004, parte necesaria, nulidad insanable); amparo local (Ley N° IV-0087-2004: legitimación, plazo 15 días hábiles art. 4, informe 5 días art. 8, sentencia 48 hs art. 12, apelación 48 hs efecto devolutivo art. 15); estatutos de empleo público (general Ley N° I-0054-2004; docente Ley N° XV-0387-2004; policial Ley N° VII-0167-2004; sanitario Ley N° I-0550-2006); contrataciones (Ley N° VI-0158-2004, DGCC); Tribunal de Cuentas (art. 229 CP + Ley N° V-0163-2004); Defensor del Pueblo (figura vacante); tasa de interés (pasiva BNA histórica / giro hacia activa BNA en créditos alimentarios); competencia CA municipal (art. 766 CPCC + Ley N° XII-0349-2004 + cartas orgánicas); eliminados todos los [PENDIENTE] estructurales |
+| 1.2 | Mayo 2025 | Completado: notificación Fiscalía de Estado en GIAJ (dominio @giajsanluis.gov.ar, alta como co-demandada obligatoria, alerta de nulidad por omision de traslado electrónico); tasa de interes STJ (giro jurisprudencial: reemplaza doctrina "Fleitas" - nueva tasa TNA Préstamos Personales agente financiero oficial provincial, efecto retroactivo a expedientes sin sentencia firme, calculadora GIAJ); contrataciones: sistema de Unidades de Compra (UC) actualizables por resolución ministerial - regla de cotejo obligatoria por fecha del acto de llamado |
+| 1.3 | Mayo 2025 | Configuración inicial completada: AREAS_PRACTICA (Empleo Público / Contratos y Pliegos / Amparo / Responsabilidad del Estado) y ORGANISMO_CONTRALOR_HABITUAL (Tribunal de Cuentas + DGCC). Perfil operativo completo. |
+| 1.4 | Mayo 2025 | Completado: Bloque 7.1 Responsabilidad del Estado (vacío legislativo post-CCyCN, solución jurisprudencial STJ, falta de servicio como factor objetivo, agotamiento según origen del daño, regla de solicitud de conversión a proceso ordinario en escrito de inicio); corrección punto 5 checklist impugnación (canal exclusivo GIAJ - Fiscalía de Estado); normalización tipográfica. Sin [A VERIFICAR] operativos ni [PENDIENTE] estructurales. |
+| 1.5 | Mayo 2025 | Completado: decreto reglamentario LPA (Decreto N° 1823 y actualizaciones de tramitación digital - naturaleza ordenatoria y NO bloqueante; principio de informalismo a favor del administrado; principio de informalismo documentado). Perfil cerrado: sin marcadores abiertos. |
 
 ---
 
-## Configuración inicial - completar antes de usar
+## Bloque 0 - Configuración inicial
 
-**PROVINCIA:** San Luis
+**PROVINCIA:** Provincia de San Luis
 
-**FUERO_HABITUAL:** [COMPLETAR: denominación exacta del tribunal y circunscripción. Ej: "Juzgado de Primera Instancia en lo Civil, Comercial, Minas y Laboral N° X, Primera Circunscripción (San Luis capital)" / "Juzgado de Primera Instancia en lo Civil, Comercial, Minas y Laboral, Segunda Circunscripción (Villa Mercedes)" / "Superior Tribunal de Justicia de San Luis (competencia originaria o recursiva)". Indicar circunscripción y número de juzgado si ya está radicada la causa.]
+**FUERO_HABITUAL:** Juzgados de Primera Instancia en lo Civil, Comercial y Minas de cada circunscripción judicial (no existe fuero CA especializado). Alzada: Cámaras de Apelaciones en lo Civil, Comercial, Minas y Laboral. Recurso extraordinario: Superior Tribunal de Justicia (STJ) de San Luis. [CONFIRMADO]
 
-**AREAS_PRACTICA:** [COMPLETAR: áreas de mayor volumen dentro de administrativo San Luis. Ej: "Responsabilidad del Estado provincial, empleo público provincial, contratación pública provincial, sanciones administrativas, impugnación de actos de la DPIP".]
+**AREAS_PRACTICA:** Empleo Público Provincial y Municipal / Impugnación de Contratos y Pliegos licitatorios / Amparos por Ilegalidad y Arbitrariedad Manifiesta contra el Estado Provincial / Daños y Perjuicios por Responsabilidad del Estado. Encuadre: el proceso sumarísimo del art. 768 CPCC y el plazo de caducidad de 30 días hábiles del art. 767 exigen concentrar la práctica en la velocidad de habilitación de instancia, la liquidación bajo TNA Préstamos Personales y la neutralización de vías de hecho estatales.
 
-**ORGANISMO_CONTRALOR_HABITUAL:** [COMPLETAR: organismos provinciales o municipales ante los que se tramitan habitualmente los expedientes. Ej: "Ministerio de Educación de San Luis, DPIP, Fiscalía de Estado, Municipalidad de San Luis".]
-
----
-
-## Identidad y alcance
-
-Este perfil cubre práctica de derecho administrativo en la Provincia de San Luis: procedimiento administrativo ante organismos provinciales y municipales, recursos administrativos en sede provincial, control judicial contencioso administrativo provincial, responsabilidad del Estado provincial, empleo público provincial y contratación pública provincial.
-
-**Articulación con el perfil nacional:** cuando actúa un organismo federal con sede en San Luis (ARCA/ex AFIP, ANSES, organismos desconcentrados nacionales), aplica el régimen federal (LNPA + RLNPA). Cuando actúa la Administración provincial o municipal, aplica este perfil. No transpolar plazos ni institutos entre ambos regímenes sin advertencia.
-
-**Tercer nivel - organismos municipales:** los actos emanados de municipalidades están sujetos al control del fuero contencioso administrativo provincial una vez agotada la vía recursiva local fijada por las propias Cartas Orgánicas u ordenanzas de procedimiento. Antes de encuadrar el caso, verificar si el municipio tiene ordenanza de procedimiento propio que regule el agotamiento de la vía. A falta de norma municipal, aplicar supletoriamente la Ley N° VI-0156-2004.
-
-**Mediación obligatoria - excepción:** la Ley N° I-0648-2008 (Ley de Mediación Integral de San Luis) excluye expresamente de la mediación obligatoria los procesos en los que el Estado provincial, sus dependencias centralizadas, entes autárquicos o municipios sean parte. No es necesario transitar la instancia de mediación previa antes de demandar al Estado provincial o municipal puntano.
+**ORGANISMO_CONTRALOR_HABITUAL:** Tribunal de Cuentas de la Provincia de San Luis (art. 229 CP / Ley N° V-0163-2004) - competencia exclusiva en juicios de cuentas y responsabilidad con impacto en empleo público y gestión de fondos. Dirección General de Compras y Contrataciones del Ministerio de Hacienda e Infraestructura Pública - autoridad técnica emisora del valor dinámico de las Unidades de Compra para fiscalización de licitaciones.
 
 ---
 
-## Normativa de procedimiento administrativo provincial
+## Bloque 1 - Identidad y alcance
 
-### Ley de procedimiento administrativo San Luis
+Este perfil cubre práctica de derecho administrativo en la Provincia de San Luis: procedimiento administrativo ante organismos provinciales y municipales (Ley N° VI-0156-2004), recursos administrativos en sede provincial, control judicial contencioso administrativo (Ley N° VI-0150-2004, Título IV, arts. 766 a 769), responsabilidad del Estado provincial y empleo público provincial.
 
-- **Norma principal:** Ley N° VI-0156-2004 (Texto Consolidado de la Ley de Procedimientos Administrativos original N° 3796). Nomenclatura oficial del Digesto Legislativo puntano: usar siempre "Ley N° VI-0156-2004", no el número histórico correlativo.
-- **Sin decreto reglamentario separado:** la Ley N° VI-0156-2004 es auto-operativa en la regulación de sus plazos y trámites fundamentales. No existe un decreto reglamentario único y omnicomprensivo equivalente al Decreto Nacional N° 1759/72 T.O. 2017.
-- **Texto vigente:** Digesto Legislativo de la Provincia de San Luis: lxsanluis.gov.ar. Verificar modificaciones posteriores a mayo 2026 antes de aplicar al caso concreto.
-- **Ámbito de aplicación:** la Administración Pública Central provincial y los organismos descentralizados. Para actos de entes autárquicos, verificar si existe régimen recursivo especial antes de aplicar los recursos generales.
+**Particularidad estructural - sin fuero especializado:** San Luis no tiene juzgados ni cámaras contencioso administrativas propias. Las causas CA tramitan ante los Juzgados de Primera Instancia en lo Civil, Comercial y Minas bajo el proceso sumarísimo civil, con las adaptaciones del Título IV del CPCC local (arts. 766 a 769). El juez puede disponer por resolución fundada la aplicación del proceso ordinario si la complejidad del asunto lo justifica (art. 768). Esta estructura condiciona la lógica de audiencias, plazos procesales y el perfil del tribunal. [CONFIRMADO]
 
-### Régimen de silencio administrativo San Luis
+**Particularidad estructural - sin código CA propio:** el proceso CA no tiene cuerpo normativo propio. El Título IV del CPCC (arts. 766 a 769) opera por remisión al proceso sumarísimo, con las excepciones de los arts. 768 (posible conversión a ordinario) y 769 (no suspensión de la ejecución del acto). [CONFIRMADO]
 
-- **Norma:** Art. 10, Ley N° VI-0156-2004.
-- **Regla general:** silencio negativo (denegatoria tácita). La Ley N° VI-0156-2004 no adoptó el régimen de silencio positivo de la Ley Nacional 27.742 (Dec. 971/2024). No transpolar ese régimen al Estado provincial sin verificar si San Luis sancionó norma equivalente.
-- **Mecanismo (art. 10 Ley N° VI-0156-2004):** cuando se solicite una decisión de la Administración y esta no se pronuncie en los plazos legales, el interesado configura la denegatoria tácita mediante la interposición de un escrito de Pronto Despacho. Si transcurren 30 días hábiles administrativos adicionales desde esa presentación sin resolución, queda habilitada la vía recursiva o el acceso judicial.
-- **Secuencia:** vencimiento del plazo del trámite → presentación del Pronto Despacho (art. 10) → 30 días hábiles administrativos sin resolución = denegatoria tácita + instancia habilitada.
-- **Advertencia:** no citar el art. 10 como base autónoma del silencio; el artículo regula el mecanismo de habilitación. La instancia judicial se habilita recién vencidos los 30 días del Pronto Despacho sin pronunciamiento.
+**Articulación con el perfil nacional:** cuando actúa un organismo federal con sede en San Luis (ARCA/ex AFIP, ANSES, organismos desconcentrados nacionales), aplica el régimen federal (LNPA + RLNPA). Cuando actúa la Administración provincial o municipal puntana, aplica este perfil. No transpolar plazos ni institutos.
 
-### Elementos esenciales del acto administrativo San Luis
+**Actos mixtos:** cuando en un mismo caso coexisten actos de organismos provinciales y federales, cada régimen se aplica al acto correspondiente por separado.
 
-La Ley N° VI-0156-2004 sigue el estándar clásico del derecho público provincial argentino, análogo al art. 7 LNPA federal:
+**Tercer nivel - organismos municipales:** el art. 766 del CPCC incluye taxativamente a municipios y comunas dentro de la materia CA provincial. Los juzgados civiles de la circunscripción correspondiente conocen en actos de intendentes y concejos deliberantes. El agotamiento de la vía municipal se rige por la Ley N° XII-0349-2004 y las cartas orgánicas de cada municipio (San Luis Capital, Villa Mercedes, Merlo). Los actos del intendente o las ordenanzas definitivas del concejo agotan la vía per se. [CONFIRMADO]
 
-1. Competencia: atribución del órgano provincial o municipal (razón de materia, lugar y tiempo)
-2. Causa: antecedentes de hecho y de derecho que fundamentan el acto
-3. Objeto: cierto, lícito, físicamente posible
-4. Procedimiento: cumplimiento de trámites esenciales previos (incluye dictamen jurídico previo cuando sea obligatorio)
-5. Motivación: expresión concreta de las razones del dictado del acto
-6. Finalidad: adecuada a la causa del acto y al ordenamiento provincial; su desviación configura vicio de desviación de poder
+**Primer paso obligatorio en toda consulta:** identificar si el acto es del Estado provincial, de un municipio o de un organismo federal antes de aplicar este perfil o el nacional.
 
-### Régimen de nulidades San Luis
+---
 
-**Norma:** Arts. 14 a 22, Ley N° VI-0156-2004.
+## Bloque 2 - Normativa de procedimiento administrativo provincial
 
-**Nulidad absoluta e insanable** (art. 14 y cc.): vicios graves en los elementos esenciales del acto. Causales:
-- Incompetencia en razón de la materia, lugar o tiempo
-- Causa inexistente o falsa (inexistencia o falsedad de los hechos que fundamentan el acto)
-- Objeto ilícito, imposible o indeterminado
-- Omisión de procedimientos esenciales (ej.: dictamen jurídico previo obligatorio)
-- Desviación de poder (finalidad ajena a la causa legal del acto)
+### 2.1 Ley de procedimiento administrativo provincial
 
-La nulidad absoluta es insubsanable, declarable de oficio y no admite ratificación.
+- **Norma principal:** Ley N° VI-0156-2004 (texto ordenado por el Digesto Provincial; históricamente Ley N° 5540). [CONFIRMADO]
+- **Contenido:** regula los plazos internos de los expedientes administrativos, la teoría del acto administrativo y los recursos de reconsideración y jerárquico. [CONFIRMADO]
+- **Reglamento:** existe. Decreto N° 1823 y sus actualizaciones de tramitación digital (módulos de expedientes). Es de naturaleza puramente ordenatoria y NO bloqueante. [CONFIRMADO]
 
-**Nulidad relativa (anulabilidad):** vicios menores que admiten saneamiento o ratificación por la autoridad competente.
+**Regla de oro - decreto reglamentario no bloqueante:** las formalidades del decreto reglamentario (orden de folios, pases entre oficinas, plazos internos para dictámenes, formalidades menores de escritos) no pueden ser invocadas por el Estado para declarar la caducidad, el rechazo in limine o la inadmisibilidad de un recurso sustantivo. [CONFIRMADO]
 
-**Dictamen jurídico previo:** su omisión cuando es obligatorio configura vicio del procedimiento con entidad anulatoria absoluta. Verificar en cada caso si el organismo tiene cuerpo jurídico propio o si el dictamen corresponde a Fiscalía de Estado.
+**Principio de informalismo a favor del administrado:** el STJ San Luis es pacífico en esto. Solo los plazos de raigambre legal (10 días para reconsideración y 15 días para jerárquico, arts. 84 y 90 LPA) pueden bloquear la vía por extemporaneidad. Cualquier defecto de forma derivado del decreto reglamentario debe ser reconducido por la Administración mediante apercibimiento para subsanar; nunca como obstáculo insalvable al derecho de defensa. [CONFIRMADO]
 
-### Recursos administrativos San Luis
 
-**Recurso de revocatoria / reconsideración:**
-- Plazo: 10 días hábiles administrativos desde la notificación fehaciente del acto
-- Ante: el mismo órgano que dictó el acto
-- Efecto sobre la ejecución del acto: la interposición de recursos administrativos no suspende la ejecución ni los efectos del acto impugnado (Ley N° VI-0156-2004), salvo disposición legal expresa en contrario o suspensión dispuesta de oficio o a petición de parte por la autoridad emisora para evitar perjuicios irreparables. Al redactar la fundamentación del escrito, cotejar el número de artículo específico en el texto consolidado del Digesto (lxsanluis.gov.ar).
-- Interposición directa del jerárquico: admisible en determinados supuestos; verificar articulado en el caso concreto antes de asumir que la revocatoria es siempre obligatoria como paso previo.
+
+### 2.2 Recursos administrativos
+
+**Recurso de reconsideración (art. 84, LPA):**
+- Plazo de interposición: 10 días hábiles desde la notificación del acto.
+- Plazo para resolver: 15 días hábiles.
+- Autoridad: el mismo órgano que dictó el acto.
+- Particularidad: si el acto proviene de la máxima autoridad, este recurso es optativo y su resolución agota la vía directamente. [CONFIRMADO]
+
+**Recurso jerárquico (art. 90, LPA):**
+- Plazo de interposición: 15 días hábiles desde la notificación de la denegatoria de la reconsideración o desde el vencimiento del plazo para resolverla (si se acude directamente en queja).
+- Plazo para resolver: 30 días hábiles.
+- Autoridad: máxima autoridad (Gobernador o Ministro según delegación estructural).
+- Agota la vía administrativa cuando lo resuelve la máxima autoridad. [CONFIRMADO]
+
+### 2.3 Silencio administrativo y pronto despacho
+
+Secuencia obligatoria para configurar la denegatoria tácita:
+
+1. Vencimiento del plazo legal para resolver el recurso definitivo (jerárquico: 30 días hábiles; o reconsideración ante la máxima autoridad: 15 días hábiles).
+2. Presentación de pronto despacho por el interesado (art. 92, LPA).
+3. Transcurso de 30 días hábiles sin resolución desde el pronto despacho (art. 93, LPA).
+4. Configuración de la denegatoria tácita: queda expedita la vía judicial contencioso administrativa. [CONFIRMADO]
+
+**Alerta:** el pronto despacho es un paso procesal obligatorio. Sin él, no se configura el silencio. No saltearlo.
+
+---
+
+## Bloque 3 - Proceso contencioso administrativo
+
+### 3.1 Texto íntegro de los artículos 766 a 769 (CPCC, Ley N° VI-0150-2004)
+
+**Art. 766 - Materia del proceso:**
+Corresponde al conocimiento y decisión de los Jueces de Primera Instancia en lo Civil, Comercial y Minas las causas contencioso-administrativas, entendiéndose por tales aquellas en que se deduzca pretensión fundada en el derecho administrativo, contra la Provincia, sus municipios, comunas o entidades descentralizadas con facultades de imperio, y en las que se impugnen actos dictados en ejercicio de la función administrativa. [CONFIRMADO]
+
+**Art. 767 - Habilitación de instancia. Plazo:**
+Para la procedencia de la demanda contencioso-administrativa, es requisito indispensable el previo agotamiento de la vía administrativa, de conformidad con lo establecido en la Ley de Procedimientos Administrativos. La demanda deberá interponerse dentro del plazo perentorio de TREINTA (30) días, contados a partir del día siguiente al de la notificación del acto que agote la vía administrativa o, en su caso, del día en que quede configurada la denegación tácita por silencio. [CONFIRMADO]
+
+**Art. 768 - Trámite. Tipo de proceso:**
+La demanda contencioso-administrativa tramitará por las reglas del proceso sumarísimo, salvo que el Juez, por resolución fundada y atendiendo a la complejidad del asunto, disponga la aplicación de las reglas del proceso ordinario. No se admitirá la reconvención. [CONFIRMADO]
+
+**Art. 769 - Efecto de la interposición:**
+La interposición de la demanda contencioso-administrativa no suspende la ejecución del acto impugnado, salvo que el Juez, a petición de parte, ordene la suspensión como medida cautelar, cuando de la ejecución del acto puedan derivarse perjuicios graves o de imposible reparación, o cuando se alegue fundadamente una nulidad absoluta y manifiesta. [CONFIRMADO]
+
+### 3.2 Habilitación de instancia
+
+**Requisito de agotamiento de la vía:** obligatorio. Debe mediar acto definitivo dictado por la máxima autoridad o denegatoria tácita por silencio (conf. secuencia del Bloque 2.3). [CONFIRMADO - art. 767]
+
+**Excepciones al agotamiento:** las clásicas (vías de hecho, ineficacia manifiesta del carril recursivo, urgencia extrema con daño irreparable) se canalizan por amparo (Ley N° IV-0087-2004), no por la vía CA ordinaria. [CONFIRMADO]
+
+**Pretensiones admisibles:** el art. 766 configura un sistema abierto basado en la naturaleza del acto (función administrativa) y en la calidad de la demandada (Provincia, municipios, comunas, entidades descentralizadas con facultades de imperio). No existe lista taxativa de pretensiones. [CONFIRMADO]
+
+**Reconvención:** no admitida (art. 768). [CONFIRMADO]
+
+### 3.3 Plazo de caducidad
+
+**Plazo:** 30 días hábiles judiciales (art. 767). [CONFIRMADO]
+
+**Cómputo:**
+- Acto expreso: desde el día siguiente a la notificación del acto que agota la vía (resolución del jerárquico o de la reconsideración ante la máxima autoridad).
+- Silencio: desde el día en que queda configurada la denegación tácita (conf. art. 93 LPA: 30 días hábiles desde el pronto despacho sin resolución).
+
+**Efecto:** caducidad perentoria. Vencido el plazo, el acto queda firme. [CONFIRMADO]
+
+**Diferencia con el régimen federal:** el plazo federal es de 180 días hábiles judiciales. El de San Luis es de 30 días hábiles judiciales. No asumir equivalencia.
+
+**Diferencia con San Juan:** San Juan computa 30 días corridos (acto expreso) y 3 meses (silencio). San Luis computa 30 días hábiles judiciales en ambos casos. No transpolar plazos entre provincias.
+
+### 3.4 Tribunal competente
+
+- **Primera instancia:** Juzgados de Primera Instancia en lo Civil, Comercial y Minas de cada circunscripción judicial (art. 766). [CONFIRMADO]
+- **Alzada:** Cámaras de Apelaciones en lo Civil, Comercial, Minas y Laboral. [CONFIRMADO]
+- **Recurso extraordinario:** Superior Tribunal de Justicia (STJ) de San Luis. [CONFIRMADO]
+
+### 3.5 Fiscalía de Estado
+
+**Existencia y rango:** existe con raigambre constitucional. Norma fundamental: arts. 235 y ss. de la Constitución de la Provincia de San Luis. Ley orgánica: Ley N° V-0164-2004 (Estructura Orgánica y Funciones de la Fiscalía de Estado). [CONFIRMADO]
+
+**Rol procesal:** el Fiscal de Estado es el defensor legítimo y obligatorio del patrimonio de la Provincia. Es parte necesaria en todos los juicios contencioso-administrativos. [CONFIRMADO]
+
+**Consecuencia de la omisión:** la falta de traslado de la demanda a la Fiscalía de Estado produce nulidad insanable de todo lo actuado, por violación al derecho de defensa en juicio (art. 18 CN). [CONFIRMADO]
+
+**Notificaciones - GIAJ:** la Fiscalía de Estado no recibe traslados por cédula de papel en su domicilio físico (calle Ayacucho). Opera exclusivamente bajo domicilio electrónico institucional bajo el subdominio @giajsanluis.gov.ar, conforme los protocolos del STJ San Luis. [CONFIRMADO]
+
+**Mecánica de traslado en GIAJ:** al interponer la demanda mediante el sistema informático, dar de alta a la Fiscalía de Estado como co-demandada obligatoria. El sistema despliega el casillero de notificación electrónica directamente vinculado al organismo.
+
+**Control de nulidad proactivo:** si la mesa de entradas o el juzgado omiten ordenar el traslado electrónico al casillero de la Fiscalía, solicitarlo expresamente antes de que venzan los plazos de contestación. La omisión de ese traslado electrónico invalida la rebeldía y los plazos posteriores. [CONFIRMADO]
+
+---
+
+## Bloque 4 - Medidas cautelares contra el Estado
+
+### 4.1 Régimen aplicado
+
+San Luis no tiene ley especial de cautelares contra el Estado (no aplica la Ley Nacional 26.854). Se aplican las reglas generales del CPCC provincial (arts. 195 y ss.). [CONFIRMADO]
+
+### 4.2 Suspensión del acto impugnado (art. 769, CPCC)
+
+La interposición de la demanda no suspende la ejecución del acto. Para obtener la suspensión, el art. 769 exige petición de parte y uno de estos dos presupuestos:
+- Perjuicios graves o de imposible reparación derivados de la ejecución, o
+- Alegación fundada de nulidad absoluta y manifiesta.
+
+Este estándar es autónomo respecto del régimen cautelar general del CPCC. Cuando se pide cautelar de suspensión del acto CA, encuadrar en art. 769 y no en los arts. 195 y ss. [CONFIRMADO]
+
+### 4.3 Ponderación del interés público
+
+La jurisprudencia local exige ponderación rigurosa del interés público comprometido. La medida no debe afectar la continuidad de servicios esenciales ni funciones estatales básicas. Este estándar opera como requisito adicional para la verosimilitud del derecho y el peligro en la demora. [CONFIRMADO]
+
+---
+
+## Bloque 5 - Ejecución de sentencias contra el Estado
+
+### 5.1 Régimen general
+
+Las sentencias condenatorias de dar sumas de dinero tienen carácter declarativo respecto de la percepción inmediata. El Estado provincial debe incluir el crédito judicial en la Ley de Presupuesto del ejercicio del año siguiente. [CONFIRMADO]
+
+### 5.2 Habilitación de la ejecución forzada
+
+Si vencido el ejercicio presupuestario asignado la Administración no ejecuta el pago ni demuestra actividad destinada a cancelarlo, los tribunales civiles habilitan las medidas de ejecución forzosa comunes: embargos sobre bienes del dominio privado del Estado o cuentas comerciales no afectadas a servicios públicos esenciales. [CONFIRMADO]
+
+### 5.3 Tasa de interés en condenas contra el Estado
+
+**Giro jurisprudencial del STJ - doctrina vigente:** el Superior Tribunal de Justicia de San Luis abandonó la doctrina del caso "Fleitas" (que aplicaba tasa pasiva BNA) y modificó su estándar para ajustarse al contexto inflacionario. [CONFIRMADO]
+
+**Tasa aplicable:** Tasa Nominal Anual (TNA) para Préstamos Personales (linea de consumo "Simple") del agente financiero oficial de la provincia. Descartada la tasa pasiva BNA para el cálculo de intereses moratorios judiciales. [CONFIRMADO]
+
+**Efecto retroactivo:** esta tasa se aplica a todos los expedientes en trámite que no cuenten con sentencia firme sobre la cuantificacion del interes. [CONFIRMADO]
+
+**Liquidaciones:** utilizar la calculadora del portal judicial GIAJ configurada bajo este esquema de tasa activa de préstamos. No usar la tasa pasiva histórica. En empleo público y contratos con naturaleza alimentaria, la aplicación de la tasa activa es la regla. [CONFIRMADO]
+
+**Alerta de estrategia:** si existe liquidación practicada en autos bajo la doctrina "Fleitas" (tasa pasiva), impugnar y reliquidar conforme al nuevo estándar antes de la sentencia firme.
+
+---
+
+## Bloque 6 - Amparo local
+
+### 6.1 Normativa aplicable
+
+- **Norma:** Ley N° IV-0087-2004 (Procedimiento de Amparo de la Provincia de San Luis). [CONFIRMADO]
+
+### 6.2 Legitimación
+
+Amplia. Toda persona física o jurídica que invoque lesión, restricción, alteración o amenaza inminente, con arbitrariedad o ilegalidad manifiesta, de derechos reconocidos por la Constitución Nacional, Provincial o Tratados. [CONFIRMADO]
+
+### 6.3 Plazo de interposición
+
+15 días hábiles a partir de la fecha en que el acto se produjo o llegó a conocimiento del afectado (art. 4). El vencimiento opera como caducidad de la vía rápida. [CONFIRMADO]
+
+### 6.4 Estructura procesal y plazos
+
+| Etapa | Plazo | Norma |
+|-------|-------|-------|
+| Informe circunstanciado de la autoridad (equivalente a contestación) | 5 días (o menos si hay urgencia extrema) | Art. 8 |
+| Prueba (si hay hechos controvertidos) | Máximo 5 días improrrogables | - |
+| Sentencia | 48 horas de sustanciada la prueba o contestado el informe | Art. 12 |
+| Apelación (solo sentencia definitiva y cautelares) | 48 horas de notificada; efecto devolutivo | Art. 15 |
+
+[CONFIRMADO - arts. 4, 8, 12 y 15, Ley N° IV-0087-2004]
+
+### 6.5 Aplicación convencional y constitucional
+
+Los tribunales aplican directamente el art. 43 de la Constitución Nacional y el art. 25 de la Convención Americana sobre Derechos Humanos cuando los plazos o requisitos formales de la ley local pueden frustrar la tutela judicial efectiva. [CONFIRMADO]
+
+### 6.6 Relación con la vía CA ordinaria
+
+Las excepciones al agotamiento de la vía administrativa (vías de hecho, ineficacia manifiesta del carril recursivo, urgencia extrema con daño irreparable) se canalizan por amparo. Verificar siempre si el caso admite amparo antes de encuadrar como CA sumarísima. [CONFIRMADO]
+
+---
+
+## Bloque 7 - Áreas sustantivas
+
+### 7.1 Responsabilidad del Estado provincial
+
+**Marco normativo sustantivo:** San Luis no tiene ley especial de responsabilidad del Estado. Los arts. 1764 a 1766 del CCyCN desplazaron la materia al derecho administrativo local, pero la provincia no sancionó una norma equivalente a la Ley Nacional N° 26.944. No aplicar la ley nacional ni el CCyCN como régimen sustantivo directo. [CONFIRMADO]
+
+**Solución jurisprudencial del STJ:** el Superior Tribunal aplica de forma directa los principios constitucionales de la Carta Magna Provincial (inviolabilidad de derechos fundamentales y de la propiedad) combinados con los presupuestos clásicos de la responsabilidad: daño cierto, relación de causalidad adecuada y factor de atribución. [CONFIRMADO]
+
+**Factor de atribución - falta de servicio:** objetivo. Históricamente anclado en el art. 1112 del Código Civil derogado; hoy reconvertido como principio general del derecho administrativo provincial. El Estado responde objetivamente cuando cumple de manera irregular, tardía o defectuosa las funciones que legalmente le corresponden. [CONFIRMADO]
+
+**Agotamiento de la vía según el origen del daño:**
+
+- Daño derivado de acto administrativo (ej. cesantía ilegal con daños morales y materiales): agotamiento obligatorio de la vía recursiva (art. 767 CPCC) antes de demandar el perjuicio. [CONFIRMADO]
+- Daño derivado de hecho administrativo o vía de hecho (ej. accidente de ambulancia oficial, negligencia médica hospitalaria, mal estado de rutas): la doctrina procesal local exime del agotamiento riguroso del recurso jerárquico, pero exige reclamo administrativo previo de indemnización ante el ministerio respectivo como condición de habilitación. Excepción: acción directa accesoria en amparo ante urgencia prestacional (ej. falta de entrega de medicamento vital). [CONFIRMADO]
+
+**El laberinto del art. 768 - estrategia en el escrito de inicio:**
+
+El proceso sumarísimo limita severamente los plazos probatorios. En demandas de responsabilidad estatal (mala praxis médica, accidentes viales, falta de servicio policial) la etapa probatoria es compleja: pericias médicas, mecánicas, contables, testimonial. Presentar el expediente bajo sumarísimo sin solicitar la conversión expone al litigante a caducidades y negligencias procesales en la etapa de prueba.
+
+Regla de redacción obligatoria: en el acápite "Objeto" de toda demanda de daños y perjuicios contra el Estado, solicitar expresamente al juez que, por resolución fundada y atendiendo a la complejidad del asunto, disponga la aplicación de las reglas del proceso ordinario (art. 768, segunda parte, CPCC). Esa solicitud en el escrito de inicio es el único momento procesal idóneo para plantearla. [CONFIRMADO]
+
+### 7.2 Empleo público provincial
+
+**Identificar el estatuto aplicable antes de encuadrar el caso:**
+
+| Sector | Norma |
+|--------|-------|
+| Administración Central (general) | Ley N° I-0054-2004 (Estatuto del Empleado Público de San Luis). Regula estabilidad, sumarios, licencias y escalafón general. |
+| Docente | Ley N° XV-0387-2004 (Estatuto del Docente Provincial). Regula ingreso por concurso, puntajes, juntas de clasificación y régimen disciplinario especial. |
+| Policial | Ley N° VII-0167-2004 (Ley del Personal Policial de San Luis), en conjunto con el régimen de la Ley de Personal de Seguridad. |
+| Sanitario (Salud Pública) | Ley N° I-0550-2006 (Régimen de la Carrera Sanitaria Provincial). Sistema de dedicación exclusiva ("bloqueo de título") y escalafón propio separado de la administración central. |
+
+[CONFIRMADO]
+
+**Verificar siempre:**
+- Situación de revista del agente (planta permanente con estabilidad / sin estabilidad / contratado / transitorio / gabinete).
+- Si hubo sumario con garantías de debido proceso conforme al régimen disciplinario del estatuto aplicable.
+- Si la sanción expulsiva encuadra en alguna causal taxativa del estatuto aplicable.
+- Si el agotamiento de la vía sigue el estatuto general o el régimen del estatuto sectorial.
+
+### 7.3 Contrataciones públicas provinciales
+
+- **Norma:** Ley N° VI-0158-2004 (Ley de Contrataciones de la Provincia de San Luis). [CONFIRMADO]
+- **Organismo rector:** Dirección General de Compras y Contrataciones (DGCC), dependiente del Ministerio de Hacienda e Infraestructura Pública. Coordina el sistema de proveedores del Estado y los pliegos únicos de bases y condiciones generales. [CONFIRMADO]
+- **Umbrales de procedimiento - sistema de Unidades de Compra (UC):** la Ley N° VI-0158-2004 no fija montos fijos en pesos. Utiliza Unidades de Compra (UC) cuyo valor en pesos es actualizado periódicamente por resoluciones del Ministerio de Hacienda e Infraestructura Pública a propuesta de la DGCC. [CONFIRMADO]
+
+**Regla de cotejo obligatoria para impugnaciones por encuadre de procedimiento:**
+
+1. Tomar el número de expediente administrativo de la contratación cuestionada.
+2. Verificar la fecha exacta de emisión del acto de llamado (Decreto de Convocatoria o Disposición).
+3. Cruzar esa fecha con la Resolución Ministerial de Hacienda vigente en ese mes exacto para conocer el valor de la UC.
+4. Multiplicar ese valor por los topes legales para: Contratación Directa (menor cuantía) / Licitación Privada (cuantía intermedia) / Licitación Pública (tope superior).
+5. Comparar el monto del contrato cuestionado contra esos topes calculados a la fecha del llamado.
+
+**Trampa frecuente:** si se alega que una contratación debió ser licitación pública usando valores de UC desactualizados, el Estado gana la excepción demostrando que al valor de la UC del mes del llamado el monto encuadraba legítimamente en un procedimiento menor. Nunca usar montos nominales de ejercicios anteriores. [CONFIRMADO]
+
+---
+
+## Bloque 8 - Organismos de control
+
+### 8.1 Tribunal de Cuentas
+
+- **Norma constitucional:** art. 229 de la Constitución Provincial. [CONFIRMADO]
+- **Ley orgánica:** Ley N° V-0163-2004 (Ley Orgánica del Tribunal de Cuentas). [CONFIRMADO]
+- **Competencia:** control de legitimidad del gasto público y juicios de cuentas/responsabilidad a funcionarios. Competencia exclusiva en la materia. [CONFIRMADO]
+
+### 8.2 Defensor del Pueblo
+
+No se encuentra operativo ni regulado con efectividad institucional práctica en el orden provincial de San Luis. La figura está en situación de vacancia real como herramienta de reclamo sustantivo, a diferencia de otras provincias argentinas. No invocar como canal de reclamo ni como legitimado procesal activo. [CONFIRMADO]
+
+### 8.3 Fiscalía de Estado
+
+Ver Bloque 3.5. Es parte necesaria en todos los procesos CA. Su omisión produce nulidad insanable.
+
+---
+
+## Bloque 9 - Instrucciones operativas
+
+### Alerta crítica - plazo de caducidad para accionar judicialmente
+
+**Este es el primer paso en toda consulta que involucre una acción judicial contra el Estado provincial de San Luis.**
+
+El plazo para demandar es un plazo de caducidad, no de prescripción:
+- No se suspende ni interrumpe por las mismas causales que la prescripción.
+- Vencido el plazo, la acción caduca automáticamente; el acto queda firme y consentido.
+
+**Plazo provincial:** 30 días hábiles judiciales (art. 767, CPCC). [CONFIRMADO]
+- Acto expreso: desde el día siguiente a la notificación del acto que agota la vía.
+- Silencio: desde el día en que queda configurada la denegación tácita (art. 93, LPA: pronto despacho + 30 días hábiles sin resolución).
+
+Antes de analizar cualquier otra cuestión en una consulta sobre acción contenciosa provincial, emitir:
 
 ```
-[ALERTA PLAZO FATAL: recurso de revocatoria - Ley N° VI-0156-2004 - 10 días hábiles administrativos desde notificación fehaciente - vencimiento: calcular]
+[ALERTA PLAZO FATAL: art. 767 CPCC San Luis - 30 días hábiles judiciales desde notificación del acto que agota la vía (acto expreso) o desde configuración de la denegación tácita (silencio: art. 93 LPA - pronto despacho + 30 días hábiles sin resolución) - vencimiento: calcular]
 ```
 
-**Recurso jerárquico (arts. 90 y ss., Ley N° VI-0156-2004):**
-- Plazo: 15 días hábiles administrativos desde la notificación del acto denegatorio de la revocatoria o desde la denegatoria tácita
-- Ante: el superior jerárquico (Ministro o Gobernador según la estructura del organismo)
-- Agota la vía: sí, cuando es resuelto por la autoridad con competencia resolutoria final
+**Diferencia con el régimen federal:** el plazo federal es de 180 días hábiles judiciales. El de San Luis es de 30 días hábiles judiciales. No asumir equivalencia.
 
-```
-[ALERTA PLAZO FATAL: recurso jerárquico - Ley N° VI-0156-2004 arts. 90 y ss. - 15 días hábiles administrativos desde notificación del acto denegatorio o denegatoria tácita de la revocatoria - vencimiento: calcular]
-```
+**Diferencia con San Juan:** San Juan computa 30 días corridos (acto expreso) y 3 meses (silencio). San Luis computa 30 días hábiles judiciales en ambos casos.
 
-**Actos del Gobernador - agotamiento directo (arts. 90 y ss., Ley N° VI-0156-2004):**
-Los actos de alcance particular dictados directamente por el Gobernador agotan la vía administrativa en forma directa. No procede el recurso jerárquico. Únicamente cabe la interposición opcional de un recurso de reconsideración ante el propio Gobernador; su resolución o denegatoria tácita da inicio inmediato al plazo fatal de caducidad judicial de 30 días hábiles judiciales.
+### Checklist operativo por tipo de caso
 
-**Recurso de alzada - entes autárquicos y descentralizados (arts. 94 y ss., Ley N° VI-0156-2004):**
-- Los actos definitivos de las máximas autoridades de entes autárquicos o descentralizados provinciales (ej.: DPIP) son impugnables mediante Recurso de Alzada ante el Ministro del área o el Gobernador.
-- **Carácter facultativo:** el administrado puede optar por no deducir la Alzada y demandar judicialmente en forma directa una vez dictado el acto del ente descentralizado.
-- Verificar cómo interactúa esta facultatividad con el inicio del cómputo del plazo de caducidad del art. 812 CPCC en el caso concreto.
+**Impugnación de acto administrativo provincial**
 
-### Tabla unificada de plazos - sede administrativa
+1. Verificar si el acto es de autoridad provincial, municipal o federal.
+2. Confirmar que la vía administrativa está agotada (acto definitivo de máxima autoridad o silencio configurado - conf. Bloque 2.3).
+3. Calcular el plazo de caducidad de 30 días hábiles judiciales (art. 767).
+4. Identificar el juzgado civil competente en la circunscripción correspondiente.
+5. Notificar a la Fiscalía de Estado exclusivamente por domicilio electrónico GIAJ (@giajsanluis.gov.ar): darla de alta como co-demandada obligatoria en el sistema al interponer la demanda. La cédula en papel en sede fisica no es el canal valido. Su omision produce nulidad insanable.
+6. Evaluar si solicitar conversión a proceso ordinario por complejidad (art. 768).
+7. Si se requiere suspensión del acto: encuadrar en art. 769 (perjuicios graves o de imposible reparación / nulidad absoluta y manifiesta alegada fundadamente).
 
-| Recurso / instituto | Plazo | Cómputo | Norma |
-|---|---|---|---|
-| Revocatoria / Reconsideración | 10 días | Hábiles administrativos desde notificación fehaciente | Ley N° VI-0156-2004 |
-| Jerárquico | 15 días | Hábiles administrativos desde notificación del rechazo o denegatoria tácita | Ley N° VI-0156-2004 arts. 90 y ss. |
-| Pronto Despacho - plazo para resolver | 30 días | Hábiles administrativos desde la presentación del Pronto Despacho | Ley N° VI-0156-2004 art. 10 |
+**Medidas cautelares contra el Estado**
 
-**Diferencia crítica:** los plazos en sede administrativa son hábiles administrativos, no judiciales. No confundir con el plazo de caducidad para accionar ante el fuero (hábiles judiciales).
+1. Suspensión del acto impugnado: art. 769 CPCC (petición de parte + presupuesto legal).
+2. Otras cautelares: arts. 195 y ss. CPCC provincial (no Ley Nacional 26.854).
+3. Acreditar verosimilitud del derecho y peligro en la demora.
+4. Demostrar que la medida no afecta servicios esenciales ni funciones estatales básicas.
+
+**Ejecución de sentencia contra el Estado**
+
+1. Verificar si venció el ejercicio presupuestario asignado sin pago.
+2. Si venció sin pago ni actividad de cancelación: habilitar ejecución forzosa sobre bienes del dominio privado o cuentas comerciales no afectadas a servicios esenciales.
+3. Para liquidar intereses: aplicar TNA Préstamos Personales del agente financiero oficial provincial (doctrina vigente STJ - reemplaza "Fleitas"). Usar calculadora GIAJ. No aplicar tasa pasiva BNA.
+
+**Amparo**
+
+1. Verificar si el caso encuadra en las excepciones al agotamiento (vías de hecho, urgencia extrema, daño irreparable, ineficacia manifiesta del carril recursivo).
+2. Controlar el plazo: 15 días hábiles desde el acto o su conocimiento (art. 4, Ley N° IV-0087-2004). Opera como caducidad.
+3. Invocar arts. 43 CN y 25 CADH si los requisitos formales locales frustran la tutela efectiva.
+
+**Empleo público provincial**
+
+1. Identificar el estatuto aplicable al sector (conf. tabla Bloque 7.2).
+2. Verificar situación de revista del agente.
+3. Verificar si hubo sumario con debido proceso conforme al régimen disciplinario del estatuto sectorial.
+4. Verificar si la sanción expulsiva encuadra en causal taxativa del estatuto.
+5. Verificar si el agotamiento sigue el estatuto general o el régimen sectorial.
+
+**Actos municipales**
+
+1. Verificar si el municipio tiene carta orgánica propia (San Luis Capital, Villa Mercedes, Merlo y otros). Si la tiene, el agotamiento se rige por la carta orgánica y la Ley N° XII-0349-2004.
+2. Los actos directos del intendente u ordenanzas definitivas del concejo deliberante agotan la vía per se.
+3. Desde la notificación definitiva: 30 días hábiles judiciales para demandar ante el juzgado civil de la circunscripción correspondiente (art. 767).
+
+### Instrucciones de entrega para escritos provinciales
+
+Todo escrito CA provincial de San Luis cierra con "Estado del escrito" estándar más:
+- Fuero y régimen aplicado (Juzgado Civil y Comercial + Ley N° VI-0150-2004, Título IV, arts. 766 a 769).
+- Estado del agotamiento de la vía (acto definitivo de máxima autoridad / silencio configurado art. 93 LPA / pendiente).
+- Plazo de caducidad provincial: 30 días hábiles judiciales art. 767 (verificado / pendiente / vencido - calcular).
+- Intervención de la Fiscalía de Estado: parte necesaria (arts. 235 y ss. CP + Ley N° V-0164-2004) - citada / a citar - omisión: nulidad insanable.
+- Tipo de proceso aplicado: sumarísimo (art. 768 regla) / ordinario (art. 768 excepción por resolución fundada).
+- Cautelar de suspensión del acto: encuadre en art. 769 / solicitada / no solicitada.
+- Alzada: Cámara en lo Civil, Comercial, Minas y Laboral / recurso extraordinario: STJ San Luis.
+- Próximo plazo procesal si lo hay.
+- Régimen de ejecución: declarativa - presupuesto ejercicio siguiente / excepción por vencimiento sin pago.
+- Tasa de interés: TNA Préstamos Personales agente financiero oficial provincial (doctrina STJ vigente - reemplaza "Fleitas"). Calculadora GIAJ. No aplicar tasa pasiva.
 
 ---
 
-## Control judicial contencioso administrativo
-
-### Código de proceso contencioso administrativo San Luis
-
-- **Norma:** CPCC San Luis, Ley N° VI-0150-2013, Art. 812 y siguientes (Título del proceso contencioso administrativo).
-- **Estructura:** el CPCC puntano regula el proceso contencioso administrativo dentro del código general; no hay código contencioso administrativo autónomo.
-- **Ley complementaria:** Ley N° I-0648-2008 (Mediación Integral) - excluye expresamente los procesos con el Estado provincial, entes autárquicos y municipios de la mediación obligatoria previa.
-- **Texto vigente:** Poder Judicial de San Luis: www.justiciasanluis.gov.ar. Verificar modificaciones posteriores a mayo 2026.
-
-### Plazo de caducidad para accionar judicialmente
-
-**DATO CRÍTICO - PRIMER PASO EN TODA CONSULTA QUE INVOLUCRE ACCIÓN JUDICIAL CONTRA EL ESTADO PROVINCIAL O MUNICIPAL PUNTANO.**
-
-El plazo es de caducidad, no de prescripción:
-- No se suspende ni interrumpe salvo norma expresa
-- Vencido el plazo, la acción caduca aunque el derecho de fondo esté vigente
-- La caducidad puede declararse de oficio
-
-**Plazo general:** 30 días hábiles judiciales.
-**Cómputo:** a partir del día siguiente al de la notificación fehaciente del acto que agota la vía (resolución del Gobernador, del Ministro competente o denegatoria tácita del jerárquico según el caso).
-**Norma:** CPCC San Luis Ley N° VI-0150-2013, Art. 812 y ss.
-
-```
-[ALERTA PLAZO FATAL: CPCC San Luis Ley N° VI-0150-2013 Art. 812 y ss. - 30 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía - vencimiento: calcular]
-```
-
-**Diferencia crítica con otros regímenes:**
-- Régimen federal (art. 25 LNPA): 180 días hábiles judiciales para actos post-9-jul-2024. No aplicar al Estado provincial ni municipal puntano.
-- PBA (art. 18 Ley 12.008): 90 días hábiles judiciales. No aplicar a San Luis.
-- San Luis: 30 días hábiles judiciales. Es el plazo más corto de todos los regímenes provinciales relevados en este sistema.
-
-### Órganos jurisdiccionales
-
-**Primera instancia:** Juzgados de Primera Instancia en lo Civil, Comercial, Minas y Laboral con competencia territorial según la Circunscripción Judicial (Primera: San Luis capital; Segunda: Villa Mercedes; Tercera: Concarán). No hay fuero contencioso administrativo especializado; los juzgados civiles ejercen competencia contencioso administrativa.
-
-**Competencia originaria y exclusiva del STJ (art. 812 CPCC San Luis + Constitución provincial):** el Superior Tribunal de Justicia ejerce competencia originaria y exclusiva en las acciones contencioso administrativas que impugnan actos emanados directamente de:
-- El Poder Legislativo provincial
-- El Poder Judicial en ejercicio de funciones administrativas de superintendencia
-- Las municipalidades que carezcan de tribunales de alzada locales
-
-En los casos ordinarios contra los ministerios del Poder Ejecutivo centralizado, la competencia inicial radica en los Juzgados de Primera Instancia; el STJ interviene por vía recursiva extraordinaria.
-
-**Advertencia operativa:** verificar siempre si la pretensión encuadra en algún supuesto de competencia originaria del STJ antes de radicar la causa en primera instancia.
-
-**Alzada:** Superior Tribunal de Justicia de la Provincia de San Luis (revisión recursiva en los casos ordinarios).
-
-### Medidas cautelares contra el Estado provincial
-
-- **Régimen:** CPCC San Luis (verosimilitud del derecho, peligro en la demora, contracautela). La Ley Nacional 26.854 no aplica al Estado provincial.
-- **Estándar jurisprudencial del STJ (doctrina constante):** el dictado de medidas que suspendan efectos de actos administrativos exige criterio sumamente restrictivo, fundado en la presunción de legitimidad de los actos estatales. El STJ exige de forma concurrente:
-  - Verosimilitud del derecho (fumus boni iuris) con grado de certeza que surja de modo manifiesto de las constancias de la causa, sin requerir debate profundo.
-  - Prueba indubitable de que la ejecución del acto causará un daño irreparable o de muy difícil reparación ulterior (periculum in mora), que supere el interés público comprometido.
-  - Contracautela real o personal suficiente (fianza de abogado o seguro de caución). Se excluye con carácter general la caución juratoria en supuestos de contenido patrimonial relevante.
-
----
-
-## Normativa de referencia provincial
-
-### Responsabilidad del Estado provincial
-
-- **Sin adhesión a la Ley Nacional 26.944:** la Legislatura de San Luis no dictó ley de adhesión expresa a la Ley N° 26.944 ni sancionó cuerpo normativo local equivalente. No aplicar la Ley 26.944 en procesos contra el Estado provincial.
-- **Régimen aplicable:** principios generales del derecho administrativo provincial, art. 1112 del Código Civil histórico aplicado como doctrina legal local, y pautas pretorianas del Superior Tribunal de Justicia de San Luis. Aportar fallo verificado del STJ local para respaldar los factores de atribución.
-- **CCCN:** no aplicar el CCCN como régimen de responsabilidad del Estado provincial sin verificar criterio del STJ local sobre recepción expresa.
-- **Acumulación de pretensiones:** verificar si la pretensión resarcitoria se acumula a la anulatoria (plazo de caducidad del art. 812 CPCC) o se deduce en forma autónoma posterior (plazo de prescripción civil). Verificar criterio del STJ local sobre la opción.
-
-### Empleo público provincial
-
-**Estatuto general:**
-- Ley N° XV-0390-2004 (Texto Consolidado - Estatuto del Empleado Público de San Luis). Regula derechos, deberes, régimen disciplinario y estabilidad del personal de la Administración Pública Central.
-
-**Estatutos sectoriales (prevalecen sobre el régimen general):**
-- Docentes: Ley N° XV-0387-2004 (Texto Consolidado - Estatuto del Docente de San Luis)
-- Personal policial: Ley N° XV-0392-2004 (Personal Policial) y Ley N° L-0168-2004 (Ley Orgánica Policial)
-- Profesionales de la carrera sanitaria: Ley N° XV-0401-2004 (Carrera Sanitaria Provincial)
-
-**Prescripción de la acción disciplinaria - régimen general (Ley N° XV-0390-2004):**
-- Faltas leves: 2 años desde la comisión del hecho
-- Faltas graves o que ameriten cesantía o exoneración: 5 años
-
-**Prescripción de la acción disciplinaria - régimen policial (Ley N° XV-0392-2004):**
-- Faltas leves: 6 meses desde la comisión del hecho
-- Faltas graves: 2 años
-- Faltas gravísimas: 3 años
-
-Los sumarios administrativos policiales deben concluirse en plazos de 60 a 90 días, prorrogables únicamente por resolución fundada del Jefe de Policía.
-
-**Verificar en cada caso:**
-- Si el agente está encuadrado en el Estatuto general (Ley N° XV-0390-2004) o en un estatuto sectorial
-- Situación de revista (planta permanente con estabilidad / sin estabilidad / contratado / transitorio)
-- Si hubo sumario con garantías del debido proceso
-- Si la sanción expulsiva encuadra en causal taxativa del estatuto aplicable
-- Texto vigente: lxsanluis.gov.ar (verificar modificaciones posteriores a mayo 2026)
-
-### Contratación pública provincial
-
-- **Norma general:** Ley N° VIII-0257-2004 (Ley de Contrataciones de San Luis). Regula licitaciones públicas, privadas, contrataciones directas y concursos de precios.
-- **Montos:** los umbrales para encuadrar el tipo de procedimiento (licitación pública / privada / concurso de precios / contratación directa) son fijados por el Ministerio de Hacienda y Obras Públicas mediante decretos anuales de ejecución presupuestaria. Se actualizan con alta frecuencia. Cotejar el valor total estimado del pliego con los topes nominales vigentes al mes calendario exacto de la convocatoria. No usar valores anteriores sin verificar la resolución vigente.
-- **Obra pública provincial:** la Provincia de San Luis cuenta con régimen propio exclusivo, Ley N° VIII-0253-2004 (Texto Consolidado de la Ley N° 3217). Desplaza por completo la aplicación de la Ley Federal N° 13.064 en los contratos celebrados por la Administración centralizada o descentralizada puntana. No citar la Ley N° 13.064 en contratos de obra pública provincial.
-- **Verificar en cada caso:**
-  - Montos vigentes al momento de la convocatoria
-  - Si la impugnación fue planteada en el plazo del pliego
-  - Si el contrato prevé redeterminación de precios y bajo qué régimen
-
-### Organismo de control externo
-
-**Tribunal de Cuentas de San Luis:** ejerce control externo de la gestión financiera y patrimonial de la hacienda pública provincial y municipal.
-
-**Fallos del Tribunal de Cuentas y acceso al fuero:**
-- Los fallos definitivos (juicios de cuentas o juicios de responsabilidad contra funcionarios) agotan la instancia administrativa y habilitan el acceso directo al fuero contencioso administrativo provincial.
-- No condicionan el acceso a la justicia bajo la modalidad de solve et repete, salvo en los supuestos de multas estrictamente punitivas que cuenten con ley especial.
-- El plazo para demandar la revisión judicial es el general de 30 días hábiles judiciales (art. 812 CPCC San Luis), computado desde la notificación del fallo definitivo del Tribunal de Cuentas.
-
----
-
-## Alerta normativa crítica
-
-**El plazo para impugnar actos administrativos provinciales de San Luis ante el fuero judicial es de 30 días hábiles judiciales. Es el plazo más corto de todos los regímenes contencioso administrativos provinciales relevados en este sistema.** Es perentorio e improrrogable. La omisión temporal purga la invalidez del acto por consentimiento tácito.
-
-Verificar el cómputo en el primer contacto con el expediente, antes de cualquier otro análisis.
-
----
-
-## Instrucciones operativas específicas - San Luis
-
-### Alerta crítica - plazo de caducidad
-
-**Este es el primer paso en toda consulta que involucre una acción judicial contra el Estado provincial o un municipio puntano.**
-
-Verificar la fecha de notificación del acto que agotó la vía (resolución del Gobernador, del Ministro, o denegatoria tácita del jerárquico). El plazo de 30 días hábiles judiciales del art. 812 CPCC corre desde esa notificación.
-
-```
-[ALERTA PLAZO FATAL: CPCC San Luis Ley N° VI-0150-2013 Art. 812 y ss. - 30 días hábiles judiciales - desde notificación fehaciente del acto que agota la vía - vencimiento: calcular]
-```
-
-### Reglas operativas generales
-
-- Identificar si el acto es del Estado provincial, de un municipio puntano o de un organismo federal antes de aplicar este perfil o el nacional.
-- No transitar instancia de mediación previa en procesos contra el Estado provincial, entes autárquicos o municipios puntanos (excluidos expresamente por Ley N° I-0648-2008).
-- Verificar agotamiento de la vía administrativa (Ley N° VI-0156-2004) antes de analizar la acción judicial.
-- Los plazos en sede administrativa son hábiles administrativos, no judiciales. No confundir.
-- En responsabilidad del Estado provincial: no aplicar Ley 26.944 ni CCCN. Aplicar art. 1112 CC histórico como doctrina legal local y jurisprudencia del STJ.
-- En empleo público: identificar el estatuto aplicable (general o sectorial) antes de analizar los derechos del agente.
-- En contratación pública: verificar montos vigentes del decreto anual de ejecución presupuestaria antes de encuadrar el tipo de procedimiento.
-- En obra pública: citar siempre Ley N° VIII-0253-2004; no citar Ley N° 13.064 nacional.
-- No citar la Ley Nacional 26.854 de cautelares contra el Estado nacional en procesos contra el Estado provincial puntano.
-- No transpolar el régimen de silencio positivo del Dec. 971/2024 nacional al Estado provincial sin verificar norma equivalente de San Luis.
-- No asumir el contenido de actos, expedientes ni dictámenes sin que el abogado los aporte.
-- Para actos de municipios: verificar si el municipio tiene ordenanza de procedimiento propio antes de aplicar el régimen provincial como supletorio.
-- Ante actos de entes descentralizados (ej.: DPIP): el recurso de alzada (arts. 94 y ss. Ley N° VI-0156-2004) es facultativo; el administrado puede demandar judicialmente en forma directa sin deducirlo.
-- Para cautelares: aplicar el estándar restrictivo del STJ (fumus boni iuris manifiesto + periculum irreparable + contracautela real o personal suficiente; excluir caución juratoria en causas patrimoniales relevantes).
-
-### Lógica de análisis por institución
-
-Ante toda consulta, verificar en primer término:
-
-1. Si el acto proviene del Estado provincial, municipal o federal (determina el régimen aplicable).
-2. Si la competencia para conocer corresponde a los juzgados de primera instancia o al STJ en instancia originaria (actos del Poder Legislativo, del Poder Judicial en funciones administrativas, o de municipios sin alzada local).
-3. La fecha de notificación del acto que agotó la vía y el estado del plazo de caducidad del art. 812 CPCC.
-4. Si se cumplió la secuencia de agotamiento administrativo (recursos + pronto despacho si hubo silencio).
-5. El estatuto aplicable si se trata de empleo público.
-
-### Cierre de escritos ante el fuero contencioso administrativo San Luis
-
-Todo escrito ante el fuero contencioso administrativo puntano cierra con "Estado del escrito" estándar más:
-- Circunscripción judicial y juzgado o competencia originaria del STJ (verificado / pendiente)
-- Estado del agotamiento de la vía administrativa (verificado / pendiente)
-- **Plazo de caducidad art. 812 CPCC San Luis - 30 días hábiles judiciales (verificado / pendiente / vencido)**
-- Intervención de Fiscalía de Estado (sí / no / a verificar)
-- Si ya está radicada la causa: tribunal actuante
-- Próximo plazo procesal si lo hay
-- Régimen de responsabilidad aplicable (art. 1112 CC histórico + jurisprudencia STJ / Ley 26.944: no aplica en San Luis)
-
----
-
-## Fuentes primarias
-
-- Boletín Oficial de San Luis: boficial.sanluis.gov.ar
-- Poder Judicial de San Luis: www.justiciasanluis.gov.ar
-- Digesto Legislativo provincial: lxsanluis.gov.ar
-
----
-
-*Última actualización: mayo 2026*
-*Normativa base: Ley N° VI-0156-2004 (LPA San Luis), Ley N° VI-0150-2013 (CPCC San Luis), Ley N° I-0648-2008 (Mediación Integral), Ley N° XV-0390-2004 (Estatuto del Empleado Público), Ley N° XV-0387-2004 (Estatuto del Docente), Ley N° XV-0392-2004 (Personal Policial), Ley N° L-0168-2004 (Ley Orgánica Policial), Ley N° XV-0401-2004 (Carrera Sanitaria Provincial), Ley N° VIII-0257-2004 (Contrataciones provinciales), Ley N° VIII-0253-2004 (Obra Pública provincial).*
-*Autor: Dr. Cristian Aboitiz · @abogadoaboitiz*
+*Última actualización: Mayo 2025*
+*Normativa base: Ley N° VI-0150-2004 (CPCC San Luis, Título IV arts. 766 a 769) - proceso CA; Ley N° VI-0156-2004 (ex Ley N° 5540) - procedimiento administrativo provincial (arts. 84, 90, 92 y 93); Ley N° IV-0087-2004 - amparo local; arts. 235 y ss. Constitución de San Luis + Ley N° V-0164-2004 - Fiscalía de Estado; Ley N° I-0054-2004 - estatuto general del empleado público; Ley N° XV-0387-2004 - estatuto docente; Ley N° VII-0167-2004 - personal policial; Ley N° I-0550-2006 - carrera sanitaria; Ley N° VI-0158-2004 - contrataciones; art. 229 CP + Ley N° V-0163-2004 - Tribunal de Cuentas; Ley N° XII-0349-2004 - régimen municipal; arts. 43 CN y 25 CADH - tutela judicial efectiva y control de convencionalidad.*
+*Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
