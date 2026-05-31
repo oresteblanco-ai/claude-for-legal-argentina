@@ -37,13 +37,13 @@ Este perfil cubre práctica de derecho administrativo en la Provincia de Buenos 
 
 ### Ley de procedimiento administrativo PBA
 
-- **Norma principal:** Decreto-Ley 7647/70 (Ley de Procedimiento Administrativo de la Provincia de Buenos Aires - LPA PBA) y modificatorias. Texto original es de 1970, con modificaciones parciales posteriores (entre ellas la Ley 13262 que modificó el art. 69 sobre presentación de escritos fuera de horario).
+- **Norma principal:** Decreto-Ley 7647/70 (Ley de Procedimiento Administrativo de la Provincia de Buenos Aires - LPA PBA) y modificatorias (Leyes 13.262, 13.708, 14.224 y 14.229).
 - **Reglamento:** el propio Dec-Ley 7647/70 contiene la regulación procedimental. No tiene decreto reglamentario separado equivalente al Decreto 1759/72 federal.
-- **Texto vigente:** consultar el portal de normas de PBA: https://normas.gba.gob.ar. El Decreto 661-E/2017 creó una Comisión para la reforma integral del Dec-Ley 7647/70; a mayo de 2026 la reforma integral no fue sancionada - verificar antes de aplicar.
+- **Texto vigente:** consultar el portal de normas de PBA: https://normas.gba.gob.ar. El Decreto 661-E/2017 creó una Comisión para la reforma integral; el anteproyecto fue elevado al Poder Ejecutivo en noviembre de 2019 pero a mayo de 2026 la reforma no fue sancionada - verificar antes de aplicar.
 - **Articulado clave:** art. 89 y ss. (recursos), art. 79 (pronto despacho - presupuesto del silencio denegatorio); art. 16 Ley 12.008 (denegatoria tácita y habilitación de la vía judicial), arts. 103-108 (acto administrativo), art. 97 (supuestos en que no procede el recurso jerárquico - agotamiento en sede administrativa; distinguir del art. 14 Ley 12.008 que regula la admisibilidad ante el fuero).
 
 ```
-[VERIFICAR VIGENCIA: Dec-Ley 7647/70 LPA PBA - verificar modificaciones posteriores a mayo 2026 en https://normas.gba.gob.ar - reforma integral pendiente desde Decreto 661-E/2017]
+[VERIFICAR VIGENCIA: Dec-Ley 7647/70 LPA PBA (mod. por Leyes 13.262, 13.708, 14.224 y 14.229) - texto con modificaciones vigente; reforma integral iniciada por Decreto 661-E/2017 no sancionada a mayo 2026 (anteproyecto elevado al PE en noviembre 2019) - verificar modificaciones posteriores a mayo 2026 en https://normas.gba.gob.ar]
 ```
 
 ### Régimen de silencio administrativo PBA
@@ -169,13 +169,13 @@ El Dec-Ley 7647/70 regula los elementos esenciales del acto administrativo (arts
 
 **Tribunal superior:**
 - **Tribunal:** Suprema Corte de Justicia de la Provincia de Buenos Aires (SCBA)
-- **Recurso de acceso:** recurso extraordinario de inaplicabilidad de ley (art. 279 CPCC PBA [VERIFICADO 24-05-2026 - Fuente: CPCC PBA, texto consolidado vigente (Boletín Oficial PBA); la referencia corresponde a la numeración de la edición consolidada consultada - se recomienda citar el texto literal y fecha de la versión consolidada para evitar confusión frente a reformas parciales posteriores]) y recurso extraordinario de inconstitucionalidad (arts. 161 y 163 Constitución PBA + art. 60 Ley 12.008). El de inaplicabilidad requiere monto mínimo equivalente a 500 Jus arancelarios (art. 278 CPCC PBA); dado que el valor del Jus se actualiza periódicamente por resolución de la SCBA, verificar el equivalente en pesos vigente al momento de la interposición. No aplica el monto mínimo en materia de impugnaciones a resoluciones del Tribunal de Cuentas y Tribunal Fiscal de Apelación (art. 60 inc. 3 Ley 12.008).
+- **Recurso de acceso:** recurso extraordinario de inaplicabilidad de ley (art. 279 CPCC PBA) y recurso extraordinario de inconstitucionalidad (arts. 161 y 163 Constitución PBA + art. 60 Ley 12.008). El de inaplicabilidad requiere que el valor del agravio exceda 500 Jus arancelarios (art. 278 CPCC PBA — verificado: texto vigente según ley de reforma B.O. 26.396/2010). Dado que el valor del Jus se actualiza periódicamente por resolución de la SCBA, verificar el equivalente en pesos vigente al momento de la interposición. No aplica el monto mínimo en materia de impugnaciones a resoluciones del Tribunal de Cuentas y Tribunal Fiscal de Apelación (art. 60 inc. 3 Ley 12.008).
 
 ```
 [VERIFICAR VIGENCIA: monto mínimo RIL - art. 278 CPCC PBA - equivalente a 500 Jus arancelarios - consultar valor del Jus vigente en https://www.scba.gov.ar (Acuerdos y Resoluciones / Valor del Jus) antes de evaluar admisibilidad del recurso]
 ```
 
-- **Recurso de queja (directo en queja):** cuando la Cámara deniega el recurso extraordinario, el interesado puede recurrir directamente en queja ante la SCBA (art. 292 CPCC PBA [VERIFICAR VIGENCIA: numeración en texto consolidado vigente]). Plazo: verificar el CPCC PBA vigente antes de computar; la queja no suspende la ejecución de la sentencia salvo que la SCBA lo disponga expresamente.
+- **Recurso de queja (directo en queja):** cuando la Cámara deniega el recurso extraordinario, el interesado puede recurrir directamente en queja ante la SCBA (art. 292 CPCC PBA — verificado: denominación "Queja por denegatoria o declaración de deserción", numeración correcta en texto vigente). Plazo: verificar el CPCC PBA vigente antes de computar; la queja no suspende la ejecución de la sentencia salvo que la SCBA lo disponga expresamente.
 - **Competencia originaria:** la implementación plena del fuero absorbió el volumen general de causas administrativas ordinarias que antes tramitaban directamente ante la SCBA, pero la competencia originaria del tribunal (art. 215 Constitución PBA) subsiste. La SCBA retiene atribuciones exclusivas para el conocimiento de demandas de inconstitucionalidad de leyes, decretos, ordenanzas o reglamentos (art. 161 inc. 1 Constitución PBA) y para conflictos de competencia entre poderes del Estado o entre municipios. Ambos regímenes coexisten; el art. 78 Ley 12.008 contiene las reglas transitorias para causas en trámite anteriores al funcionamiento del fuero en cada departamento.
 
 ### Pretensiones admisibles (art. 12 Ley 12.008)
@@ -207,14 +207,14 @@ La Ley 12.008 prevé un catálogo de pretensiones (no exhaustivo):
 ### Amparo PBA
 
 - **Norma:** art. 20 Constitución PBA + Ley 13.928 (amparo PBA) y modificatorias
-- **Plazo:** 90 días desde que el afectado conoció o pudo conocer el acto lesivo (art. 6 Ley 13.928). [VERIFICADO 24-05-2026 - Fuente: Ley 13.928, texto vigente (Boletín Oficial PBA).] La redacción del art. 6 establece "90 días" sin precisar si son hábiles o corridos; la jurisprudencia provincial no aporta una regla uniforme. No aplicar como "90 días hábiles" sin verificar la interpretación judicial vigente al momento del caso concreto.
-- **Legitimación activa:** amplia; incluye legitimación colectiva (art. 13 Ley 13.928 y art. 43 CN)
+- **Plazo:** 30 días desde que el afectado conoció o pudo conocer el acto u omisión lesivos (art. 5 Ley 13.928, texto según Ley 14.192). La norma no califica si son días hábiles o corridos; la jurisprudencia provincial no tiene regla uniforme sobre el punto. No computar como "30 días hábiles" sin verificar la interpretación de la sala actuante al momento del caso concreto. El plazo no se interrumpe por intimaciones particulares ni presentaciones en sede administrativa (art. 5 in fine Ley 13.928).
+- **Legitimación activa:** amplia; incluye legitimación colectiva (art. 4 Ley 13.928, texto Ley 14.192, y art. 43 CN)
 - **Subsidiariedad:** procede cuando no existe otra vía judicial más idónea; el fuero contencioso administrativo tiene acciones ordinarias más amplias. Verificar antes de optar por el amparo.
 - **Competencia:** Juzgados en lo Contencioso Administrativo en primera instancia; Cámaras en alzada
 
 ```
-[ALERTA PLAZO FATAL - AMPARO PBA: art. 6 Ley 13.928 - 90 días desde que el acto fue conocido o debió conocerse - ADVERTENCIA: la norma no califica si son hábiles o corridos; jurisprudencia provincial sin regla uniforme - verificar interpretación aplicable al caso antes de computar - vencimiento: calcular]
-[VERIFICAR VIGENCIA: Ley 13.928 (amparo PBA) y modificatorias - VERIFICADO 24-05-2026 texto vigente (Boletín Oficial PBA); pendiente verificar modificatorias posteriores a esa fecha]
+[ALERTA PLAZO FATAL - AMPARO PBA: art. 5 Ley 13.928 (texto Ley 14.192) - 30 días desde que el acto fue conocido o debió conocerse - ADVERTENCIA: la norma no califica si son hábiles o corridos; jurisprudencia provincial sin regla uniforme - verificar interpretación aplicable al caso antes de computar - vencimiento: calcular]
+[VERIFICAR VIGENCIA: Ley 13.928 (amparo PBA) mod. por Ley 14.192 y Ley 15.016 - texto actualizado verificado a mayo 2026]
 ```
 
 ### Amparo por mora / orden de pronto despacho judicial (arts. 76 y 12 inc. 6 Ley 12.008)
@@ -293,14 +293,14 @@ La Ley 12.008 prevé un catálogo de pretensiones (no exhaustivo):
 - Impugnación directa: ante las Cámaras de Apelación departamentales. El recurso de inaplicabilidad de ley ante la SCBA no requiere monto mínimo en materia de resoluciones del TFA (art. 60 inc. 3 Ley 12.008).
 
 **Asesoría General de Gobierno (AGG):**
-- Representa al Estado provincial en juicio (art. 9 inc. 1 Ley 12.008 y Decreto-Ley 7543/69).
+- Órgano de asesoramiento jurídico del Poder Ejecutivo provincial. No representa al Estado en juicio; esa función corresponde exclusivamente al Fiscal de Estado (Constitución PBA art. 155; Decreto-Ley 7543/69 art. 1). No confundir ambos órganos.
 - Emite dictámenes obligatorios previos en contratos, concesiones y actos que comprometan el patrimonio provincial y en las demás materias de su ley orgánica. La omisión del dictamen cuando es obligatorio puede configurar vicio de procedimiento del acto. Verificar si el expediente administrativo requirió dictamen de la AGG y si fue emitido.
-- Cuando el Fiscal de Estado promueve una pretensión anulatoria de un acto provincial, la defensa del Estado corresponde a la AGG (art. 9 inc. 2 Ley 12.008).
+- Excepción en sede judicial: cuando el Fiscal de Estado promueve una pretensión anulatoria de un acto provincial, es la AGG quien interviene y contesta esa demanda (art. 9 inc. 2 Ley 12.008). Fuera de ese supuesto, la representación procesal de la Provincia corresponde al Fiscal de Estado.
 - Las notificaciones a la AGG y al Fiscal de Estado deben hacerse en sus despachos oficiales (art. 9 inc. 4 Ley 12.008).
 
 **Fiscal de Estado PBA:**
-- **Rol en sede administrativa:** el Fiscal de Estado interviene también en sede administrativa en los supuestos de su ley orgánica (Decreto-Ley 7543/69). Las resoluciones administrativas definitivas dictadas en oposición con su vista no pueden cumplirse durante 30 días hábiles desde su notificación (art. 41 Decreto-Ley 7543/69). Esta intervención previa puede ser relevante para el análisis de vicios de procedimiento del acto (omisión de la vista cuando era obligatoria) y para determinar si el acto quedó en suspenso durante ese plazo.
-- **Rol en sede judicial:** interviene en los procesos contencioso administrativos de conformidad con el art. 155 Constitución PBA y la Ley orgánica (Decreto-Ley 7543/69).
+- **Función constitucional:** representa y defiende a la Provincia en juicio. Es parte legítima en los procesos contencioso administrativos y en todos aquéllos en que se controviertan intereses del Estado provincial (Constitución PBA art. 155; Decreto-Ley 7543/69 art. 1). Es el órgano de representación procesal de la Provincia; la AGG no cumple esa función salvo en el supuesto específico del art. 9 inc. 2 Ley 12.008.
+- **Rol en sede administrativa:** interviene en los supuestos previstos por su ley orgánica (Decreto-Ley 7543/69). Las resoluciones administrativas definitivas dictadas en oposición con su vista no pueden cumplirse durante 30 días hábiles desde su notificación (art. 41 Decreto-Ley 7543/69). Esta intervención es relevante para el análisis de vicios de procedimiento del acto (omisión de la vista cuando era obligatoria) y para determinar si el acto quedó en suspenso durante ese plazo.
 - Puede promover pretensiones anulatorias de actos administrativos ilegítimos; en ese caso la defensa del Estado corresponde a la AGG (art. 9 inc. 2 Ley 12.008).
 - Las notificaciones al Fiscal de Estado deben hacerse en su despacho oficial (art. 9 inc. 4 Ley 12.008).
 
@@ -327,7 +327,7 @@ La Ley 12.008 prevé un catálogo de pretensiones (no exhaustivo):
 - **Montos de contratación pública PBA (Ley 13.981 + Decreto 59/19):** los umbrales para licitación pública, privada y contratación directa se actualizan por resolución del Organismo Provincial de Contrataciones. Verificar en PBAC antes de encuadrar el procedimiento.
 - **Escala salarial empleo público PBA:** se modifica por paritarias. No asumir montos sin verificar la resolución de homologación vigente.
 - **Habilitaciones municipales:** el régimen de habilitaciones comerciales varía por municipio. Ante cualquier habilitación o sanción municipal, verificar ordenanza vigente al momento del acto.
-- **Reforma del Dec-Ley 7647/70:** el proyecto de reforma integral está pendiente desde Decreto 661-E/2017. Verificar si fue sancionado antes de aplicar el texto original.
+- **Reforma del Dec-Ley 7647/70:** el anteproyecto de reforma integral fue elevado al PE provincial en noviembre de 2019 (Comisión creada por Decreto 661-E/2017). A mayo de 2026 la reforma no fue sancionada; el Dec-Ley 7647/70 sigue vigente con las modificaciones de las Leyes 13.262, 13.708, 14.224 y 14.229. Verificar si fue sancionada una reforma posterior a esa fecha antes de aplicar el texto actual.
 - **IOMA (resoluciones del Directorio):** las resoluciones del Directorio de IOMA son impugnables ante el fuero contencioso administrativo. Verificar la resolución vigente en materia de prestaciones antes de asesorar.
 
 ```
@@ -484,5 +484,5 @@ Antes de analizar cualquier otra cuestión en una consulta sobre acción contenc
 ---
 
 *Última actualización: mayo 2026*
-*Normativa base: Dec-Ley 7647/70 LPA PBA, Ley 12.008 CCA PBA (mod. por Leyes 12.310, 13.101, 13.325 y 14.437), Ley 13.928 (amparo PBA), Ley 10.430 (empleo público), Ley 10.579 (estatuto docente), Ley 13.982 (policial), Ley 11.757 (personal municipal), Ley 13.981 (contrataciones), Decreto 59/19 (mod. por Decreto 605/2020, Decreto 648/2023 y Decreto 205/2024), Ley 6021 (obra pública PBA), Decreto-Ley 7543/69 (AGG/Fiscal de Estado), Ley 10.869 (Tribunal de Cuentas PBA), Constitución PBA arts. 20, 55, 155, 161, 163, 215*
+*Normativa base: Dec-Ley 7647/70 LPA PBA, Ley 12.008 CCA PBA (mod. por Leyes 12.310, 13.101, 13.325 y 14.437), Ley 13.928 (amparo PBA, mod. por Ley 14.192 y Ley 15.016), Ley 10.430 (empleo público, mod. por Leyes 12.777, 12.950, 13.154, 13.354, 13.414, 13.967, 14.241, 14.579, 14.720, 14.814 y 14.815), Ley 10.579 (estatuto docente), Ley 13.982 (policial), Ley 11.757 (personal municipal), Ley 13.981 (contrataciones), Decreto 59/19 (mod. por Decreto 605/2020, Decreto 648/2023 y Decreto 205/2024), Ley 6021 (obra pública PBA), Decreto-Ley 7543/69 (AGG/Fiscal de Estado), Ley 10.869 (Tribunal de Cuentas PBA), Constitución PBA arts. 20, 55, 155, 161, 163, 215*
 *Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*

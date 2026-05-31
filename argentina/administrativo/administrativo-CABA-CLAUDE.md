@@ -116,7 +116,7 @@ El art. 7 del Decreto N° 1510/97 establece los elementos esenciales del acto ad
 
 - **Norma:** Ley N° 189 CABA (Código Contencioso Administrativo y Tributario - CCAyT) y modificatorias
 - **Texto vigente:** consultar JURISTECA: https://juristeca.jusbaires.gob.ar/compilacion-normativa-juristeca/ley-189/
-- **Subsidiariedad:** el CCAyT es autónomo. Para lo no previsto, remite al Código Procesal Civil y Comercial de la Nación (CPCCN) en forma supletoria según criterio jurisprudencial de la Cámara CCAyT.
+- **Supletoriedad:** el art. 6 Ley N° 189 CCAyT establece expresamente que, en lo no previsto, se aplican las normas del CPCCN que sean compatibles con el carácter contencioso-administrativo del proceso. La remisión tiene base normativa expresa; no es una supletoriedad implícita ni de fuente jurisprudencial. El art. 26 CCAyT regula la forma de los escritos (materia específica), no la cláusula general de remisión.
 
 ### Plazo de caducidad para accionar judicialmente
 
