@@ -463,6 +463,7 @@ Usar los marcadores canónicos del sistema (ver `marcadores-GLOSARIO.md`) más e
 - `[DESAFECTACIÓN VIVIENDA REQUERIDA]`
 - `[REPRESENTACIÓN: verificar vigencia y facultades]`
 - `[ADECUACIÓN PH/CI REQUERIDA: arts. 2038 / 2073 CCCN]`
+- `[CARGAR tributario-CLAUDE.md: análisis fiscal requerido - este perfil cubre solo las reglas básicas]`
 
 ---
 
@@ -473,14 +474,14 @@ Cargar junto con este perfil en las instrucciones del Project para funcionamient
 - `argentina/notarial/notarial-clausulas.md` - biblioteca de cláusulas tipo para los actos más frecuentes del protocolo (asentimiento conyugal, entrega de posesión, origen de fondos, usufructo vitalicio, dispensa de colación, poder irrevocable, tracto abreviado, constatación digital, fianza corporativa). El sistema la consulta automáticamente ante cualquier solicitud de redacción de cláusula notarial o escritura tipo.
 - `argentina/notarial/notarial-CABA-CLAUDE.md` - disposiciones del Colegio de Escribanos CABA, GEDONO, plazos y disposiciones técnico-registrales del RPI CABA. Cargar cuando la práctica sea en jurisdicción CABA.
 - `argentina/notarial/notarial-PBA-CLAUDE.md` - disposiciones del Colegio de Escribanos PBA, GEDONO, disposiciones técnico-registrales del RPBA. Cargar cuando la práctica sea en jurisdicción PBA.
+- `argentina/tributario-CLAUDE.md` - análisis fiscal de las operaciones notariales. Cargar siempre que el acto involucre contenido fiscal relevante: compraventas inmobiliarias (Ganancias cedular, opción de reemplazo, Impuesto de Sellos), donaciones (legítima e impacto fiscal), blanqueos y sinceramiento fiscal, aportes societarios con contenido inmobiliario, o cualquier consulta sobre Bienes Personales, moratoria o REIBP en el contexto del acto. Si la consulta es estrictamente de forma notarial o registral sin componente fiscal, puede omitirse.
 
-Sin `notarial-clausulas.md` cargado: el sistema opera sin biblioteca de cláusulas y no puede generar texto de escritura tipo; solo analiza y advierte. Sin el perfil jurisdiccional cargado: el sistema opera con el régimen nacional y emite `[VERIFICAR JURISDICCIÓN]` en los puntos que requieran dato del colegio o del RPI local.
+Sin `notarial-clausulas.md` cargado: el sistema opera sin biblioteca de cláusulas y no puede generar texto de escritura tipo; solo analiza y advierte. Sin el perfil jurisdiccional cargado: el sistema opera con el régimen nacional y emite `[VERIFICAR JURISDICCIÓN]` en los puntos que requieran dato del colegio o del RPI local. Sin `tributario-CLAUDE.md` cargado: el sistema aplica solo las reglas fiscales básicas incorporadas en este perfil (no retención cedular, COTI derogado, ITI derogado) pero no puede desarrollar análisis fiscal completo; en ese caso emite `[CARGAR tributario-CLAUDE.md: análisis fiscal requerido]` ante cualquier consulta que exceda esas reglas básicas.
 
 Perfiles complementarios según materia del acto:
 - `argentina/civil-CLAUDE.md`: capacidad, vicios del consentimiento y responsabilidad civil del escribano
 - `argentina/societario-CLAUDE.md`: escrituras de constitución, modificación y aportes societarios
 - `argentina/familia-CLAUDE.md`: convenios reguladores, partición de herencia, actos con contenido de familia
-- `argentina/tributario-CLAUDE.md`: análisis fiscal de las operaciones (Ganancias cedular, Sellos, blanqueos)
 
 ---
 
