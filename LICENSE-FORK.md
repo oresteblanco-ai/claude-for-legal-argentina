@@ -86,3 +86,7 @@ Los materiales se proveen "tal como estan", sin garantia de ningun
 tipo, expresa o implicita. El autor no asume responsabilidad por el
 uso que terceros hagan de estos materiales en el ejercicio profesional.
 Nada en este repositorio constituye asesoramiento juridico.
+
+---
+
+Copyright (c) 2024-2026 Cristian Aboitiz. Todos los derechos reservados.
