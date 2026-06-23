@@ -273,6 +273,8 @@ git pull
 
 Hacelo antes de cada sesión de trabajo, o cuando veas un aviso de actualización en el repositorio. El pull es instantáneo y nunca pisa tu `legal.local.md` porque ese archivo está protegido por el `.gitignore`.
 
+Si no querés acordarte de correr el pull, hay un instalador que lo automatiza. Corrés una sola vez `instaladores/auto-update-git.bat` (Windows) o `instaladores/auto-update-git.sh` (Mac/Linux) y queda programado un `git pull` que corre solo. Detalle en `instaladores/LEEME.md`.
+
 #### Paso 4: Crear el Project en Claude.ai y cargar los perfiles
 
 En un chat nuevo de Claude adjuntás el archivo `C:\Users\TU USUARIO\claude-for-legal-argentina\argentina\CLAUDE.md`, escribís **"Corré la entrevista de configuración"** y completás las preguntas. El sistema te entrega un `CLAUDE.md` personalizado con los datos de tu práctica.
@@ -335,7 +337,7 @@ Instalá los que correspondan a tu práctica. Podés instalar varios.
 
 #### Paso 6: Empezar a usarlo
 
-Las skills se activan automáticamente cuando son relevantes. También podés invocarlas manualmente escribiendo "/" para ver la lista de comandos disponibles. Claude accede a tu carpeta de trabajo, lee los archivos directamente y ejecuta tareas largas sin supervisión: liquidaciones sobre varios expedientes, revisión de contratos en lote, matrices de riesgo, cronologías. Las actualizaciones del repositorio se incorporan automáticamente la próxima vez que usás el sistema.
+Las skills se activan automáticamente cuando son relevantes. También podés invocarlas manualmente escribiendo "/" para ver la lista de comandos disponibles. Claude accede a tu carpeta de trabajo, lee los archivos directamente y ejecuta tareas largas sin supervisión: liquidaciones sobre varios expedientes, revisión de contratos en lote, matrices de riesgo, cronologías. Cowork lee siempre lo que haya en la carpeta local, así que para trabajar con la última versión esa carpeta tiene que estar al día: hacé `git pull` antes de la sesión, o dejá la actualización programada con el instalador (ver "Mantener tu copia local al día" más abajo).
 
 Para activar una skill específica (telegramas, plazos u otras): en Cowork, con acceso habilitado a tu carpeta del repo, indicale a Claude que lea el archivo correspondiente dentro de `argentina/laboral/`. No uses el flujo "Cargar habilidad", ese es para archivos `.skill` de Cowork, no para los `.md` de este repo.
 
@@ -599,6 +601,18 @@ mayor frecuencia de cambio y la fecha de última verificación de cada uno.
 El repositorio incluye un workflow de GitHub Actions que sincroniza tu fork con el original de Anthropic todos los días a las 03:00 (hora Argentina), sin que tengas que hacer nada. Es un robot incluido en el repo: revisa si hubo cambios en el repo original y los incorpora a tu copia automáticamente. Tus archivos propios (carpeta `argentina/` y `legal.local.md`) nunca se pisan. El workflow corre gratis en todos los planes de GitHub, incluido el gratuito.
 
 Si preferís hacerlo a mano, GitHub te avisa cuando tu fork está desactualizado y podés sincronizar con un click desde el botón "Sync fork" en la página del repo.
+
+**Mantener tu copia local al día:**
+
+Una distinción que conviene tener clara, porque se confunde seguido. El workflow de arriba mantiene al día el repo en GitHub, no la carpeta de tu computadora. Que GitHub tenga lo último no significa que tu copia local lo tenga: para eso hay que bajar los cambios.
+
+Si trabajás con Cowork o con archivos locales, la carpeta de tu máquina es la que Claude lee, así que conviene mantenerla sincronizada. Tres opciones, de menos a más cómoda:
+
+- A mano: `git pull` antes de cada sesión (Opción A, Paso 3).
+- Automático con git: corrés una sola vez `instaladores/auto-update-git.bat` (Windows) o `instaladores/auto-update-git.sh` (Mac/Linux). Programa un `git pull` que corre solo y deja tu copia al día sin que hagas nada. No pisa tu `legal.local.md`.
+- Automático sin git: para quien no quiere instalar git. `instaladores/instalar-sin-git.bat` (Windows) o `instalar-sin-git.sh` (Mac/Linux) bajan la carpeta y programan la actualización. Requiere repo público. En esta modalidad solo podés editar `argentina/legal.local.md`; cualquier otro archivo que toques se sobrescribe en la próxima actualización.
+
+Los instaladores se corren una sola vez. En Windows, doble clic; en Mac/Linux, `bash <archivo>`. Por qué al iniciar sesión y no a un horario fijo de madrugada: una notebook suele estar apagada de noche, así que un horario nocturno se saltearía. Detalle de cada uno en `instaladores/LEEME.md`.
 
 ---
 

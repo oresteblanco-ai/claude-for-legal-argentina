@@ -5,3 +5,4 @@
 /.claude/
 __pycache__/
 *.pyc
+instaladores/_update.log
