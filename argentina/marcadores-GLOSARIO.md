@@ -301,6 +301,24 @@ Ejemplo:
 
 ---
 
+### B5 · VERIFICAR PRECEDENTE
+
+**Uso:** cuando se cita un fallo cuyo holding está verificado pero no se pudo confirmar que siga vigente como precedente (que no haya sido dejado sin efecto, revocado o superado por jurisprudencia posterior). Ningún conector del hub lo resuelve: los endpoints de citados/citantes no están implementados, de modo que la verificación es manual. Distinto de B1 (no hay fallo verificado) y de B4 (holding verificado, falta la cita formal de colección).
+
+**Sintaxis:**
+```
+[VERIFICAR PRECEDENTE: "carátula" o Fallos T:P - confirmar que no fue dejado sin efecto ni superado antes de citar]
+```
+
+Ejemplo:
+```
+[VERIFICAR PRECEDENTE: "Mazzeo" Fallos 330:3248 - confirmar vigencia como precedente antes de citar]
+```
+
+**Nunca:** usar para una norma (en ese caso, A1 VERIFICAR VIGENCIA). No combinar con B1.
+
+---
+
 ## Categoría C - Integridad del escrito
 
 Marcan problemas estructurales o de consistencia interna del escrito. Los genera el módulo de diagnóstico.
@@ -473,6 +491,7 @@ y los reemplaza por la forma canónica. Usar para actualizar archivos existentes
 ---
 
 *Última actualización: junio 2026*
+*Versión: 1.3 - agregado marcador B5 [VERIFICAR PRECEDENTE] (vigencia del precedente: confirmar que no fue dejado sin efecto ni superado; verificación manual, citados/citantes no implementado en el hub); usado en bucles-SKILL.md y fuentes.md*
 *Versión: 1.2 - agregado marcador B4 [VERIFICAR CITA DE FALLOS] (holding verificado, cita formal pendiente); usado en penal-DOCTRINA.md*
 *Versión: 1.1 - agregado marcador A10 [ALERTA PLAZO FATAL]; equivalencia [ALERTA DE PLAZO] registrada*
 *Autor: Dr. Cristian Aboitiz · [@abogadoaboitiz](https://x.com/abogadoaboitiz)*
